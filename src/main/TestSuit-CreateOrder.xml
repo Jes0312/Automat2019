@@ -8,8 +8,7 @@
         <classes>
             <class name="com.wecash.http.cases.CreateChannelOrder">
                 <methods>
-                    <include name="getBaseParam" />
-                    <include name="createOrder" />
+                    <include name="userGetAllInfo" />
                 </methods>
             </class>
         </classes>

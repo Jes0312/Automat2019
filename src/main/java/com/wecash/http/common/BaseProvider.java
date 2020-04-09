@@ -15,24 +15,68 @@ import java.util.List;
  */
 public class BaseProvider {
 	
-
-   // @DataProvider(name = "userGetList")
-   // public Iterator<Object[]> userGetList() throws IOException {
-        List<String> lables = new ArrayList<String>();
-        //lables.add("0级");
-      //  lables.add("1级");
-       // ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.user, "userInfo", lables);
-       // return testdata.iterator();
-   // }
-
+	
     @DataProvider(name = "userGetAllInfo")
     public Iterator<Object[]> userGetAllInfo() throws IOException {
         List<String> lables = new ArrayList<String>();
         //lables.add("0级");
         lables.add("1级");
-        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.user, "userInfo", lables);
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userCreate, "userCreate", lables);
         return testdata.iterator();
     }
+    
+    
+    @DataProvider(name = "userBatchQueryMobileMd")
+    public Iterator<Object[]> userBatchQueryMobileMd() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userBatchQueryIdByMobileMd, "userBatchQueryIdByMobileMd", lables);
+        return testdata.iterator();
+    }
+    
+    
+    @DataProvider(name = "userBatchQuery")
+    public Iterator<Object[]> userBatchQuery() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userBatchqueryById, "userBatchqueryById", lables);
+        return testdata.iterator();
+    } 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     @DataProvider(name = "createOrder")

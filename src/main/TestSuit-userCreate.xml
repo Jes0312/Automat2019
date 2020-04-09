@@ -4,12 +4,11 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
 
-    <test name="user" preserve-order="true">
+    <test name="userCreate" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.user">
+            <class name="com.wecash.http.cases.userCreate">
                 <methods>
-                    <include name="getBaseParam" />
-                    <include name="createUser" />
+                    <include name="userGetAllInfo" />
                 </methods>
             </class>
         </classes>

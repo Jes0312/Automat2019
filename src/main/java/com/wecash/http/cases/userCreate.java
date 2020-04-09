@@ -21,7 +21,7 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
  * @ContentUse :
  */
 @Slf4j
-public class user {
+public class userCreate {
 
 //    @Test(dataProvider = "userGetList", dataProviderClass = BaseProvider.class, description = "用户信息")
 //    public void userGetList(ITestContext context, Map<String, Object> params){
@@ -41,7 +41,7 @@ public class user {
 
 
 
-    @Test(dataProvider = "userGetAllInfo", dataProviderClass = BaseProvider.class, description = "根获取用户信息")
+    @Test(dataProvider = "userGetAllInfo", dataProviderClass = BaseProvider.class, description = "创建用户信息")
     public void userGetAllInfo(Map<String, Object> params){
         //初始化数据
        // Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
