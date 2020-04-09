@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="资方产品管理" parallel="classes" thread-count="4">
+    <parameter name="serviceEnv" value="https://capital-testing4.wecash.net"/>
+    <test name="CapitalProduct">
+        <classes>
+            <class name="com.wecash.http.cases.CapitalProduct" />
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="com.wecash.http.utils.ExtentTestNGIReporterListener" />
+        <!--<listener class-name="com.wecash.http.utils.ExtentTestNgFormatter" />-->
+    </listeners>
+</suite>

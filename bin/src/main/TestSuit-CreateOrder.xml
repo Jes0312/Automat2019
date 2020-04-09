@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="创建渠道订单" parallel="classes" thread-count="4">
+
+    <parameter name="serviceEnv" value="https://capital-testing4.wecash.net"/>
+
+    <test name="CreateChannelOrder" preserve-order="true">
+        <classes>
+            <class name="com.wecash.http.cases.CreateChannelOrder">
+                <methods>
+                    <include name="getBaseParam" />
+                    <include name="createOrder" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="com.wecash.http.utils.ExtentTestNGIReporterListener" />
+        <!--<listener class-name="com.wecash.http.utils.ExtentTestNgFormatter" />-->
+    </listeners>
+</suite>
