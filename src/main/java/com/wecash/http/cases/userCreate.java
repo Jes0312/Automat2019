@@ -2,12 +2,14 @@ package com.wecash.http.cases;
 
 import com.wecash.http.common.BaseProvider;
 
+
 import com.wecash.http.utils.DBUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -23,26 +25,10 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 @Slf4j
 public class userCreate {
 
-//    @Test(dataProvider = "userGetList", dataProviderClass = BaseProvider.class, description = "用户信息")
-//    public void userGetList(ITestContext context, Map<String, Object> params){
-//        //从【XML】获取环境域名
-//        String url = context.getCurrentXmlTest().getParameter("serviceEnv") + params.get("url").toString();
-//        //从【Excel】获取数据
-//        String caseComment = params.get("Comment").toString();
-//        String baseParamJson = params.get("baseParamJson").toString();
-//        String exectResult = params.get("exectResult").toString();
-//        //发送POST请求
-//        String result = httpJSONPost(url, baseParamJson); 
-//
-//        log.info("-------------> 用例功能描述为：" + caseComment);
-//        log.info("-------------> 期望接口返回为：" + exectResult);
-//        log.info("-------------> 接口实际返回为：" + result);
-//    }
 
-
-
-    @Test(dataProvider = "userGetAllInfo", dataProviderClass = BaseProvider.class, description = "创建用户信息")
-    public void userGetAllInfo(Map<String, Object> params){
+    
+    @Test(dataProvider = "userCeateInfo", dataProviderClass = BaseProvider.class, description = "创建用户信息")
+    public void userCeateInfo(Map<String, Object> params){
         //初始化数据
        // Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
     	DBUtils.clearData(params.get("clearDataSQL").toString());
@@ -75,8 +61,6 @@ public class userCreate {
             
         }
        
-      //清理数据
-        //DBUtils.clearData(params.get("clearDataSQL").toString());
         
     }
     

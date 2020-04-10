@@ -1,7 +1,7 @@
 package com.wecash.http.cases;
 
 import com.wecash.http.common.BaseProvider;
-import org.testng.annotations.Test;
+
 
 import com.wecash.http.utils.DBUtils;
 
@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
-
+import org.testng.annotations.Test;
 
 import java.util.Map;
 
@@ -23,16 +23,16 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
  * @ContentUse :
  */
 @Slf4j
-public class userBatchqueryById {
+public class userLogout {
+
 
     
-    @Test(dataProvider = "userBatchQuery", dataProviderClass = BaseProvider.class, description = "根据用户id批量查询用户信息")
-    public void userBatchQuery(Map<String, Object> params){
-
+    @Test(dataProvider = "userInvalid", dataProviderClass = BaseProvider.class, description = "注销用户信息")
+    public void userInvalid(Map<String, Object> params){
+    	
     	DBUtils.clearData(params.get("clearDataSQL").toString());
         //初始化数据
         Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
-    	
         
         String caseComment = params.get("Comment").toString();
         String url = params.get("serviceEnv").toString() + params.get("url").toString();
@@ -62,8 +62,6 @@ public class userBatchqueryById {
             
         }
        
-      //清理数据
-        //DBUtils.clearData(params.get("clearDataSQL").toString());
         
     }
     

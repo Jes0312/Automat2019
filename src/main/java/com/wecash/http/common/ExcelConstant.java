@@ -21,6 +21,25 @@ public interface ExcelConstant {
     
     //通过通过手机号MD5值批量查询租户用户id
     public  String userBatchQueryIdByMobileMd = "src/main/resources/caseconf/userBatchQueryIdByMobileMd/Case_userBatchQueryIdByMobileMd.xlsx";
-       
+     
+    //用户注销
+    public  String userLogout = "src/main/resources/caseconf/userLogout/Case_userLogout.xlsx";   
+    
+    
+    
+    
+  //提交实名认证信息
+    public  String identitySubmit = "src/main/resources/caseconf/identitySubmit/Case_identitySubmit.xlsx";
+    
+    
+  //查询实名认证信息
+    public  String identityGetInfo = "src/main/resources/caseconf/identityGetInfo/Case_identityGetInfo.xlsx";
+    
+
+    //实名认证信息失效
+    public  String identityInvalid = "src/main/resources/caseconf/identityInvalid/Case_identityInvalid.xlsx";
+     
+    
+    
     
 }

@@ -16,8 +16,8 @@ import java.util.List;
 public class BaseProvider {
 	
 	
-    @DataProvider(name = "userGetAllInfo")
-    public Iterator<Object[]> userGetAllInfo() throws IOException {
+    @DataProvider(name = "userCeateInfo")
+    public Iterator<Object[]> userCeateInfo() throws IOException {
         List<String> lables = new ArrayList<String>();
         //lables.add("0级");
         lables.add("1级");
@@ -35,6 +35,52 @@ public class BaseProvider {
         return testdata.iterator();
     }
     
+    @DataProvider(name = "userInvalid")
+    public Iterator<Object[]> userInvalid() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userLogout, "userLogout", lables);
+        return testdata.iterator();
+    }   
+  
+    
+    
+    
+    
+    
+    @DataProvider(name = "idSubmitInfo")
+    public Iterator<Object[]> idSubmitInfo() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.identitySubmit, "identitySubmit", lables);
+        return testdata.iterator();
+    } 
+    
+    
+    @DataProvider(name = "idGetInfo")
+    public Iterator<Object[]> idGetInfo() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.identityGetInfo, "identityGetInfo", lables);
+        return testdata.iterator();
+    } 
+       
+ 
+    @DataProvider(name = "idInvalid")
+    public Iterator<Object[]> idInvalid() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.identityInvalid, "identityInvalid", lables);
+        return testdata.iterator();
+    }    
+    
+    
+    
+    
     
     @DataProvider(name = "userBatchQuery")
     public Iterator<Object[]> userBatchQuery() throws IOException {
@@ -43,13 +89,7 @@ public class BaseProvider {
         lables.add("1级");
         ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userBatchqueryById, "userBatchqueryById", lables);
         return testdata.iterator();
-    } 
-    
-    
-    
-    
-    
-    
+    }  
     
     
     

@@ -23,11 +23,11 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
  * @ContentUse :
  */
 @Slf4j
-public class userBatchqueryById {
+public class identitySubmit {
 
     
-    @Test(dataProvider = "userBatchQuery", dataProviderClass = BaseProvider.class, description = "根据用户id批量查询用户信息")
-    public void userBatchQuery(Map<String, Object> params){
+    @Test(dataProvider = "idSubmitInfo", dataProviderClass = BaseProvider.class, description = "提交实名认证信息")
+    public void idSubmitInfo(Map<String, Object> params){
 
     	DBUtils.clearData(params.get("clearDataSQL").toString());
         //初始化数据
