@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="用户信息" parallel="classes" thread-count="4">
+
+    <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
+
+    <test name="userQueryLimit" preserve-order="true">
+        <classes>
+            <class name="com.wecash.http.cases.userQueryLimit">
+                <methods>
+                    <include name="GetInfoLimit" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="com.wecash.http.utils.ExtentTestNGIReporterListener" />
+        <!--<listener class-name="com.wecash.http.utils.ExtentTestNgFormatter" />-->
+    </listeners>
+</suite>

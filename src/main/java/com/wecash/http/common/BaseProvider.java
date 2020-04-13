@@ -35,6 +35,7 @@ public class BaseProvider {
         return testdata.iterator();
     }
     
+    
     @DataProvider(name = "userInvalid")
     public Iterator<Object[]> userInvalid() throws IOException {
         List<String> lables = new ArrayList<String>();
@@ -45,6 +46,63 @@ public class BaseProvider {
     }   
   
     
+    @DataProvider(name = "userInfoModify")
+    public Iterator<Object[]> userInfoModify() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userModify, "userModify", lables);
+        return testdata.iterator();
+    }   
+    
+    @DataProvider(name = "GetInfoById")
+    public Iterator<Object[]> GetInfoById() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userQueryById, "userQueryById", lables);
+        return testdata.iterator();
+    }      
+    
+    
+    @DataProvider(name = "QueryByConditionMd")
+    public Iterator<Object[]> QueryByConditionMd() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userQueryIdByConditionMd, "userQueryIdByConditionMd", lables);
+        return testdata.iterator();
+    }     
+    
+  
+    @DataProvider(name = "GetInfoLimit")
+    public Iterator<Object[]> GetInfoLimit () throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userQueryLimit, "userQueryLimit", lables);
+        return testdata.iterator();
+    }    
+    
+   
+    @DataProvider(name = "GetInfoLimitById")
+    public Iterator<Object[]> GetInfoLimitById () throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userQueryLimitMdById, "userQueryLimitMdById", lables);
+        return testdata.iterator();
+    }     
+    
+
+    @DataProvider(name = "GetInfoByUserId")
+    public Iterator<Object[]> GetInfoByUserId () throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userQueryUserInfoByUserId, "userQueryUserInfoByUserId", lables);
+        return testdata.iterator();
+    }    
     
     
     

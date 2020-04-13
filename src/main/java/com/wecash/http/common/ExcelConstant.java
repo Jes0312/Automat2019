@@ -25,6 +25,24 @@ public interface ExcelConstant {
     //用户注销
     public  String userLogout = "src/main/resources/caseconf/userLogout/Case_userLogout.xlsx";   
     
+    //修改用户信息
+    public  String userModify = "src/main/resources/caseconf/userModify/Case_userModify.xlsx";
+    
+    //根据Id查询用户信息
+    public  String userQueryById = "src/main/resources/caseconf/userQueryById/Case_userQueryById.xlsx";   
+    
+    //根据用户租户Id查询用手机号证件号
+    public  String userQueryIdByConditionMd = "src/main/resources/caseconf/userQueryIdByConditionMd/Case_userQueryIdByConditionMd.xlsx";     
+    
+    //根据手机号证件号查询用户信息
+    public  String userQueryLimit = "src/main/resources/caseconf/userQueryLimit/Case_userQueryLimit.xlsx";     
+      
+   
+    //根据用户租户Id查询用手机号证件号Md5值
+    public  String userQueryLimitMdById = "src/main/resources/caseconf/userQueryLimitMdById/Case_userQueryLimitMdById.xlsx";    
+    
+    //根据userId查询用用户信息
+    public  String userQueryUserInfoByUserId = "src/main/resources/caseconf/userQueryUserInfoByUserId/Case_userQueryUserInfoByUserId.xlsx";
     
     
     
@@ -39,7 +57,7 @@ public interface ExcelConstant {
     //实名认证信息失效
     public  String identityInvalid = "src/main/resources/caseconf/identityInvalid/Case_identityInvalid.xlsx";
      
-    
+  
     
     
 }

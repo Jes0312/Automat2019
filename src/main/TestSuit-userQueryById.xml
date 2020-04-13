@@ -4,11 +4,11 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
 
-    <test name="userCreate" preserve-order="true">
+    <test name="userQueryById" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.userBatchQueryIdByMobileMd">
+            <class name="com.wecash.http.cases.userQueryById">
                 <methods>
-                    <include name="userBatchQueryMobileMd" />
+                    <include name="userQueryById" />
                 </methods>
             </class>
         </classes>

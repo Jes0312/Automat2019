@@ -3,12 +3,14 @@ package com.wecash.http.cases;
 import com.wecash.http.common.BaseProvider;
 
 
+
 import com.wecash.http.utils.DBUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -22,11 +24,13 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
  * @ContentUse :
  */
 @Slf4j
-public class userBatchQueryIdByMobileMd {
+public class userQueryById {
 
 
-    @Test(dataProvider = "userBatchQueryMobileMd", dataProviderClass = BaseProvider.class, description = "根据用户手机号Md5批量查询用户信息")
-    public void userBatchQueryMobileMd(Map<String, Object> params){
+    
+    @Test(dataProvider = "GetInfoById", dataProviderClass = BaseProvider.class, description = "修改用户信息")
+    public void GetInfoById(Map<String, Object> params){
+    	
     	DBUtils.clearData(params.get("clearDataSQL").toString());
         //初始化数据
         Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
@@ -59,8 +63,6 @@ public class userBatchQueryIdByMobileMd {
             
         }
        
-      //清理数据
-        //DBUtils.clearData(params.get("clearDataSQL").toString());
         
     }
     
