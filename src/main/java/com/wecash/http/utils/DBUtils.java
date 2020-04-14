@@ -228,20 +228,30 @@ public class DBUtils {
  
     
     
-    public static String queryDataSQL(String sql, String param) {
-        String result = null;
+    public static String queryDataSQL(String sql) {
+        String result = "";
         // 查询数据库记录
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
+        
         try {
             connection = getConnection();
             statement = connection.createStatement();
-        resultSet = statement.executeQuery(sql);
-        while (resultSet.next()) {                    
-            result = resultSet.getString(param);
-        }
-               
+            resultSet = statement.executeQuery(sql);
+            
+            while (resultSet.next()) {
+                int i =resultSet.getMetaData().getColumnCount();
+                for(int j = 1; j <= resultSet.getMetaData().getColumnCount(); j++) {
+                    result += resultSet.getString(j);
+                    System.out.println("结果"+j + result);
+                    result += ",";
+        	               	            
+        	 result = result.substring(0, result.length() - 1);
+            	            
+                    }
+                }
+           
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

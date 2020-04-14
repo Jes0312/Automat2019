@@ -56,8 +56,8 @@ public class userModify {
         log.info("预期SQL:"+ exceptSQL);
         //数据库断言
         if (null != exceptSQL && "" != exceptSQL && null != seSQL) {
-        	String actualParam = params.get("actualParam").toString();
-            String mysql = DBUtils.queryDataSQL(seSQL, actualParam);
+        	//String actualParam = params.get("actualParam").toString();
+            String mysql = DBUtils.queryDataSQL(seSQL);
             log.info("数据库查询结果："+mysql);
             Assert.assertEquals(exceptSQL,mysql);
             

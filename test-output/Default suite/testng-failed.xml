@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.wecash.http.cases.userBatchQueryIdByMobileMd">
+      <class name="com.wecash.http.cases.identitySubmit">
         <methods>
-          <include name="userBatchQueryMobileMd" invocation-numbers="0 1 3"/>
+          <include name="idSubmitInfo" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.wecash.http.cases.userBatchQueryIdByMobileMd -->
+      </class> <!-- com.wecash.http.cases.identitySubmit -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
