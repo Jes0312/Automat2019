@@ -16,14 +16,53 @@ import java.util.List;
 public class BaseProvider {
 	
 	
+    @DataProvider(name = "CeateCashaccount")
+    public Iterator<Object[]> CeateCashaccount() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.CashAccountCreate, "CashAccountCreate", lables);
+        return testdata.iterator();
+    }
+    
+    
+    @DataProvider(name = "ModifyCashaccount")
+    public Iterator<Object[]> ModifyCashaccount() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.CashAccountModify, "CashAccountModify", lables);
+        return testdata.iterator();
+    }
+    
+  
+    @DataProvider(name = "QueryAccountInfo")
+    public Iterator<Object[]> QueryAccountInfo () throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.CashAccountQueryLimit, "CashAccountQueryLimit", lables);
+        return testdata.iterator();
+    }  
+    
+   
+    @DataProvider(name = "QueryAccountById")
+    public Iterator<Object[]> QueryAccountById () throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.CashAccountQueryById, "CashAccountQueryById", lables);
+        return testdata.iterator();
+    }    
+    
     @DataProvider(name = "userCeateInfo")
-    public Iterator<Object[]> userCeateInfo() throws IOException {
+    public Iterator<Object[]> userCeateInfo () throws IOException {
         List<String> lables = new ArrayList<String>();
         //lables.add("0级");
         lables.add("1级");
         ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userCreate, "userCreate", lables);
         return testdata.iterator();
-    }
+    } 
     
     
     @DataProvider(name = "userBatchQueryMobileMd")

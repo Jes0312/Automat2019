@@ -30,9 +30,10 @@ public class userCreate {
     
     @Test(dataProvider = "userCeateInfo", dataProviderClass = BaseProvider.class, description = "创建用户信息")
     public void userCeateInfo(Map<String, Object> params){
-        //初始化数据
-       // Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
+        
     	DBUtils.clearData(params.get("clearDataSQL").toString());
+    	//初始化数据
+        Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
         
         String caseComment = params.get("Comment").toString();
         String url = params.get("serviceEnv").toString() + params.get("url").toString();
@@ -95,14 +96,14 @@ public class userCreate {
         if (null != exceptSQL4 && "" != exceptSQL4 && null != seSQL4) {     	
             String mysql4 = DBUtils.queryDataSQL(seSQL4);
             log.info("数据库查询结果："+mysql4);
-            Assert.assertEquals(exceptSQL3,mysql4);  
+            Assert.assertEquals(exceptSQL4,mysql4);  
     }    
      
             
         //数据库预期结果
         String exceptSQL5= params.get("exceptSQL5").toString();
         //数据库查询语句
-        String seSQL5 = params.get("selSQL4").toString();
+        String seSQL5 = params.get("selSQL5").toString();
         log.info("预期SQL:"+ exceptSQL5);
         //数据库断言
         if (null != exceptSQL5 && "" != exceptSQL5 && null != seSQL5) {     	

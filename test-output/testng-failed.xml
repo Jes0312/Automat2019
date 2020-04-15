@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.wecash.http.cases.identitySubmit">
+      <class name="com.wecash.http.cases.CashAccountQueryLimit">
         <methods>
-          <include name="idSubmitInfo" invocation-numbers="0"/>
+          <include name="QueryAccountInfo" invocation-numbers="3 4 5"/>
         </methods>
-      </class> <!-- com.wecash.http.cases.identitySubmit -->
+      </class> <!-- com.wecash.http.cases.CashAccountQueryLimit -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

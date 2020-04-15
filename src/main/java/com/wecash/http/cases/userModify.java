@@ -50,19 +50,33 @@ public class userModify {
   
         
       //数据库预期结果
-        String exceptSQL= params.get("exceptSQL").toString();
+        String exceptSQL1= params.get("exceptSQL1").toString();
         //数据库查询语句
-        String seSQL= params.get("selSQL").toString();
-        log.info("预期SQL:"+ exceptSQL);
+        String seSQL1= params.get("selSQL1").toString();
+        log.info("预期SQL:"+ exceptSQL1);
         //数据库断言
-        if (null != exceptSQL && "" != exceptSQL && null != seSQL) {
+        if (null != exceptSQL1 && "" != exceptSQL1 && null != seSQL1) {
         	//String actualParam = params.get("actualParam").toString();
-            String mysql = DBUtils.queryDataSQL(seSQL);
-            log.info("数据库查询结果："+mysql);
-            Assert.assertEquals(exceptSQL,mysql);
+            String mysql1 = DBUtils.queryDataSQL(seSQL1);
+            log.info("数据库查询结果："+mysql1);
+            Assert.assertEquals(exceptSQL1,mysql1);
             
         }
-       
+      
+        
+      //数据库预期结果
+        String exceptSQL2= params.get("exceptSQL2").toString();
+        //数据库查询语句
+        String seSQL2= params.get("selSQL2").toString();
+        log.info("预期SQL:"+ exceptSQL2);
+        //数据库断言
+        if (null != exceptSQL2 && "" != exceptSQL2 && null != seSQL2) {
+        	//String actualParam = params.get("actualParam").toString();
+            String mysql2 = DBUtils.queryDataSQL(seSQL2);
+            log.info("数据库查询结果："+mysql2);
+            Assert.assertEquals(exceptSQL2,mysql2);
+            
+        }        
         
     }
     

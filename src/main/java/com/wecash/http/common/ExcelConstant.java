@@ -57,7 +57,16 @@ public interface ExcelConstant {
     //实名认证信息失效
     public  String identityInvalid = "src/main/resources/caseconf/identityInvalid/Case_identityInvalid.xlsx";
      
-  
+  //创建账户
+    public  String CashAccountCreate = "src/main/resources/caseconf/CashAccountCreate/Case_CashAccountCreate.xlsx";
     
+ //修改账户 
+    public  String CashAccountModify = "src/main/resources/caseconf/CashAccountModify/Case_CashAccountModify.xlsx";
+       
+  //查询账户
+    public  String CashAccountQueryLimit = "src/main/resources/caseconf/CashAccountQueryLimit/Case_CashAccountQueryLimit.xlsx";
+    
+    //通过中台id查询账户
+    public  String CashAccountQueryById = "src/main/resources/caseconf/CashAccountQueryById/Case_CashAccountQueryById.xlsx";
     
 }

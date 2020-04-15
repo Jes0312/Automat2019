@@ -246,8 +246,7 @@ public class DBUtils {
                     result += resultSet.getString(j);
                     System.out.println("结果"+j + result);
                     result += ",";
-        	               	            
-        	 result = result.substring(0, result.length() - 1);
+
             	            
                     }
                 }
@@ -263,6 +262,7 @@ public class DBUtils {
                 ee.printStackTrace();
             }
         }
+        result = result.substring(0, result.length() - 1);
         return result;
     }
     
