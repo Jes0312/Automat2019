@@ -9,348 +9,79 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">17</td><td class="num">0</td><td class="num">0</td><td class="num">991,072</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">94,693</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="17">com.wecash.http.cases.userModify</td><td><a href="#m0">userInfoModify</a></td><td rowspan="17">1586967982204</td><td rowspan="17">489</td></tr><tr class="passedeven"><td><a href="#m1">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m2">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m3">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m4">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m5">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m6">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m7">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m8">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m9">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m10">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m11">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m12">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m13">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m14">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m15">userInfoModify</a></td></tr><tr class="passedeven"><td><a href="#m16">userInfoModify</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">com.wecash.http.cases.GrantInvalid</td><td><a href="#m0">InvalidGrantInfo</a></td><td rowspan="7">1587034171185</td><td rowspan="7">427</td></tr><tr class="passedeven"><td><a href="#m1">InvalidGrantInfo</a></td></tr><tr class="passedeven"><td><a href="#m2">InvalidGrantInfo</a></td></tr><tr class="passedeven"><td><a href="#m3">InvalidGrantInfo</a></td></tr><tr class="passedeven"><td><a href="#m4">InvalidGrantInfo</a></td></tr><tr class="passedeven"><td><a href="#m5">InvalidGrantInfo</a></td></tr><tr class="passedeven"><td><a href="#m6">InvalidGrantInfo</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
+<h2>Default test</h2><h3 id="m0">com.wecash.http.cases.GrantInvalid#InvalidGrantInfo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
     &quot;resCode&quot;: &quot;E0001&quot;,
     &quot;resMsg&quot;: &quot;系统错误&quot;,
     &quot;successful&quot;: 0,
-    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object &apos;userInfoByUpdateReq&apos; on field &apos;tenantUserId&apos;: rejected value []; codes [NotBlank.userInfoByUpdateReq.tenantUserId,NotBlank.tenantUserId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [租户用户id不允许为空]] &quot;
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;111&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;&quot;,
- &quot;params&quot;:{
-        &quot;name&quot;:&quot;李&quot;,
-        &quot;mobileNo&quot;:&quot;18966789098&quot;,
-        &quot;certNo&quot;:&quot;543456789098765432&quot;,
-        &quot;email&quot;:&quot;&quot;
-        }
-}, 用例编号=userModify-013}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=parems为空则不修改, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;successful&quot;: 1
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;202003311&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;,
- &quot;params&quot;:{
-        }
-}, 用例编号=userModify-005}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数缺失-tenantUserId, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;系统错误&quot;,
-    &quot;successful&quot;: 0,
-    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object &apos;userInfoByUpdateReq&apos; on field &apos;tenantUserId&apos;: rejected value [null]; codes [NotBlank.userInfoByUpdateReq.tenantUserId,NotBlank.tenantUserId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [租户用户id不允许为空]] &quot;
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;20200326&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;params&quot;:{
-        &quot;name&quot;:&quot;小明&quot;,
-        &quot;mobileNo&quot;:&quot;18899934567&quot;,
-        &quot;certNo&quot;:&quot;341222199303040000&quot;,
-        &quot;email&quot;:&quot;1234567@126.com&quot;
-        }
-}, 用例编号=userModify-016}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=创建时不存在的参数修改, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;successful&quot;: 1
-}, exceptSQL2=, flag=, exceptSQL1=李**, selSQL1=select  key_value from user_info_item where tenant_user_id = 110 and tenant_id = 1001 and key_name = &quot;name&quot;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
-
-  &quot;requestId&quot;:&quot;202003314&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;110&quot;,
- &quot;params&quot;:{ &quot;name&quot;:&quot;李子七&quot;
-        }
-}, 用例编号=userModify-008}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=用户不存在, exectResult={
-    &quot;resCode&quot;: &quot;USR2002&quot;,
-    &quot;resMsg&quot;: &quot;用户不存在&quot;,
+    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object &apos;grantInvalidRequest&apos; on field &apos;tenantId&apos;: rejected value []; codes [NotEmpty.grantInvalidRequest.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [tenant id cannot be null]] &quot;
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+&quot;tenantId&quot;:&quot;&quot;,
+&quot;grantId&quot;:710311580205498368
+}, 用例编号=GrantInvalid-004}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.wecash.http.cases.GrantInvalid#InvalidGrantInfo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=grantId不存在, exectResult={
+    &quot;resCode&quot;: &quot;USR4002&quot;,
+    &quot;resMsg&quot;: &quot;授权关系不存在&quot;,
     &quot;successful&quot;: 0
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=JY, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;202003316&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;: &quot;211211&quot;,
- &quot;params&quot;:{
-        &quot;mobileNo&quot;:&quot;13366590175&quot;,
-        &quot;certNo&quot;:&quot;324111222233335463&quot;
-        }
-}, 用例编号=userModify-010}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数-requestId为空, exectResult={
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+&quot;tenantId&quot;:&quot;1001&quot;,
+&quot;grantId&quot;:1000311580205498368
+}, 用例编号=GrantInvalid-003}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.wecash.http.cases.GrantInvalid#InvalidGrantInfo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
     &quot;resCode&quot;: &quot;E0001&quot;,
     &quot;resMsg&quot;: &quot;系统错误&quot;,
     &quot;successful&quot;: 0,
-    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object &apos;userInfoByUpdateReq&apos; on field &apos;requestId&apos;: rejected value []; codes [NotBlank.userInfoByUpdateReq.requestId,NotBlank.requestId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.requestId,requestId]; arguments []; default message [requestId]]; default message [请求唯一id不允许为空]] &quot;
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;833334&quot;,
- &quot;params&quot;:{
-        &quot;name&quot;:&quot;李&quot;,
-        &quot;mobileNo&quot;:&quot;18966789098&quot;,
-        &quot;certNo&quot;:&quot;543456789098765432&quot;,
-        &quot;email&quot;:&quot;&quot;
-        }
-}, 用例编号=userModify-011}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
+    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object &apos;grantInvalidRequest&apos; on field &apos;grantId&apos;: rejected value [null]; codes [NotNull.grantInvalidRequest.grantId,NotNull.grantId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.grantId,grantId]; arguments []; default message [grantId]]; default message [grant id cannot be null]] &quot;
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+&quot;tenantId&quot;:&quot;1001&quot;,
+&quot;grantId&quot;:&quot;&quot;
+}, 用例编号=GrantInvalid-005}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.wecash.http.cases.GrantInvalid#InvalidGrantInfo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
     &quot;resCode&quot;: &quot;E0001&quot;,
     &quot;resMsg&quot;: &quot;系统错误&quot;,
     &quot;successful&quot;: 0,
-    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object &apos;userInfoByUpdateReq&apos; on field &apos;tenantId&apos;: rejected value []; codes [NotEmpty.userInfoByUpdateReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [用户租户号不允许为空]] &quot;
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;11&quot;,
- &quot;tenantId&quot;: &quot;&quot;,
- &quot;tenantUserId&quot;:&quot;833334&quot;,
- &quot;params&quot;:{
-        &quot;name&quot;:&quot;李&quot;,
-        &quot;mobileNo&quot;:&quot;18966789098&quot;,
-        &quot;certNo&quot;:&quot;543456789098765432&quot;,
-        &quot;email&quot;:&quot;&quot;
-        }
-}, 用例编号=userModify-012}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数缺失-tenantId, exectResult={
+    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object &apos;grantInvalidRequest&apos; on field &apos;grantId&apos;: rejected value [null]; codes [NotNull.grantInvalidRequest.grantId,NotNull.grantId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.grantId,grantId]; arguments []; default message [grantId]]; default message [grant id cannot be null]] &quot;
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+&quot;tenantId&quot;:&quot;1001&quot;
+}, 用例编号=GrantInvalid-007}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.wecash.http.cases.GrantInvalid#InvalidGrantInfo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
     &quot;resCode&quot;: &quot;E0001&quot;,
     &quot;resMsg&quot;: &quot;系统错误&quot;,
     &quot;successful&quot;: 0,
-    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object &apos;userInfoByUpdateReq&apos; on field &apos;tenantId&apos;: rejected value [null]; codes [NotEmpty.userInfoByUpdateReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [用户租户号不允许为空]] &quot;
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;20200326&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;,
- &quot;params&quot;:{
-        &quot;name&quot;:&quot;小明&quot;,
-        &quot;mobileNo&quot;:&quot;18899934567&quot;,
-        &quot;certNo&quot;:&quot;341222199303040000&quot;,
-        &quot;email&quot;:&quot;1234567@126.com&quot;
-        }
-}, 用例编号=userModify-015}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=必传参数缺失-requestId, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;系统错误&quot;,
-    &quot;successful&quot;: 0,
-    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object &apos;userInfoByUpdateReq&apos; on field &apos;requestId&apos;: rejected value [null]; codes [NotBlank.userInfoByUpdateReq.requestId,NotBlank.requestId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.requestId,requestId]; arguments []; default message [requestId]]; default message [请求唯一id不允许为空]] &quot;
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;833334&quot;,
- &quot;params&quot;:{
-        &quot;name&quot;:&quot;李&quot;,
-        &quot;mobileNo&quot;:&quot;18966789098&quot;,
-        &quot;certNo&quot;:&quot;543456789098765432&quot;,
-        &quot;email&quot;:&quot;&quot;
-        }
-}, 用例编号=userModify-014}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=修改name成功, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;successful&quot;: 1
-}, exceptSQL2=, flag=, exceptSQL1=于*, selSQL1=select  key_value from user_info_item where tenant_user_id =000113 and tenant_id = 1001 and key_name = &quot;name&quot;;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;20200327&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;,
- &quot;params&quot;:{
-        &quot;name&quot;:&quot;于今&quot;
-        }
-}, 用例编号=userModify-001}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=修改值与之前相同, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;successful&quot;: 1
-}, exceptSQL2=, flag=, exceptSQL1=李**, selSQL1=select  key_value from user_info_item where tenant_user_id = 110 and tenant_id = 1001 and key_name = &quot;name&quot;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
+    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object &apos;grantInvalidRequest&apos; on field &apos;tenantId&apos;: rejected value [null]; codes [NotEmpty.grantInvalidRequest.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [tenant id cannot be null]] &quot;
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
 
- &quot;requestId&quot;:&quot;202003315&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;110&quot;,
- &quot;params&quot;:{ &quot;name&quot;:&quot;李子七&quot;
-        }
-}, 用例编号=userModify-009}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=select  key_value from user_info_item where tenant_user_id = 000113 and tenant_id = 1001 and key_name = &quot;email&quot;, null=null, Comment=params 4选2，3修改, exectResult={
+&quot;grantId&quot;:710311580205498368
+}, 用例编号=GrantInvalid-006}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.wecash.http.cases.GrantInvalid#InvalidGrantInfo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=tenantId不存在, exectResult={
+    &quot;resCode&quot;: &quot;E0010&quot;,
+    &quot;resMsg&quot;: &quot;请求租户和用户租户不一致&quot;,
+    &quot;successful&quot;: 0
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+&quot;tenantId&quot;:&quot;9001&quot;,
+&quot;grantId&quot;:700311580205498368
+}, 用例编号=GrantInvalid-002}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.wecash.http.cases.GrantInvalid#InvalidGrantInfo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=更新成功, exectResult={
     &quot;resCode&quot;: &quot;E0000&quot;,
     &quot;resMsg&quot;: &quot;成功&quot;,
     &quot;successful&quot;: 1
-}, exceptSQL2=789@qq.com, flag=, exceptSQL1=0000***0001, selSQL1=select  key_value from user_info_item where tenant_user_id = 000113 and tenant_id = 1001 and key_name = &quot;certNo&quot;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
+}, exceptSQL2=, flag=, exceptSQL1=699222007535509504,-1, selSQL1=select user_id,grant_status from tenant_user_grant where user_id = 699222007535509504 and id=700311580205498368;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
 insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
 insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
 insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
 insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
 insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
+insert into tenant_user_grant values (&quot;700311580205498368&quot;,&quot;1001&quot;,&quot;699222007535509504&quot;,2,&quot;4f82d6478e368b2dbc23ff648ef7ef1f&quot;,NULL,&quot;0&quot;,&quot;2020-04-16 10:48:12&quot;,&quot;2020-04-16 10:48:12&quot;), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
 delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;202003313&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;,
- &quot;params&quot;:{ &quot;email&quot;:&quot;789@qq.com&quot;,
-&quot;certNo&quot;:&quot;0000001&quot;
-        }
-}, 用例编号=userModify-007}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=修改证件号成功, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;successful&quot;: 1
-}, exceptSQL2=, flag=, exceptSQL1=3412**********4384, selSQL1=select  key_value from user_info_item where tenant_user_id =000113 and tenant_id = 1001 and key_name = &quot;certNo&quot;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;20200329&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;,
- &quot;params&quot;:{      &quot;certNo&quot;:&quot;341222199112164384&quot;
-        }
-}, 用例编号=userModify-003}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=修改手机号成功, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;successful&quot;: 1
-}, exceptSQL2=, flag=, exceptSQL1=133****0175, selSQL1=select  key_value from user_info_item where tenant_user_id =000113 and tenant_id = 1001 and key_name = &quot;mobileNo&quot;;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={ &quot;requestId&quot;:&quot;20200328&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;,
- &quot;params&quot;:{
-&quot;mobileNo&quot;:&quot;13366590175&quot;
-        }
-}
-, 用例编号=userModify-002}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=parems中修改参数传空，不修改, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;successful&quot;: 1
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;202003312&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;,
- &quot;params&quot;:{
-&quot;email&quot;:&quot;&quot;
-        }
-}, 用例编号=userModify-006}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=修改邮箱成功, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;successful&quot;: 1
-}, exceptSQL2=, flag=, exceptSQL1=624859***@qq.com, selSQL1=select  key_value from user_info_item where tenant_user_id =000113 and tenant_id = 1001 and key_name = &quot;email&quot;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;name&quot;,&quot;李*&quot;,&quot;G+1kJ3G3qsg=&quot;,&quot;a4292d5e92be734194926548ec6e3cf6&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897133,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;mobileNo&quot;,&quot;155****6733&quot;,&quot;v39jSjKgwX/LlzVDHCxGcQ==&quot;,&quot;74108036c205aedb06337232d5a01f03&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897135,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;certNo&quot;,&quot;5412**********0000&quot;,&quot;8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV&quot;,&quot;d508ebd3c36b9297a99a7354e0ae4f74&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_info_item values (1002897137,&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;email&quot;,&quot;3234***@126.com&quot;,&quot;b1w/bCSdxM2sVm5O8y+eZg==&quot;,&quot;03065f0f961760adf3d79341ac1972e2&quot;,&quot;0&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_basic_info values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;699222007535509504&quot;,&quot;1001&quot;,&quot;000113&quot;,&quot;9337473d97849183519161fea2bfd554&quot;,&quot;67b10fbf4bd7cd6871830cf7fe5ee581&quot;,&quot;37f23ec7e589c3d77d162ddaccb495f8&quot;,&quot;458fdf82207c3a7d063d4924c2d310a2&quot;,&quot;233bcb92b24dbebd294b2eade430541d&quot;,&quot;6252a94479dbeb9c309a061962389948&quot;,&quot;c7ca10cbfddc6285810765c42cf91159&quot;,&quot;e5a3a77b29f86275295b31a1289e5400&quot;,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);
-insert into user_basic_info values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,1,&quot;ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=&quot;,&quot;2020-03-28 21:49:59&quot;,&quot;2020-03-28 21:49:59&quot;);
-insert into user_index values (&quot;793145221335302333&quot;,&quot;1001&quot;,&quot;110&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,&quot;2020-03-29 21:49:59&quot;,&quot;2020-03-29 21:49:59&quot;);, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
-  &quot;requestId&quot;:&quot;202003310&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;,
- &quot;params&quot;:{
-&quot;email&quot;:&quot;624859396@qq.com&quot;
-        }
-}, 用例编号=userModify-004}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">com.wecash.http.cases.userModify#userInfoModify</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{selSQL2=, null=null, Comment=非必传参数缺失-params, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;系统错误&quot;,
-    &quot;successful&quot;: 0,
-    &quot;data&quot;: &quot;Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object &apos;userInfoByUpdateReq&apos; on field &apos;params&apos;: rejected value [null]; codes [NotNull.userInfoByUpdateReq.params,NotNull.params,NotNull.***.service.dto.UserDto,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.params,params]; arguments []; default message [params]]; default message [用户信息参数不允许为空]] &quot;
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- &quot;requestId&quot;:&quot;20200326&quot;,
- &quot;tenantId&quot;: &quot;1001&quot;,
- &quot;tenantUserId&quot;:&quot;000113&quot;
-}, 用例编号=userModify-017}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from tenant_user_grant where user_id = 699222007535509504;, url=/invalid, expectParamJson=, baseParamJson={
+&quot;tenantId&quot;:&quot;1001&quot;,
+&quot;grantId&quot;:700311580205498368
+}, 用例编号=GrantInvalid-001}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

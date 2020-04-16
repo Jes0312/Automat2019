@@ -1,375 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="17" passed="17">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="991072" started-at="2020-04-15T16:09:53Z" finished-at="2020-04-15T16:26:24Z">
+  <suite name="Default suite" duration-ms="94693" started-at="2020-04-16T10:47:58Z" finished-at="2020-04-16T10:49:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="991072" started-at="2020-04-15T16:09:53Z" finished-at="2020-04-15T16:26:24Z">
-      <class name="com.wecash.http.cases.userModify">
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="128152" started-at="2020-04-15T16:09:57Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:12:06Z">
+    <test name="Default test" duration-ms="94693" started-at="2020-04-16T10:47:58Z" finished-at="2020-04-16T10:49:32Z">
+      <class name="com.wecash.http.cases.GrantInvalid">
+        <test-method status="PASS" signature="InvalidGrantInfo(java.util.Map)[pri:0, instance:com.wecash.http.cases.GrantInvalid@2b552920]" name="InvalidGrantInfo" duration-ms="90154" started-at="2020-04-16T10:48:00Z" description="保存授权" data-provider="InvalidGrantInfo" finished-at="2020-04-16T10:49:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{selSQL2=, null=null, Comment=修改name成功, exectResult={
+                <![CDATA[{selSQL2=, null=null, Comment=更新成功, exectResult={
     "resCode": "E0000",
     "resMsg": "成功",
     "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=于*, selSQL1=select  key_value from user_info_item where tenant_user_id =000113 and tenant_id = 1001 and key_name = "name";, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+}, exceptSQL2=, flag=, exceptSQL1=699222007535509504,-1, selSQL1=select user_id,grant_status from tenant_user_grant where user_id = 699222007535509504 and id=700311580205498368;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
+insert into tenant_user_grant values ("700311580205498368","1001","699222007535509504",2,"4f82d6478e368b2dbc23ff648ef7ef1f",NULL,"0","2020-04-16 10:48:12","2020-04-16 10:48:12"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
 delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"20200327",
- "tenantId": "1001",
- "tenantUserId":"000113",
- "params":{
-        "name":"于今"
-        }
-}, 用例编号=userModify-001}]]>
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from tenant_user_grant where user_id = 699222007535509504;, url=/invalid, expectParamJson=, baseParamJson={
+"tenantId":"1001",
+"grantId":700311580205498368
+}, 用例编号=GrantInvalid-001}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="102698" started-at="2020-04-15T16:12:06Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:13:48Z">
+        </test-method> <!-- InvalidGrantInfo -->
+        <test-method status="PASS" signature="InvalidGrantInfo(java.util.Map)[pri:0, instance:com.wecash.http.cases.GrantInvalid@2b552920]" name="InvalidGrantInfo" duration-ms="474" started-at="2020-04-16T10:49:30Z" description="保存授权" data-provider="InvalidGrantInfo" finished-at="2020-04-16T10:49:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{selSQL2=, null=null, Comment=修改手机号成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=133****0175, selSQL1=select  key_value from user_info_item where tenant_user_id =000113 and tenant_id = 1001 and key_name = "mobileNo";, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={ "requestId":"20200328",
- "tenantId": "1001",
- "tenantUserId":"000113",
- "params":{
-"mobileNo":"13366590175"
-        }
-}
-, 用例编号=userModify-002}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="111068" started-at="2020-04-15T16:13:48Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:15:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=修改证件号成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=3412**********4384, selSQL1=select  key_value from user_info_item where tenant_user_id =000113 and tenant_id = 1001 and key_name = "certNo", requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"20200329",
- "tenantId": "1001",
- "tenantUserId":"000113",
- "params":{      "certNo":"341222199112164384"
-        }
-}, 用例编号=userModify-003}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="111102" started-at="2020-04-15T16:15:39Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:17:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=修改邮箱成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=624859***@qq.com, selSQL1=select  key_value from user_info_item where tenant_user_id =000113 and tenant_id = 1001 and key_name = "email", requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
-  "requestId":"202003310",
- "tenantId": "1001",
- "tenantUserId":"000113",
- "params":{
-"email":"624859396@qq.com"
-        }
-}, 用例编号=userModify-004}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="94930" started-at="2020-04-15T16:17:30Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:19:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=parems为空则不修改, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"202003311",
- "tenantId": "1001",
- "tenantUserId":"000113",
- "params":{
-        }
-}, 用例编号=userModify-005}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="94824" started-at="2020-04-15T16:19:05Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:20:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=parems中修改参数传空，不修改, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"202003312",
- "tenantId": "1001",
- "tenantUserId":"000113",
- "params":{
-"email":""
-        }
-}, 用例编号=userModify-006}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="121454" started-at="2020-04-15T16:20:40Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:22:42Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=select  key_value from user_info_item where tenant_user_id = 000113 and tenant_id = 1001 and key_name = "email", null=null, Comment=params 4选2，3修改, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL2=789@qq.com, flag=, exceptSQL1=0000***0001, selSQL1=select  key_value from user_info_item where tenant_user_id = 000113 and tenant_id = 1001 and key_name = "certNo", requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"202003313",
- "tenantId": "1001",
- "tenantUserId":"000113",
- "params":{ "email":"789@qq.com",
-"certNo":"0000001"
-        }
-}, 用例编号=userModify-007}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="105636" started-at="2020-04-15T16:22:42Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:24:27Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=创建时不存在的参数修改, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=李**, selSQL1=select  key_value from user_info_item where tenant_user_id = 110 and tenant_id = 1001 and key_name = "name", requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
-
-  "requestId":"202003314",
- "tenantId": "1001",
- "tenantUserId":"110",
- "params":{ "name":"李子七"
-        }
-}, 用例编号=userModify-008}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="112297" started-at="2020-04-15T16:24:27Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=修改值与之前相同, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=李**, selSQL1=select  key_value from user_info_item where tenant_user_id = 110 and tenant_id = 1001 and key_name = "name", requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into user_basic_info values ("793145221335302333","1001","110",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViMDVlS3gvRWpFQ2todWRyNFBya0FkWEN6ZWUrVTNlODRBQUFBQUFBQUFBQ2lMcmdqMDAwalFvSFg5OFpocm0rL1IzTElDN3Rwelo3R241ZTFRN0ZzWjYraDV0Y0tLVFFhSG9BOWNIM3pkYzd0ZUl4N3IwMHBWQXlMVzhpTDNuOW80clNLUDVkanQ4WnhyLzMzVUtBcys0SWFqTlV2WmtuM29nNnRsWVZCRFFJeS9kK1ljVnhXRCtCdXBvWTlFcnVQdTQweGdqK0plNjBaV040NHZrVlJDL2dTYTlDTTQyOGpqc2I3Z0EwRkVoQkFnQnRWZmJoT2ZrOFJla3ZkVGNsOHRKaDBYaXVieGxBeDErVzIvcmpXQVVnZ2dCWHpWU3h0Z1EraXI3c2E5ajI0M05NRnhhSmdhMG5QNDhmZ2NvcXF6cWJ1bWdNOWEvTzRUaFg1L2V1TUNTYThmZDBmckhhRE8vbUZ5dndNKzZJSjNiRWQxRGxmc3NMdkwxYVBtSDV5Q2xwK0wzdzZlMlFHSngvZ0hCRVRmME5sSHVQM1crSmdpTmx2WGh1Z25VMEcxeWVLWDZTcjJLVG9lSjM5WXgzbGk4VG5lRVRLaFk3Q21GcWptUnRqdmRUM29Qell6YW9LT2lYWUFSRVNqejNFTmZ6V0xrT21IMEQzdElUWGhoVWt5aHYwYmlERzdyND0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("793145221335302333","1001","110",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"2020-03-29 21:49:59","2020-03-29 21:49:59");, clearDataSQL=delete from user_basic_info where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id =000113 and tenant_id = 1001;
-delete from user_basic_info where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 110 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001, url=/modify, expectParamJson=, baseParamJson={
-
- "requestId":"202003315",
- "tenantId": "1001",
- "tenantUserId":"110",
- "params":{ "name":"李子七"
-        }
-}, 用例编号=userModify-009}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="728" started-at="2020-04-15T16:26:20Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=用户不存在, exectResult={
-    "resCode": "USR2002",
-    "resMsg": "用户不存在",
+                <![CDATA[{selSQL2=, null=null, Comment=tenantId不存在, exectResult={
+    "resCode": "E0010",
+    "resMsg": "请求租户和用户租户不一致",
     "successful": 0
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=JY, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"202003316",
- "tenantId": "1001",
- "tenantUserId": "211211",
- "params":{
-        "mobileNo":"13366590175",
-        "certNo":"324111222233335463"
-        }
-}, 用例编号=userModify-010}]]>
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+"tenantId":"9001",
+"grantId":700311580205498368
+}, 用例编号=GrantInvalid-002}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="742" started-at="2020-04-15T16:26:20Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:21Z">
+        </test-method> <!-- InvalidGrantInfo -->
+        <test-method status="PASS" signature="InvalidGrantInfo(java.util.Map)[pri:0, instance:com.wecash.http.cases.GrantInvalid@2b552920]" name="InvalidGrantInfo" duration-ms="462" started-at="2020-04-16T10:49:30Z" description="保存授权" data-provider="InvalidGrantInfo" finished-at="2020-04-16T10:49:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{selSQL2=, null=null, Comment=必传参数-requestId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object 'userInfoByUpdateReq' on field 'requestId': rejected value []; codes [NotBlank.userInfoByUpdateReq.requestId,NotBlank.requestId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.requestId,requestId]; arguments []; default message [requestId]]; default message [请求唯一id不允许为空]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"",
- "tenantId": "1001",
- "tenantUserId":"833334",
- "params":{
-        "name":"李",
-        "mobileNo":"18966789098",
-        "certNo":"543456789098765432",
-        "email":""
-        }
-}, 用例编号=userModify-011}]]>
+                <![CDATA[{selSQL2=, null=null, Comment=grantId不存在, exectResult={
+    "resCode": "USR4002",
+    "resMsg": "授权关系不存在",
+    "successful": 0
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+"tenantId":"1001",
+"grantId":1000311580205498368
+}, 用例编号=GrantInvalid-003}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="563" started-at="2020-04-15T16:26:21Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:22Z">
+        </test-method> <!-- InvalidGrantInfo -->
+        <test-method status="PASS" signature="InvalidGrantInfo(java.util.Map)[pri:0, instance:com.wecash.http.cases.GrantInvalid@2b552920]" name="InvalidGrantInfo" duration-ms="427" started-at="2020-04-16T10:49:31Z" description="保存授权" data-provider="InvalidGrantInfo" finished-at="2020-04-16T10:49:31Z">
           <params>
             <param index="0">
               <value>
@@ -377,25 +80,18 @@ delete from user_request_serial where tenant_id = 1001, url=/modify, expectParam
     "resCode": "E0001",
     "resMsg": "系统错误",
     "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object 'userInfoByUpdateReq' on field 'tenantId': rejected value []; codes [NotEmpty.userInfoByUpdateReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [用户租户号不允许为空]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"11",
- "tenantId": "",
- "tenantUserId":"833334",
- "params":{
-        "name":"李",
-        "mobileNo":"18966789098",
-        "certNo":"543456789098765432",
-        "email":""
-        }
-}, 用例编号=userModify-012}]]>
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'tenantId': rejected value []; codes [NotEmpty.grantInvalidRequest.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [tenant id cannot be null]] "
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+"tenantId":"",
+"grantId":710311580205498368
+}, 用例编号=GrantInvalid-004}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="489" started-at="2020-04-15T16:26:22Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:22Z">
+        </test-method> <!-- InvalidGrantInfo -->
+        <test-method status="PASS" signature="InvalidGrantInfo(java.util.Map)[pri:0, instance:com.wecash.http.cases.GrantInvalid@2b552920]" name="InvalidGrantInfo" duration-ms="448" started-at="2020-04-16T10:49:31Z" description="保存授权" data-provider="InvalidGrantInfo" finished-at="2020-04-16T10:49:32Z">
           <params>
             <param index="0">
               <value>
@@ -403,120 +99,55 @@ delete from user_request_serial where tenant_id = 1001, url=/modify, expectParam
     "resCode": "E0001",
     "resMsg": "系统错误",
     "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object 'userInfoByUpdateReq' on field 'tenantUserId': rejected value []; codes [NotBlank.userInfoByUpdateReq.tenantUserId,NotBlank.tenantUserId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [租户用户id不允许为空]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"111",
- "tenantId": "1001",
- "tenantUserId":"",
- "params":{
-        "name":"李",
-        "mobileNo":"18966789098",
-        "certNo":"543456789098765432",
-        "email":""
-        }
-}, 用例编号=userModify-013}]]>
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'grantId': rejected value [null]; codes [NotNull.grantInvalidRequest.grantId,NotNull.grantId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.grantId,grantId]; arguments []; default message [grantId]]; default message [grant id cannot be null]] "
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+"tenantId":"1001",
+"grantId":""
+}, 用例编号=GrantInvalid-005}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="459" started-at="2020-04-15T16:26:22Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:23Z">
+        </test-method> <!-- InvalidGrantInfo -->
+        <test-method status="PASS" signature="InvalidGrantInfo(java.util.Map)[pri:0, instance:com.wecash.http.cases.GrantInvalid@2b552920]" name="InvalidGrantInfo" duration-ms="446" started-at="2020-04-16T10:49:32Z" description="保存授权" data-provider="InvalidGrantInfo" finished-at="2020-04-16T10:49:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{selSQL2=, null=null, Comment=必传参数缺失-requestId, exectResult={
+                <![CDATA[{selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
     "resCode": "E0001",
     "resMsg": "系统错误",
     "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object 'userInfoByUpdateReq' on field 'requestId': rejected value [null]; codes [NotBlank.userInfoByUpdateReq.requestId,NotBlank.requestId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.requestId,requestId]; arguments []; default message [requestId]]; default message [请求唯一id不允许为空]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- "tenantId": "1001",
- "tenantUserId":"833334",
- "params":{
-        "name":"李",
-        "mobileNo":"18966789098",
-        "certNo":"543456789098765432",
-        "email":""
-        }
-}, 用例编号=userModify-014}]]>
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'tenantId': rejected value [null]; codes [NotEmpty.grantInvalidRequest.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [tenant id cannot be null]] "
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+
+"grantId":710311580205498368
+}, 用例编号=GrantInvalid-006}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="484" started-at="2020-04-15T16:26:23Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:23Z">
+        </test-method> <!-- InvalidGrantInfo -->
+        <test-method status="PASS" signature="InvalidGrantInfo(java.util.Map)[pri:0, instance:com.wecash.http.cases.GrantInvalid@2b552920]" name="InvalidGrantInfo" duration-ms="424" started-at="2020-04-16T10:49:32Z" description="保存授权" data-provider="InvalidGrantInfo" finished-at="2020-04-16T10:49:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{selSQL2=, null=null, Comment=必传参数缺失-tenantId, exectResult={
+                <![CDATA[{selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
     "resCode": "E0001",
     "resMsg": "系统错误",
     "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object 'userInfoByUpdateReq' on field 'tenantId': rejected value [null]; codes [NotEmpty.userInfoByUpdateReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [用户租户号不允许为空]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"20200326",
- "tenantUserId":"000113",
- "params":{
-        "name":"小明",
-        "mobileNo":"18899934567",
-        "certNo":"341222199303040000",
-        "email":"1234567@126.com"
-        }
-}, 用例编号=userModify-015}]]>
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'grantId': rejected value [null]; codes [NotNull.grantInvalidRequest.grantId,NotNull.grantId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.grantId,grantId]; arguments []; default message [grantId]]; default message [grant id cannot be null]] "
+}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+"tenantId":"1001"
+}, 用例编号=GrantInvalid-007}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="460" started-at="2020-04-15T16:26:23Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=必传参数缺失-tenantUserId, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object 'userInfoByUpdateReq' on field 'tenantUserId': rejected value [null]; codes [NotBlank.userInfoByUpdateReq.tenantUserId,NotBlank.tenantUserId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [租户用户id不允许为空]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"20200326",
- "tenantId": "1001",
- "params":{
-        "name":"小明",
-        "mobileNo":"18899934567",
-        "certNo":"341222199303040000",
-        "email":"1234567@126.com"
-        }
-}, 用例编号=userModify-016}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-        <test-method status="PASS" signature="userInfoModify(java.util.Map)[pri:0, instance:com.wecash.http.cases.userModify@2b552920]" name="userInfoModify" duration-ms="799" started-at="2020-04-15T16:26:24Z" description="修改用户信息" data-provider="userInfoModify" finished-at="2020-04-15T16:26:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{selSQL2=, null=null, Comment=非必传参数缺失-params, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserController.modify(***.web.request.UserInfoByUpdateReq): [Field error in object 'userInfoByUpdateReq' on field 'params': rejected value [null]; codes [NotNull.userInfoByUpdateReq.params,NotNull.params,NotNull.***.service.dto.UserDto,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfoByUpdateReq.params,params]; arguments []; default message [params]]; default message [用户信息参数不允许为空]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/user, preDataSQL=, clearDataSQL=, url=/modify, expectParamJson=, baseParamJson={
- "requestId":"20200326",
- "tenantId": "1001",
- "tenantUserId":"000113"
-}, 用例编号=userModify-017}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userInfoModify -->
-      </class> <!-- com.wecash.http.cases.userModify -->
+        </test-method> <!-- InvalidGrantInfo -->
+      </class> <!-- com.wecash.http.cases.GrantInvalid -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

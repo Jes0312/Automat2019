@@ -44,8 +44,7 @@ public interface ExcelConstant {
     //根据userId查询用用户信息
     public  String userQueryUserInfoByUserId = "src/main/resources/caseconf/userQueryUserInfoByUserId/Case_userQueryUserInfoByUserId.xlsx";
     
-    
-    
+       
   //提交实名认证信息
     public  String identitySubmit = "src/main/resources/caseconf/identitySubmit/Case_identitySubmit.xlsx";
     
@@ -68,5 +67,21 @@ public interface ExcelConstant {
     
     //通过中台id查询账户
     public  String CashAccountQueryById = "src/main/resources/caseconf/CashAccountQueryById/Case_CashAccountQueryById.xlsx";
+  
+  //保存授权
+    public  String SaveGrant = "src/main/resources/caseconf/SaveGrant/Case_SaveGrant.xlsx";
+      
+  //查询授权项授权状态 
+    public  String GrantGetById = "src/main/resources/caseconf/GrantGetById/Case_GrantGetById.xlsx"; 
+    
+  //查询用户所有授权项授权状态
+    public  String GrantGetByType = "src/main/resources/caseconf/GrantGetByType/Case_GrantGetByType.xlsx"; 
+   
+   //查询用户授权地址 
+    public  String GrantGetConfigByType = "src/main/resources/caseconf/GrantGetConfigByType/Case_GrantGetConfigByType.xlsx"; 
+    
+    //授权失效
+    public  String GrantInvalid = "src/main/resources/caseconf/GrantInvalid/Case_GrantInvalid.xlsx"; 
+    
     
 }

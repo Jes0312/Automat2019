@@ -175,9 +175,7 @@ public class BaseProvider {
         return testdata.iterator();
     }    
     
-    
-    
-    
+        
     
     @DataProvider(name = "userBatchQuery")
     public Iterator<Object[]> userBatchQuery() throws IOException {
@@ -186,19 +184,57 @@ public class BaseProvider {
         lables.add("1级");
         ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userBatchqueryById, "userBatchqueryById", lables);
         return testdata.iterator();
+    }
+        
+        @DataProvider(name = "SaveGrantInfo")
+        public Iterator<Object[]> SaveGrantInfo() throws IOException {
+            List<String> lables = new ArrayList<String>();
+            //lables.add("0级");
+            lables.add("1级");
+            ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.SaveGrant, "SaveGrant", lables);
+            return testdata.iterator();       
+              
     }  
     
     
+        @DataProvider(name = "GetGrantInfo")
+        public Iterator<Object[]> GetGrantInfo() throws IOException {
+            List<String> lables = new ArrayList<String>();
+            //lables.add("0级");
+            lables.add("1级");
+            ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.GrantGetById, "GrantGetById", lables);
+            return testdata.iterator();
+        } 
+    
+        @DataProvider(name = "GetGrantByType")
+        public Iterator<Object[]> GetGrantByType() throws IOException {
+            List<String> lables = new ArrayList<String>();
+            //lables.add("0级");
+            lables.add("1级");
+            ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.GrantGetByType, "GrantGetByType", lables);
+            return testdata.iterator();
+        }    
     
     
+  
+        @DataProvider(name = "GetGrantConfig")
+        public Iterator<Object[]> GetGrantConfig() throws IOException {
+            List<String> lables = new ArrayList<String>();
+            //lables.add("0级");
+            lables.add("1级");
+            ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.GrantGetConfigByType, "GrantGetConfigByType", lables);
+            return testdata.iterator();
+        }    
     
     
-    
-    
-    
-    
-    
-    
+        @DataProvider(name = "InvalidGrantInfo")
+        public Iterator<Object[]> InvalidGrantInfo() throws IOException {
+            List<String> lables = new ArrayList<String>();
+            //lables.add("0级");
+            lables.add("1级");
+            ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.GrantInvalid, "GrantInvalid", lables);
+            return testdata.iterator();
+        }    
     
     
     
