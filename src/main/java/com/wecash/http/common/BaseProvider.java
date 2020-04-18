@@ -236,21 +236,7 @@ public class BaseProvider {
             return testdata.iterator();
         }    
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
 
     @DataProvider(name = "createOrder")
     public Iterator<Object[]> createOrder() throws IOException {
@@ -282,6 +268,17 @@ public class BaseProvider {
     }
 
 
+    @DataProvider(name = "SaveJobInfo")
+    public Iterator<Object[]> SaveJobInfo() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.JobPut, "JobPut", lables);
+        return testdata.iterator();
+    }   
+    
+    
+    
 
 
 }

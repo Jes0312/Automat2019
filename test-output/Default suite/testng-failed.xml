@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.wecash.http.cases.GrantGetByType">
+      <class name="com.wecash.http.cases.JobPut">
         <methods>
-          <include name="GetGrantByType" invocation-numbers="10"/>
+          <include name="SaveJobInfo" invocation-numbers="0 24"/>
         </methods>
-      </class> <!-- com.wecash.http.cases.GrantGetByType -->
+      </class> <!-- com.wecash.http.cases.JobPut -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

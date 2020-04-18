@@ -83,5 +83,8 @@ public interface ExcelConstant {
     //授权失效
     public  String GrantInvalid = "src/main/resources/caseconf/GrantInvalid/Case_GrantInvalid.xlsx"; 
     
+    //提交职业信息
+    public  String JobPut = "src/main/resources/caseconf/JobPut/Case_JobPut.xlsx"; 
+    
     
 }

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>23/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 16 18:47:58 CST 2020</td>
+<td>Started on:</td><td>Fri Apr 17 20:15:19 CST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>94 seconds (94693 ms)</td>
+<tr><td>Total time:</td><td>348 seconds (348016 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,208 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=null, Comment=提交职业信息成功, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=select update_time from user_job where tenant_user_id =000113  and tenant_id = 1001, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-001}</td>
+<td><div><pre>java.lang.AssertionError: expected [2020-04-17 20:15:39] but found [2020-04-17 20]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.wecash.http.cases.JobPut.SaveJobInfo(JobPut.java:107)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2044337856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2044337856'><pre>java.lang.AssertionError: expected [2020-04-17 20:15:39] but found [2020-04-17 20]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.wecash.http.cases.JobPut.SaveJobInfo(JobPut.java:107)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>20</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin, selSQL1=select tenant_user_id,industry,occupation  from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "",
+ "occupation": "",
+ "company": "",
+  "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-027}</td>
+<td><div><pre>java.lang.AssertionError: expected [000113,,] but found [000113,IT,test,shanyin]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.wecash.http.cases.JobPut.SaveJobInfo(JobPut.java:63)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1311315651", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1311315651'><pre>java.lang.AssertionError: expected [000113,,] but found [000113,IT,test,shanyin]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.wecash.http.cases.JobPut.SaveJobInfo(JobPut.java:63)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,103 +277,679 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.wecash.http.cases.GrantInvalid.InvalidGrantInfo()'><b>InvalidGrantInfo</b><br>Test class: com.wecash.http.cases.GrantInvalid<br>Test method: 保存授权<br>Parameters: {selSQL2=, null=null, Comment=更新成功, exectResult={
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
     "resCode": "E0000",
     "resMsg": "成功",
     "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=699222007535509504,-1, selSQL1=select user_id,grant_status from tenant_user_grant where user_id = 699222007535509504 and id=700311580205498368;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,fin,devp,wecash, selSQL1=select tenant_user_id,industry,occupation,company from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into tenant_user_grant values ("700311580205498368","1001","699222007535509504",2,"4f82d6478e368b2dbc23ff648ef7ef1f",NULL,"0","2020-04-16 10:48:12","2020-04-16 10:48:12"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
 delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
 delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
 delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
 delete from user_request_serial where tenant_id = 1001;
-delete from tenant_user_grant where user_id = 699222007535509504;, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"1001",
-"grantId":700311580205498368
-}, 用例编号=GrantInvalid-001}</td>
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "fin",
+ "occupation": "devp",
+ "company": "wecash",
+  "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-002}</td>
 <td></td>
-<td>90</td>
-<td>com.wecash.http.cases.GrantInvalid@2b552920</td></tr>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
 <tr>
-<td title='com.wecash.http.cases.GrantInvalid.InvalidGrantInfo()'><b>InvalidGrantInfo</b><br>Test class: com.wecash.http.cases.GrantInvalid<br>Test method: 保存授权<br>Parameters: {selSQL2=, null=null, Comment=tenantId不存在, exectResult={
-    "resCode": "E0010",
-    "resMsg": "请求租户和用户租户不一致",
-    "successful": 0
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"9001",
-"grantId":700311580205498368
-}, 用例编号=GrantInvalid-002}</td>
-<td></td>
-<td>0</td>
-<td>com.wecash.http.cases.GrantInvalid@2b552920</td></tr>
-<tr>
-<td title='com.wecash.http.cases.GrantInvalid.InvalidGrantInfo()'><b>InvalidGrantInfo</b><br>Test class: com.wecash.http.cases.GrantInvalid<br>Test method: 保存授权<br>Parameters: {selSQL2=, null=null, Comment=grantId不存在, exectResult={
-    "resCode": "USR4002",
-    "resMsg": "授权关系不存在",
-    "successful": 0
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"1001",
-"grantId":1000311580205498368
-}, 用例编号=GrantInvalid-003}</td>
-<td></td>
-<td>0</td>
-<td>com.wecash.http.cases.GrantInvalid@2b552920</td></tr>
-<tr>
-<td title='com.wecash.http.cases.GrantInvalid.InvalidGrantInfo()'><b>InvalidGrantInfo</b><br>Test class: com.wecash.http.cases.GrantInvalid<br>Test method: 保存授权<br>Parameters: {selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
     "resCode": "E0001",
     "resMsg": "系统错误",
     "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'tenantId': rejected value []; codes [NotEmpty.grantInvalidRequest.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [tenant id cannot be null]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"",
-"grantId":710311580205498368
-}, 用例编号=GrantInvalid-004}</td>
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantId': rejected value []; codes [NotEmpty.userJobReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [渠道id不允许为空]] "
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "", 
+ "tenantUserId": "1114",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "jingsuan",
+ "job": "test",
+ "companyCity": "shanghai", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-003}</td>
 <td></td>
 <td>0</td>
-<td>com.wecash.http.cases.GrantInvalid@2b552920</td></tr>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
 <tr>
-<td title='com.wecash.http.cases.GrantInvalid.InvalidGrantInfo()'><b>InvalidGrantInfo</b><br>Test class: com.wecash.http.cases.GrantInvalid<br>Test method: 保存授权<br>Parameters: {selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
     "resCode": "E0001",
     "resMsg": "系统错误",
     "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'grantId': rejected value [null]; codes [NotNull.grantInvalidRequest.grantId,NotNull.grantId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.grantId,grantId]; arguments []; default message [grantId]]; default message [grant id cannot be null]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"1001",
-"grantId":""
-}, 用例编号=GrantInvalid-005}</td>
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantUserId': rejected value []; codes [NotEmpty.userJobReq.tenantUserId,NotEmpty.tenantUserId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [渠道用户id不允许为空]] "
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "li", 
+ "tenantUserId": "",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "jingsuan",
+ "job": "test",
+ "companyCity": "shanghai", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-004}</td>
 <td></td>
 <td>0</td>
-<td>com.wecash.http.cases.GrantInvalid@2b552920</td></tr>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
 <tr>
-<td title='com.wecash.http.cases.GrantInvalid.InvalidGrantInfo()'><b>InvalidGrantInfo</b><br>Test class: com.wecash.http.cases.GrantInvalid<br>Test method: 保存授权<br>Parameters: {selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
     "resCode": "E0001",
     "resMsg": "系统错误",
     "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'tenantId': rejected value [null]; codes [NotEmpty.grantInvalidRequest.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [tenant id cannot be null]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantId': rejected value [null]; codes [NotEmpty.userJobReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [渠道id不允许为空]] "
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
+ "tenantUserId": "1114",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "jingsuan",
+ "job": "test",
+ "companyCity": "shanghai", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-005}</td>
+<td></td>
+<td>0</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
+    "resCode": "E0001",
+    "resMsg": "系统错误",
+    "successful": 0,
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantUserId': rejected value [null]; codes [NotEmpty.userJobReq.tenantUserId,NotEmpty.tenantUserId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [渠道用户id不允许为空]] "
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "li", 
+ "industry": "IT",
+ "occupation": "test",
+ "company": "jingsuan",
+ "job": "test",
+ "companyCity": "shanghai", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-006}</td>
+<td></td>
+<td>0</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-009}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-010}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,beijing,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,job,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.3
+}, 用例编号=JobPut-011}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.3
+}, 用例编号=JobPut-012}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,bj,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.4
+}, 用例编号=JobPut-013}</td>
+<td></td>
+<td>15</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.4
+}, 用例编号=JobPut-014}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,12345@123.com,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.5
+}, 用例编号=JobPut-015}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "",
+ "monthlySalary": 3000.5
+}, 用例编号=JobPut-016}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": ""
+}, 用例编号=JobPut-017}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
 
-"grantId":710311580205498368
-}, 用例编号=GrantInvalid-006}</td>
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-018}</td>
 <td></td>
-<td>0</td>
-<td>com.wecash.http.cases.GrantInvalid@2b552920</td></tr>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
 <tr>
-<td title='com.wecash.http.cases.GrantInvalid.InvalidGrantInfo()'><b>InvalidGrantInfo</b><br>Test class: com.wecash.http.cases.GrantInvalid<br>Test method: 保存授权<br>Parameters: {selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'grantId': rejected value [null]; codes [NotNull.grantInvalidRequest.grantId,NotNull.grantId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.grantId,grantId]; arguments []; default message [grantId]]; default message [grant id cannot be null]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"1001"
-}, 用例编号=GrantInvalid-007}</td>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-019}</td>
 <td></td>
-<td>0</td>
-<td>com.wecash.http.cases.GrantInvalid@2b552920</td></tr>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,beijing,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,job,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.3
+}, 用例编号=JobPut-020}</td>
+<td></td>
+<td>15</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.3
+}, 用例编号=JobPut-021}</td>
+<td></td>
+<td>15</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,bj,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.4
+}, 用例编号=JobPut-022}</td>
+<td></td>
+<td>15</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.4
+}, 用例编号=JobPut-023}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,12345@123.com,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.5
+}, 用例编号=JobPut-024}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+
+ "monthlySalary": 3000.5
+}, 用例编号=JobPut-025}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
+<tr>
+<td title='com.wecash.http.cases.JobPut.SaveJobInfo()'><b>SaveJobInfo</b><br>Test class: com.wecash.http.cases.JobPut<br>Test method: 提交职业信息<br>Parameters: {selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com"
+}, 用例编号=JobPut-026}</td>
+<td></td>
+<td>16</td>
+<td>com.wecash.http.cases.JobPut@2b552920</td></tr>
 </table><p>
 </body>
 </html>

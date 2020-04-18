@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\YUJIN\AppData\Local\Temp\testng-eclipse--1599525721\testng-customsuite.xml</span>
+                    <span>C:\Users\YUJIN\AppData\Local\Temp\testng-eclipse-1468058883\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,30 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">25 methods, 2 failed,   23 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...)">SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;成功&quot;,...)">SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,67 +125,211 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.GrantInvalid" hash-for-method="InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;...)">InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: ...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.GrantInvalid" hash-for-method="InvalidGrantInfo({selSQL2=, null=null, Comment=grantId不存在, exectResult={
-    &quot;resCode&quot;: &quot;USR4002&quot;,
-    &quot;resMsg&quot;: &quot;授权关...)">InvalidGrantInfo({selSQL2=, null=null, Comment=grantId不存在, exectResult={
-    "resCode": "USR4002",
-    "resMsg": "授权关...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: ...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.GrantInvalid" hash-for-method="InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;成功&quot;,...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMs...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
+    "resCode": "E0000",
+    "resMs...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
     &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg...)">InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
+    &quot;resMsg...)">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
     "resCode": "E0001",
     "resMsg...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.GrantInvalid" hash-for-method="InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg...)">InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    "resCode": "E0001",
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
+    "resCode": "E0000",
     "resMsg...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.GrantInvalid" hash-for-method="InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;...)">InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resM...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
+    "resCode": "E0000",
+    "resM...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.GrantInvalid" hash-for-method="InvalidGrantInfo({selSQL2=, null=null, Comment=tenantId不存在, exectResult={
-    &quot;resCode&quot;: &quot;E0010&quot;,
-    &quot;resMsg&quot;: &quot;请求租户...)">InvalidGrantInfo({selSQL2=, null=null, Comment=tenantId不存在, exectResult={
-    "resCode": "E0010",
-    "resMsg": "请求租户...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg"...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.GrantInvalid" hash-for-method="InvalidGrantInfo({selSQL2=, null=null, Comment=更新成功, exectResult={
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
     &quot;resCode&quot;: &quot;E0000&quot;,
     &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;s...)">InvalidGrantInfo({selSQL2=, null=null, Comment=更新成功, exectResult={
+  ...)">SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
     "resCode": "E0000",
     "resMsg": "成功",
-    "s...)</a> <!-- method navigator-link -->
+  ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0001&quot;,
+    &quot;resMsg...)">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
+    "resCode": "E0001",
+    "resMsg...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMs...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
+    "resCode": "E0000",
+    "resMs...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMs...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
+    "resCode": "E0000",
+    "resMs...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resM...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
+    "resCode": "E0000",
+    "resM...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;成功&quot;,...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;res...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
+    "resCode": "E0000",
+    "res...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;res...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
+    "resCode": "E0000",
+    "res...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMs...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
+    "resCode": "E0000",
+    "resMs...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
+    "resCode": "E0000",
+    "resMsg"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0001&quot;,
+    &quot;resMsg&quot;: &quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
+    "resCode": "E0001",
+    "resMsg": "...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
+    &quot;resCode&quot;: &quot;E0001&quot;,
+    &quot;resMsg&quot;: &quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
+    "resCode": "E0001",
+    "resMsg": "...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -177,173 +344,1046 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.wecash.http.cases.GrantInvalid</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.wecash.http.cases.JobPut</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;...)">
-                  </a> <!-- InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...) -->
-                  <span class="method-name">InvalidGrantInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'tenantId': rejected value []; codes [NotEmpty.grantInvalidRequest.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [tenant id cannot be null]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"",
-"grantId":710311580205498368
-}, 用例编号=GrantInvalid-004})</span>
-                  <em>
-(保存授权)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidGrantInfo({selSQL2=, null=null, Comment=grantId不存在, exectResult={
-    &quot;resCode&quot;: &quot;USR4002&quot;,
-    &quot;resMsg&quot;: &quot;授权关...)">
-                  </a> <!-- InvalidGrantInfo({selSQL2=, null=null, Comment=grantId不存在, exectResult={
-    "resCode": "USR4002",
-    "resMsg": "授权关...) -->
-                  <span class="method-name">InvalidGrantInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=grantId不存在, exectResult={
-    "resCode": "USR4002",
-    "resMsg": "授权关系不存在",
-    "successful": 0
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"1001",
-"grantId":1000311580205498368
-}, 用例编号=GrantInvalid-003})</span>
-                  <em>
-(保存授权)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg...)">
-                  </a> <!-- InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg...) -->
-                  <span class="method-name">InvalidGrantInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'grantId': rejected value [null]; codes [NotNull.grantInvalidRequest.grantId,NotNull.grantId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.grantId,grantId]; arguments []; default message [grantId]]; default message [grant id cannot be null]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"1001",
-"grantId":""
-}, 用例编号=GrantInvalid-005})</span>
-                  <em>
-(保存授权)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg...)">
-                  </a> <!-- InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg...) -->
-                  <span class="method-name">InvalidGrantInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'grantId': rejected value [null]; codes [NotNull.grantInvalidRequest.grantId,NotNull.grantId,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.grantId,grantId]; arguments []; default message [grantId]]; default message [grant id cannot be null]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"1001"
-}, 用例编号=GrantInvalid-007})</span>
-                  <em>
-(保存授权)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;...)">
-                  </a> <!-- InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...) -->
-                  <span class="method-name">InvalidGrantInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.GrantController.invalid(***.web.request.GrantInvalidRequest): [Field error in object 'grantInvalidRequest' on field 'tenantId': rejected value [null]; codes [NotEmpty.grantInvalidRequest.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [grantInvalidRequest.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [tenant id cannot be null]] "
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-
-"grantId":710311580205498368
-}, 用例编号=GrantInvalid-006})</span>
-                  <em>
-(保存授权)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidGrantInfo({selSQL2=, null=null, Comment=tenantId不存在, exectResult={
-    &quot;resCode&quot;: &quot;E0010&quot;,
-    &quot;resMsg&quot;: &quot;请求租户...)">
-                  </a> <!-- InvalidGrantInfo({selSQL2=, null=null, Comment=tenantId不存在, exectResult={
-    "resCode": "E0010",
-    "resMsg": "请求租户...) -->
-                  <span class="method-name">InvalidGrantInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=tenantId不存在, exectResult={
-    "resCode": "E0010",
-    "resMsg": "请求租户和用户租户不一致",
-    "successful": 0
-}, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=, clearDataSQL=, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"9001",
-"grantId":700311580205498368
-}, 用例编号=GrantInvalid-002})</span>
-                  <em>
-(保存授权)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidGrantInfo({selSQL2=, null=null, Comment=更新成功, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-    &quot;s...)">
-                  </a> <!-- InvalidGrantInfo({selSQL2=, null=null, Comment=更新成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "s...) -->
-                  <span class="method-name">InvalidGrantInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=更新成功, exectResult={
+                  <a name="SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...)">
+                  </a> <!-- SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=null, Comment=提交职业信息成功, exectResult={
     "resCode": "E0000",
     "resMsg": "成功",
     "successful": 1
-}, exceptSQL2=, flag=, exceptSQL1=699222007535509504,-1, selSQL1=select user_id,grant_status from tenant_user_grant where user_id = 699222007535509504 and id=700311580205498368;, requestType=POST, author=, serviceEnv=https://user-center-thu.tunaikita.id/grant, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+}, exceptSQL3=, selSQL3=select update_time from user_job where tenant_user_id =000113  and tenant_id = 1001, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
 insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59");
-insert into tenant_user_grant values ("700311580205498368","1001","699222007535509504",2,"4f82d6478e368b2dbc23ff648ef7ef1f",NULL,"0","2020-04-16 10:48:12","2020-04-16 10:48:12"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
 delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
 delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
 delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
 delete from user_request_serial where tenant_id = 1001;
-delete from tenant_user_grant where user_id = 699222007535509504;, url=/invalid, expectParamJson=, baseParamJson={
-"tenantId":"1001",
-"grantId":700311580205498368
-}, 用例编号=GrantInvalid-001})</span>
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-001})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [2020-04-17 20:15:39] but found [2020-04-17 20]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.wecash.http.cases.JobPut.SaveJobInfo(JobPut.java:107)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                   <em>
-(保存授权)                  </em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;成功&quot;,...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin, selSQL1=select tenant_user_id,industry,occupation  from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "",
+ "occupation": "",
+ "company": "",
+  "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-027})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [000113,,] but found [000113,IT,test,shanyin]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.wecash.http.cases.JobPut.SaveJobInfo(JobPut.java:63)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.wecash.http.cases.JobPut</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: ...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": ...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-018})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: ...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": ...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-009})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;成功&quot;,...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.3
+}, 用例编号=JobPut-021})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,bj,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.4
+}, 用例编号=JobPut-022})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMs...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
+    "resCode": "E0000",
+    "resMs...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,12345@123.com,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.5
+}, 用例编号=JobPut-024})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
+    &quot;resCode&quot;: &quot;E0001&quot;,
+    &quot;resMsg...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
+    "resCode": "E0001",
+    "resMsg...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
+    "resCode": "E0001",
+    "resMsg": "系统错误",
+    "successful": 0,
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantUserId': rejected value []; codes [NotEmpty.userJobReq.tenantUserId,NotEmpty.tenantUserId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [渠道用户id不允许为空]] "
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "li", 
+ "tenantUserId": "",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "jingsuan",
+ "job": "test",
+ "companyCity": "shanghai", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-004})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
+    "resCode": "E0000",
+    "resMsg...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,bj,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.4
+}, 用例编号=JobPut-013})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resM...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
+    "resCode": "E0000",
+    "resM...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com"
+}, 用例编号=JobPut-026})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg"...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-019})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;成功&quot;,
+  ...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+  ...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,fin,devp,wecash, selSQL1=select tenant_user_id,industry,occupation,company from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "fin",
+ "occupation": "devp",
+ "company": "wecash",
+  "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-002})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0001&quot;,
+    &quot;resMsg...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
+    "resCode": "E0001",
+    "resMsg...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
+    "resCode": "E0001",
+    "resMsg": "系统错误",
+    "successful": 0,
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantUserId': rejected value [null]; codes [NotEmpty.userJobReq.tenantUserId,NotEmpty.tenantUserId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [渠道用户id不允许为空]] "
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "li", 
+ "industry": "IT",
+ "occupation": "test",
+ "company": "jingsuan",
+ "job": "test",
+ "companyCity": "shanghai", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-006})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMs...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
+    "resCode": "E0000",
+    "resMs...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+
+ "monthlySalary": 3000.5
+}, 用例编号=JobPut-025})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMs...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
+    "resCode": "E0000",
+    "resMs...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,12345@123.com,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.5
+}, 用例编号=JobPut-015})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,beijing,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,job,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.3
+}, 用例编号=JobPut-020})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resM...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
+    "resCode": "E0000",
+    "resM...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": ""
+}, 用例编号=JobPut-017})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;成功&quot;,...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.3
+}, 用例编号=JobPut-012})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;res...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
+    "resCode": "E0000",
+    "res...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.4
+}, 用例编号=JobPut-014})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;: &quot;...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,beijing,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,job,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.3
+}, 用例编号=JobPut-011})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;res...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
+    "resCode": "E0000",
+    "res...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.4
+}, 用例编号=JobPut-023})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMs...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
+    "resCode": "E0000",
+    "resMs...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "",
+ "monthlySalary": 3000.5
+}, 用例编号=JobPut-016})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
+    &quot;resCode&quot;: &quot;E0000&quot;,
+    &quot;resMsg&quot;...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
+    "resCode": "E0000",
+    "resMsg"...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+    "successful": 1
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
+insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
+delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
+delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
+delete from user_request_serial where tenant_id = 1001;
+delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "1001", 
+ "tenantUserId": "000113",
+ "industry": "IT",
+ "occupation": "",
+ "company": "shanyin",
+ "job": "test",
+ "companyCity": "beijing", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-010})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
+    &quot;resCode&quot;: &quot;E0001&quot;,
+    &quot;resMsg&quot;: &quot;...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
+    "resCode": "E0001",
+    "resMsg": "...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
+    "resCode": "E0001",
+    "resMsg": "系统错误",
+    "successful": 0,
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantId': rejected value [null]; codes [NotEmpty.userJobReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [渠道id不允许为空]] "
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
+ "tenantUserId": "1114",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "jingsuan",
+ "job": "test",
+ "companyCity": "shanghai", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-005})</span>
+                  <em>
+(提交职业信息)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
+    &quot;resCode&quot;: &quot;E0001&quot;,
+    &quot;resMsg&quot;: &quot;...)">
+                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
+    "resCode": "E0001",
+    "resMsg": "...) -->
+                  <span class="method-name">SaveJobInfo</span>
+                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
+    "resCode": "E0001",
+    "resMsg": "系统错误",
+    "successful": 0,
+    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantId': rejected value []; codes [NotEmpty.userJobReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [渠道id不允许为空]] "
+}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
+ "tenantId": "", 
+ "tenantUserId": "1114",
+ "industry": "IT",
+ "occupation": "test",
+ "company": "jingsuan",
+ "job": "test",
+ "companyCity": "shanghai", 
+ "companyAddress": "bj",
+ "companyPhone": "010-9999111",
+ "companyEmail": "12345@123.com",
+ "monthlySalary": 3000.2
+}, 用例编号=JobPut-003})</span>
+                  <em>
+(提交职业信息)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -351,7 +1391,7 @@ delete from tenant_user_grant where user_id = 699222007535509504;, url=/invalid,
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\YUJIN\AppData\Local\Temp\testng-eclipse--1599525721\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\YUJIN\AppData\Local\Temp\testng-eclipse-1468058883\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -360,7 +1400,7 @@ delete from tenant_user_grant where user_id = 699222007535509504;, url=/invalid,
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.wecash.http.cases.GrantInvalid&quot;/&gt;
+      &lt;class name=&quot;com.wecash.http.cases.JobPut&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -400,40 +1440,112 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(25);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'InvalidGrantInfo')
-data.setCell(0, 2, 'com.wecash.http.cases.GrantInvalid')
-data.setCell(0, 3, 90154);
+data.setCell(0, 1, 'SaveJobInfo')
+data.setCell(0, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(0, 3, 20249);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'InvalidGrantInfo')
-data.setCell(1, 2, 'com.wecash.http.cases.GrantInvalid')
-data.setCell(1, 3, 474);
+data.setCell(1, 1, 'SaveJobInfo')
+data.setCell(1, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(1, 3, 16554);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'InvalidGrantInfo')
-data.setCell(2, 2, 'com.wecash.http.cases.GrantInvalid')
-data.setCell(2, 3, 462);
+data.setCell(2, 1, 'SaveJobInfo')
+data.setCell(2, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(2, 3, 16527);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'InvalidGrantInfo')
-data.setCell(3, 2, 'com.wecash.http.cases.GrantInvalid')
-data.setCell(3, 3, 448);
+data.setCell(3, 1, 'SaveJobInfo')
+data.setCell(3, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(3, 3, 16448);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'InvalidGrantInfo')
-data.setCell(4, 2, 'com.wecash.http.cases.GrantInvalid')
-data.setCell(4, 3, 446);
+data.setCell(4, 1, 'SaveJobInfo')
+data.setCell(4, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(4, 3, 16357);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'InvalidGrantInfo')
-data.setCell(5, 2, 'com.wecash.http.cases.GrantInvalid')
-data.setCell(5, 3, 427);
+data.setCell(5, 1, 'SaveJobInfo')
+data.setCell(5, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(5, 3, 16340);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'InvalidGrantInfo')
-data.setCell(6, 2, 'com.wecash.http.cases.GrantInvalid')
-data.setCell(6, 3, 424);
+data.setCell(6, 1, 'SaveJobInfo')
+data.setCell(6, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(6, 3, 16275);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'SaveJobInfo')
+data.setCell(7, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(7, 3, 16268);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'SaveJobInfo')
+data.setCell(8, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(8, 3, 16257);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'SaveJobInfo')
+data.setCell(9, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(9, 3, 16237);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'SaveJobInfo')
+data.setCell(10, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(10, 3, 16223);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'SaveJobInfo')
+data.setCell(11, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(11, 3, 16206);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'SaveJobInfo')
+data.setCell(12, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(12, 3, 16204);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'SaveJobInfo')
+data.setCell(13, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(13, 3, 16181);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'SaveJobInfo')
+data.setCell(14, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(14, 3, 16158);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'SaveJobInfo')
+data.setCell(15, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(15, 3, 16109);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'SaveJobInfo')
+data.setCell(16, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(16, 3, 16101);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'SaveJobInfo')
+data.setCell(17, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(17, 3, 15960);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'SaveJobInfo')
+data.setCell(18, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(18, 3, 15919);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'SaveJobInfo')
+data.setCell(19, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(19, 3, 15897);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'SaveJobInfo')
+data.setCell(20, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(20, 3, 15756);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'SaveJobInfo')
+data.setCell(21, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(21, 3, 453);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'SaveJobInfo')
+data.setCell(22, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(22, 3, 448);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'SaveJobInfo')
+data.setCell(23, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(23, 3, 440);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'SaveJobInfo')
+data.setCell(24, 2, 'com.wecash.http.cases.JobPut')
+data.setCell(24, 3, 437);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -459,49 +1571,159 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.wecash.http.cases.GrantInvalid</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.wecash.http.cases.JobPut</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">InvalidGrantInfo({selSQL2=, null=null, Comment=更新成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "s...)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">InvalidGrantInfo({selSQL2=, null=null, Comment=tenantId不存在, exectResult={
-    "resCode": "E0010",
-    "resMsg": "请求租户...)</span>
-                <span class="method-start">90158 ms</span>
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",
+  ...)</span>
+                <span class="method-start">20257 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">InvalidGrantInfo({selSQL2=, null=null, Comment=grantId不存在, exectResult={
-    "resCode": "USR4002",
-    "resMsg": "授权关...)</span>
-                <span class="method-start">90640 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
     "resCode": "E0001",
     "resMsg": "...)</span>
-                <span class="method-start">91104 ms</span>
+                <span class="method-start">36465 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
     "resCode": "E0001",
     "resMsg...)</span>
-                <span class="method-start">91534 ms</span>
+                <span class="method-start">36915 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
     "resCode": "E0001",
     "resMsg": "...)</span>
-                <span class="method-start">91984 ms</span>
+                <span class="method-start">37370 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">InvalidGrantInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
     "resCode": "E0001",
     "resMsg...)</span>
-                <span class="method-start">92432 ms</span>
+                <span class="method-start">37809 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": ...)</span>
+                <span class="method-start">38250 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
+    "resCode": "E0000",
+    "resMsg"...)</span>
+                <span class="method-start">54489 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "...)</span>
+                <span class="method-start">70592 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...)</span>
+                <span class="method-start">86818 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
+    "resCode": "E0000",
+    "resMsg...)</span>
+                <span class="method-start">103076 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
+    "resCode": "E0000",
+    "res...)</span>
+                <span class="method-start">119038 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
+    "resCode": "E0000",
+    "resMs...)</span>
+                <span class="method-start">135149 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
+    "resCode": "E0000",
+    "resMs...)</span>
+                <span class="method-start">151679 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
+    "resCode": "E0000",
+    "resM...)</span>
+                <span class="method-start">168129 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": ...)</span>
+                <span class="method-start">184685 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg"...)</span>
+                <span class="method-start">200844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "...)</span>
+                <span class="method-start">217026 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...)</span>
+                <span class="method-start">232924 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
+    "resCode": "E0000",
+    "resMsg...)</span>
+                <span class="method-start">248682 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
+    "resCode": "E0000",
+    "res...)</span>
+                <span class="method-start">264603 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
+    "resCode": "E0000",
+    "resMs...)</span>
+                <span class="method-start">280962 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
+    "resCode": "E0000",
+    "resMs...)</span>
+                <span class="method-start">297304 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
+    "resCode": "E0000",
+    "resM...)</span>
+                <span class="method-start">313510 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
+    "resCode": "E0000",
+    "resMsg": "成功",...)</span>
+                <span class="method-start">329787 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
