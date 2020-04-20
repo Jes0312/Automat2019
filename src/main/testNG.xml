@@ -5,7 +5,31 @@
     <parameter name="serviceEnv" value="https://capital-${testingEnv}.wecash.net"/>
 
     <suite-files>
-        <suite-file path="TestSuit-CreateOrder.xml"></suite-file>
+        <suite-file path="TestSuit-CashAccountCreate.xml"></suite-file>
+        <suite-file path="TestSuit-CashAccountModify.xml"></suite-file>
+        <suite-file path="TestSuit-CashAccountQueryById.xml"></suite-file>
+        <suite-file path="TestSuit-CashAccountQueryLimit.xml"></suite-file>
+        <suite-file path="TestSuit-GrantGetById.xml"></suite-file>
+        <suite-file path="TestSuit-GrantGetByType.xml"></suite-file>
+        <suite-file path="TestSuit-GrantGetConfigByType.xml"></suite-file>
+        <suite-file path="TestSuit-GrantInvalid.xml"></suite-file>
+        <suite-file path="TestSuit-identityGetInfo.xml"></suite-file>
+        <suite-file path="TestSuit-identityInvalid.xml"></suite-file>
+        <suite-file path="TestSuit-identitySubmit.xml"></suite-file>
+        <suite-file path="TestSuit-JobPut.xml"></suite-file>
+        <suite-file path="TestSuit-SaveGrant.xml"></suite-file>
+        <suite-file path="TestSuit-userBatchqueryById.xml"></suite-file>
+        <suite-file path="TestSuit-userBatchQueryIdByMobileMd.xml"></suite-file>
+        <suite-file path="TestSuit-userCreate.xml"></suite-file>
+        <suite-file path="TestSuit-userLogout.xml"></suite-file>
+        <suite-file path="TestSuit-userModify.xml"></suite-file>
+        <suite-file path="TestSuit-userQueryById.xml"></suite-file>
+        <suite-file path="TestSuit-userQueryIdByConditionMd.xml"></suite-file>
+        <suite-file path="TestSuit-userQueryLimit.xml"></suite-file>
+        <suite-file path="TestSuit-userQueryLimitMdById.xml"></suite-file>
+        <suite-file path="TestSuit-userQueryUserInfoByUserId.xml"></suite-file>
+
+
         <!--<suite-file path="TestSuit-CapitalProduct.xml"></suite-file>-->
     </suite-files>
 </suite>
