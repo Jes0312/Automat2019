@@ -151,7 +151,9 @@
                         <!--<testingEnv>${env}</testingEnv>-->
                     <!--</systemPropertyVariables>-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>testNG.xml</suiteXmlFile>
+                        <suiteXmlFile>/src/main/TestSuit-userModify.xml</suiteXmlFile>
+
+<!--                        <suiteXmlFile>testNG.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                     <properties>
                         <property>
