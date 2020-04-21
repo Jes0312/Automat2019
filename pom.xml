@@ -11,7 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <xmlFileName>src/main/testNG.xml</xmlFileName>
+        <xmlFileName>testNG.xml</xmlFileName>
     </properties>
 
     <dependencies>
@@ -147,9 +147,9 @@
                 <!--<version>6.14.3</version>-->
                 <configuration>
                     <!--<skipTests>false</skipTests>-->
-                    <systemPropertyVariables>
-                        <testingEnv>${env}</testingEnv>
-                    </systemPropertyVariables>
+                    <!--<systemPropertyVariables>-->
+                        <!--<testingEnv>${env}</testingEnv>-->
+                    <!--</systemPropertyVariables>-->
                     <suiteXmlFiles>
                         <suiteXmlFile>${xmlFileName}</suiteXmlFile>
                     </suiteXmlFiles>
