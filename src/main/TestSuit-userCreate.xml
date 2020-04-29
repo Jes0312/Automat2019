@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="用户信息" parallel="classes" thread-count="4">
 
-    <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
+    <parameter name="serviceEnv" value="https://user-center-qa01.tunaikita.id/user"/>
 
     <test name="userCreate" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.userCreate">
                 <methods>
-                    <include name="userGetAllInfo" />
+                    <include name="userCeateInfo" />
                 </methods>
             </class>
         </classes>
