@@ -19,7 +19,7 @@ import java.util.Map;
 @Slf4j
 public class DBUtils {
     private static String   driver = "com.mysql.cj.jdbc.Driver";
-    private static String url = "jdbc:mysql://10.61.19.145:32010/seraph?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull";
+    private static String url = "jdbc:mysql://10.61.19.142:30012/seraph?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull";
     private static String user = "app_seraph_rw";
     private static String pwd = "xlWl7Z3YRQgfxmgTckqZCGVPKRZUN0";
 

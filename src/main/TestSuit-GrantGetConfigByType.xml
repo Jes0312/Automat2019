@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="授权" parallel="classes" thread-count="4">
+<suite name="获取授权配置" parallel="classes" thread-count="4">
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/grant"/>
 
