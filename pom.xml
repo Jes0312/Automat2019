@@ -22,6 +22,15 @@
             <version>1.18.6</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+
+
         <!--TestNG-->
         <dependency>
             <groupId>org.testng</groupId>
@@ -144,15 +153,28 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.20</version>
+                <!--<version>6.14.3</version>-->
                 <configuration>
                     <!--<skipTests>false</skipTests>-->
                     <!--<systemPropertyVariables>-->
                         <!--<testingEnv>${env}</testingEnv>-->
                     <!--</systemPropertyVariables>-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>testNG.xml</suiteXmlFile>
+                        <suiteXmlFile>src/main/TestSuit-userModify.xml</suiteXmlFile>
+
+<!--                        <suiteXmlFile>testNG.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
+                        </property>
+                    </properties>
+                    <forkMode>always</forkMode>
                 </configuration>
             </plugin>
             <plugin>
