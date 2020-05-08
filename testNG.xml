@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="中台项目" parallel="classes" thread-count="4">
-
-
+<suite name="中台项目">
+    
+    
     <suite-files>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-CashAccountCreate.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-CashAccountModify.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-CashAccountQueryById.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-CashAccountQueryLimit.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-GrantGetById.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-GrantGetByType.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-GrantGetConfigByType.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-GrantInvalid.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-identityGetInfo.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-identityInvalid.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-identitySubmit.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-JobPut.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-SaveGrant.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userBatchqueryById.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userBatchQueryIdByMobileMd.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userCreate.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userLogout.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userModify.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userQueryById.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userQueryIdByConditionMd.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userQueryLimit.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userQueryLimitMdById.xml"></suite-file>
-        <suite-file path="../../Data_Center_Platform/src/main/TestSuit-userQueryUserInfoByUserId.xml"></suite-file>
-
-
+        <suite-file path="src/main/TestSuit-CashAccountCreate.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-CashAccountModify.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-CashAccountQueryById.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-CashAccountQueryLimit.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-GrantGetById.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-GrantGetByType.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-GrantGetConfigByType.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-GrantInvalid.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-identityGetInfo.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-identityInvalid.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-identitySubmit.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-JobPut.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-SaveGrant.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userBatchqueryById.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userBatchQueryIdByMobileMd.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userCreate.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userLogout.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userModify.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userQueryById.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userQueryIdByConditionMd.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userQueryLimit.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userQueryLimitMdById.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-userQueryUserInfoByUserId.xml"></suite-file>
+        
+        
         <!--<suite-file path="TestSuit-CapitalProduct.xml"></suite-file>-->
     </suite-files>
 </suite>
