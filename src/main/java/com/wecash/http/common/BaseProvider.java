@@ -14,7 +14,13 @@ import java.util.List;
  * @ContentUse :
  */
 public class BaseProvider {
-	
+
+
+//    name 与接口名称一致 驼峰命名
+
+//    src/main/java/com/wecash/http/common/ExcelConstant.java中添加excel的路径；命名规则同name
+//    sheetName 为excel中sheet页的名字；命名规则同name
+
 	
     @DataProvider(name = "CeateCashaccount")
     public Iterator<Object[]> CeateCashaccount() throws IOException {
@@ -117,7 +123,7 @@ public class BaseProvider {
     @DataProvider(name = "GetInfoLimit")
     public Iterator<Object[]> GetInfoLimit () throws IOException {
         List<String> lables = new ArrayList<String>();
-        //lables.add("0级");
+//        lables.add("0级");
         lables.add("1级");
         ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.userQueryLimit, "userQueryLimit", lables);
         return testdata.iterator();
@@ -191,7 +197,7 @@ public class BaseProvider {
             List<String> lables = new ArrayList<String>();
             //lables.add("0级");
             lables.add("1级");
-            ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.SaveGrant, "SaveGrant", lables);
+            ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.GrantSave, "SaveGrant", lables);
             return testdata.iterator();       
               
     }  

@@ -7,9 +7,9 @@
     <test name="identitySubmit" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.identitySubmit">
-                <methods>
-                    <include name="idSubmitInfo" />
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="idSubmitInfo" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

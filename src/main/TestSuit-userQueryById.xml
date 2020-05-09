@@ -7,9 +7,9 @@
     <test name="userQueryById" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.userQueryById">
-                <methods>
-                    <include name="userQueryById" />
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="userQueryById" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

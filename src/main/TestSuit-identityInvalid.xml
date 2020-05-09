@@ -4,12 +4,12 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/identity"/>
 
-    <test name="identitySubmit" preserve-order="true">
+    <test name="identityInvalid" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.identityInvalid">
-                <methods>
-                    <include name="idInvalid" />
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="idInvalid" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

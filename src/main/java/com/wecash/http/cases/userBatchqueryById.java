@@ -29,9 +29,17 @@ public class userBatchqueryById {
     @Test(dataProvider = "userBatchQuery", dataProviderClass = BaseProvider.class, description = "根据用户id批量查询用户信息")
     public void userBatchQuery(Map<String, Object> params){
 
-    	DBUtils.clearData(params.get("clearDataSQL").toString());
-        //初始化数据
-        Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
+        try {
+
+            log.info("-------------> 数据清理开始");
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+            log.info("-------------> 数据清理结束");
+
+//    	初始化数据
+            log.info("-------------> 数据预至开始");
+            Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
+            log.info("-------------> 数据预至结束");
+
     	
         
         String caseComment = params.get("Comment").toString();
@@ -61,7 +69,11 @@ public class userBatchqueryById {
             Assert.assertEquals(exceptSQL,mysql);
             
         }
-       
+        }  finally
+        {
+//            DBUtils.clearData(params.get("clearDataSQL").toString());
+//            log.info("-------------> case结束--数据清理结束" );
+        }
       //清理数据
         //DBUtils.clearData(params.get("clearDataSQL").toString());
         

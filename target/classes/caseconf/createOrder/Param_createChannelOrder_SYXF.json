@@ -1,0 +1,104 @@
+{
+  "callback": {
+    "address": "https://stage13-m.wecash.net/service/status/notify",
+    "landingPageUrl": "https://stage13-m.wecash.net/wep/loan/index.html#/loanprogressList",
+    "protocol": "https"
+  },
+  "channelId": 3,
+  "channelProductId": 143,
+  "channelFundschemeId": 289,
+  "channelOrderNo": "shengyin_test_202003131046_3",
+  "channelLoanInfo": {
+    "applyTime": "20181023162833",
+    "bankCard": {
+      "accountType": 1,
+      "bankBranchName": "范德萨发",
+      "bankCardNo": "6214830143537516",
+      "bankCityName": "天津市辖区",
+      "bankCode": "006",
+      "bankMobilePhone": "13544443336",
+      "bankName": "招商银行",
+      "bankProvince": "",
+      "bankProvinceName": "北京市"
+    },
+    "channelConfirmLoanTime": "20181023162833",
+    "contract": {},
+    "currency": "CNY",
+    "equalityType": 0,
+    "idCardBackPic": "http://wecash-resources-testing.oss.aliyuncs.com/idcardReverse/29212439/oXsEX0.jpg",
+    "idCardFrontPic": "http://wecash-resources-testing.oss.aliyuncs.com/idcardFront/29212439/IAdNoD.jpg",
+    "idCardHoldPic": "http://wecash-resources-testing.oss.aliyuncs.com/identityNod/29212439/ZQ0b3d.jpg",
+    "interestRate": "0.36",
+    "interestType":2,
+    "interestRateType": 4,
+    "livingBodyRecognitionPic": "http://wecash-resources-testing.oss.aliyuncs.com/identityNod/29212439/ZQ0b3d.jpg",
+    "loanAmount": "1000",
+    "loanPurpose": "10",
+    "period": 3,
+    "periodRepaymentAmount": "",
+    "productionType": "CL",
+    "repayDateType": 2,
+    "userRepayType": 2
+  },
+  "goodsInfo": {},
+  "loanUserBasicInfo": {
+    "age": 27,
+    "birthday": "19901019",
+    "company": {
+      "companyAddress": "对对对",
+      "companyAddressCity": "110100",
+      "companyAddressDistrict": "110101",
+      "companyAddressProvince": "110000",
+      "companyContactNo": "15209245689",
+      "companyDuration": "5",
+      "companyName": "范德萨看",
+      "profession":1,
+      "companyType": 3,
+      "industry": 9,
+      "monthlyIncome": "3000",
+      "professionTitle": "发的看看发都发发送到亏大发",
+      "yearlyIncome": "677667"
+    },
+    "contacts": [{
+      "name": "刘大二",
+      "phone": "15788947789",
+      "relation": 2
+    }, {
+      "name": "李大二",
+      "phone": "15788097788",
+      "relation": 1
+    }],
+    "customerType": 2,
+    "gender": 2,
+    "gpsLocation": {},
+    "home": {
+      "homeAddress": "减两单分",
+      "homeCity": "500200",
+      "homeDistrict": "500230",
+      "homeProvince": "500000"
+    },
+    "idDocuments": [{
+      "documentsType": 1,
+      "idCard": "11010119900307635X",
+      "idCardAddress":"北京朝阳区",
+      "idCardIssueInstitution":"公安局",
+      "idCardExpiryDate": "2017.02.21-2037.02.21"
+    }],
+    "maritalStatus": 1,
+    "name": "王大六",
+    "phone": "13544443336",
+    "localResid":10,
+    "topEducation": 2,
+    "nation":"01"
+  },
+  "portraitCustomer": "1494C86280469463A10780AD02139B29",
+  "portraitSource": "10000",
+  "riskData": {
+    "borrowerJob": "01",
+    "clientRank": "C",
+    "riskScores": [{
+      "riskScore": 622,
+      "riskType": 101
+    }]
+  }
+}

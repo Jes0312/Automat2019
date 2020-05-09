@@ -438,7 +438,7 @@ public class HttpClientUtils {
             for (Map.Entry<String, Object> entry : jsonObject2.entrySet()) {
                 // 判断下一级Json格式
                 Object o2 = entry.getValue();
-             
+
 
                 log.info(" 期望字段内容为：Key：" + entry.getKey() + "  ： " + entry.getValue());
                 log.info(" 实际字段内容为：Key：" + entry.getKey() + "  ： " + jsonObject1.get(entry.getKey()));
@@ -477,25 +477,25 @@ public class HttpClientUtils {
                             for (int m = 0; m < arr2.length; m++) {
                                 arr2[i] = Array.get(s2, i);
                             }
-                        
+
                             int length1 = Array.getLength(s1);
                             Object[] arr1 = new Object[length1];
                             for (int m = 0; m < arr1.length; m++) {
                                 arr1[i] = Array.get(s1, i);
-                            }    
-                          
-                        
-                        for (int n = 0; n < arr2.length; n ++) {
-                            flag = arr2[n].toString().equals(arr1[n].toString());
-                        	assertResult.add(flag);	
-                        		}
-                        } 
+                            }
+
+
+                            for (int n = 0; n < arr2.length; n ++) {
+                                flag = arr2[n].toString().equals(arr1[n].toString());
+                                assertResult.add(flag);
+                            }
+                        }
                     }
-                        		
-                        		
+
+
                 }else if(o2 instanceof JSONObject){
-                	log.error(" 请完善Json对比类型 ~ ~ ~");               
-                                    
+                    log.error(" 请完善Json对比类型 ~ ~ ~");
+
                 }else if(o2 instanceof JSONObject){
                     return compareJsonAssert(jsonObject1.get(entry.getKey()).toString(), o2.toString());
                 }else {
@@ -508,8 +508,8 @@ public class HttpClientUtils {
         //TODO: JsonArray替换逻辑待完善
         return flag;
     }
-    
-    
+
+
     public static  List getJSONList(String jsonstring, Class cls) {
         List list = new ArrayList();
         try {
@@ -519,8 +519,8 @@ public class HttpClientUtils {
         }
         return list;
     }
-    
-    
+
+
 
     /**
      * 发送http get请求
@@ -804,9 +804,9 @@ public class HttpClientUtils {
         }
         return result;
     }
-    
-    
-    
+
+
+
     /**
      * 执行HTTP POST请求
      * @param url url
@@ -827,8 +827,8 @@ public class HttpClientUtils {
                 entity.setContentType("application/json");
                 httpPost.setHeader("token","qsL0FxqzPwuApNb9");
                 httpPost.setHeader("fromTenantId","1001");
-                
-                
+
+
                 httpPost.setEntity(entity);
             }
             HttpResponse resp = client.execute(httpPost);
@@ -841,10 +841,10 @@ public class HttpClientUtils {
             close(client);
         }
         return null;
-    }    
-    
-       
-    
+    }
+
+
+
 }
 
 

@@ -69,7 +69,7 @@ public interface ExcelConstant {
     public  String CashAccountQueryById = "src/main/resources/caseconf/CashAccountQueryById/Case_CashAccountQueryById.xlsx";
   
   //保存授权
-    public  String SaveGrant = "src/main/resources/caseconf/SaveGrant/Case_SaveGrant.xlsx";
+    public  String GrantSave = "src/main/resources/caseconf/GrantSave/Case_SaveGrant.xlsx";
       
   //查询授权项授权状态 
     public  String GrantGetById = "src/main/resources/caseconf/GrantGetById/Case_GrantGetById.xlsx"; 

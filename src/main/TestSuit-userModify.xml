@@ -7,9 +7,9 @@
     <test name="userModify" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.userModify">
-                <methods>
-                    <include name="userModify" />
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="userInfoModify" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

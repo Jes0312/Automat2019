@@ -4,7 +4,7 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
 
-    <test name="userCreate" preserve-order="true">
+    <test name="userBatchqueryById" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.userBatchqueryById">
                 <methods>

@@ -7,9 +7,9 @@
     <test name="userQueryLimitMdById" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.userQueryLimitMdById">
-                <methods>
-                    <include name="GetInfoLimit" />
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="GetInfoLimit" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

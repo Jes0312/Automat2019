@@ -1,1733 +1,1744 @@
+
+
 <!DOCTYPE html>
-
 <html>
-  <head>
-  <meta charset='utf-8'>
-  <title>TestNG reports</title>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://extentreports.com/resx/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>自动化测试报告</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="testng-reports.js"></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type='text/javascript'>
-      google.load('visualization', '1', {packages:['table']});
-      google.setOnLoadCallback(drawTable);
-      var suiteTableInitFunctions = new Array();
-      var suiteTableData = new Array();
-    </script>
-    <!--
-      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
-     -->
-  </head>
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			.node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>API自动化测试报告</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>May 9, 2020 06:02:42 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>获取实名认证信息</a></li>
+					<li><a href='#'>实名认证失效</a></li>
+					<li><a href='#'>确认实名认证</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='87.5%'><span class='strong'>28</span> step(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='12.5%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>获取实名认证信息</span>
+						<span class='test-time'>May 9, 2020 06:02:42 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2020 06:02:42 PM</span>
+	<span class='label end-time'>May 9, 2020 06:03:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 58s+428ms</span>
+</div>
+<div class='test-desc'>Pass: 9 ; Fail: 1 ; Skip: 0 ; </div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>获取实名认证信息</span>
+		<span class='category label'>获取实名认证信息</span>
+	</div>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf fail' status='fail' test-id='2'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:02:44 PM</span>
+			&middot; <span class='node-duration'>0h 0m 11s+449ms</span>
+			<span class='test-status right fail'>fail</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='fail'>
+							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									java.lang.AssertionError: expected [true] but found [false]
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='3'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:02:56 PM</span>
+			&middot; <span class='node-duration'>0h 0m 11s+11ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='4'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:03:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 10s+733ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='5'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:03:17 PM</span>
+			&middot; <span class='node-duration'>0h 0m 10s+832ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='6'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:03:28 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+446ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='7'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:03:29 PM</span>
+			&middot; <span class='node-duration'>0h 0m 9s+823ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='8'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:03:38 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+433ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='9'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:03:39 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+439ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='10'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:03:39 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+446ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='11'>
+		<div class='collapsible-header'>
+			<div class='node-name'>查询实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:03:40 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+441ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>获取实名认证信息</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityGetInfo@5f375618
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>实名认证失效</span>
+						<span class='test-time'>May 9, 2020 06:03:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2020 06:03:40 PM</span>
+	<span class='label end-time'>May 9, 2020 06:04:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+585ms</span>
+</div>
+<div class='test-desc'>Pass: 8 ; Fail: 0 ; Skip: 0 ; </div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>实名认证失效</span>
+		<span class='category label'>实名认证失效</span>
+	</div>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf pass' status='pass' test-id='13'>
+		<div class='collapsible-header'>
+			<div class='node-name'>实名认证信息失效</div>
+			<span class='node-time'>May 9, 2020 06:03:40 PM</span>
+			&middot; <span class='node-duration'>0h 0m 11s+693ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>实名认证失效</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityInvalid@62ee68d8
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='14'>
+		<div class='collapsible-header'>
+			<div class='node-name'>实名认证信息失效</div>
+			<span class='node-time'>May 9, 2020 06:03:52 PM</span>
+			&middot; <span class='node-duration'>0h 0m 11s+683ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>实名认证失效</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityInvalid@62ee68d8
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='15'>
+		<div class='collapsible-header'>
+			<div class='node-name'>实名认证信息失效</div>
+			<span class='node-time'>May 9, 2020 06:04:04 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+461ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>实名认证失效</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityInvalid@62ee68d8
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='16'>
+		<div class='collapsible-header'>
+			<div class='node-name'>实名认证信息失效</div>
+			<span class='node-time'>May 9, 2020 06:04:04 PM</span>
+			&middot; <span class='node-duration'>0h 0m 9s+874ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>实名认证失效</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityInvalid@62ee68d8
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='17'>
+		<div class='collapsible-header'>
+			<div class='node-name'>实名认证信息失效</div>
+			<span class='node-time'>May 9, 2020 06:04:14 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+456ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>实名认证失效</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityInvalid@62ee68d8
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='18'>
+		<div class='collapsible-header'>
+			<div class='node-name'>实名认证信息失效</div>
+			<span class='node-time'>May 9, 2020 06:04:14 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+427ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>实名认证失效</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityInvalid@62ee68d8
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='19'>
+		<div class='collapsible-header'>
+			<div class='node-name'>实名认证信息失效</div>
+			<span class='node-time'>May 9, 2020 06:04:15 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+444ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>实名认证失效</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityInvalid@62ee68d8
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='20'>
+		<div class='collapsible-header'>
+			<div class='node-name'>实名认证信息失效</div>
+			<span class='node-time'>May 9, 2020 06:04:15 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+450ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>实名认证失效</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identityInvalid@62ee68d8
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>确认实名认证</span>
+						<span class='test-time'>May 9, 2020 06:04:16 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2020 06:04:16 PM</span>
+	<span class='label end-time'>May 9, 2020 06:05:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 2s+67ms</span>
+</div>
+<div class='test-desc'>Pass: 11 ; Fail: 3 ; Skip: 0 ; </div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>确认实名认证</span>
+		<span class='category label'>确认实名认证</span>
+	</div>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf fail' status='fail' test-id='22'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:04:16 PM</span>
+			&middot; <span class='node-duration'>0h 0m 10s+899ms</span>
+			<span class='test-status right fail'>fail</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='fail'>
+							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf fail' status='fail' test-id='23'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:03 PM</span>
+			&middot; <span class='node-duration'>0h 0m 12s+303ms</span>
+			<span class='test-status right fail'>fail</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='fail'>
+							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									java.lang.AssertionError: expected [true] but found [false]
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf fail' status='fail' test-id='24'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:16 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+478ms</span>
+			<span class='test-status right fail'>fail</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='fail'>
+							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									java.lang.AssertionError: expected [true] but found [false]
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='25'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:04:27 PM</span>
+			&middot; <span class='node-duration'>0h 0m 15s+843ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='26'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:04:43 PM</span>
+			&middot; <span class='node-duration'>0h 0m 18s+454ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='27'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:01 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+592ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='28'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:02 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+413ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='29'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:02 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+424ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='30'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:03 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+427ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='31'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:03 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+413ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='32'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:16 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+427ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='33'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:17 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+424ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='34'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:17 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+424ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='35'>
+		<div class='collapsible-header'>
+			<div class='node-name'>提交实名认证信息</div>
+			<span class='node-time'>May 9, 2020 06:05:17 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+411ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>确认实名认证</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>6:05:18 PM</td>
+							<td class='step-details'>
+									com.wecash.http.cases.identitySubmit@7dc7cbad
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>获取实名认证信息</span>
+						<span class='category-status right'>
+						<span class='label pass'>9</span>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 9</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 9, 2020 06:02:42 PM</td>
+										<td class='linked' test-id='1'>获取实名认证信息</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:02:44 PM</td>
+										<td class='linked' test-id='2'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:02:56 PM</td>
+										<td class='linked' test-id='3'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:07 PM</td>
+										<td class='linked' test-id='4'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:17 PM</td>
+										<td class='linked' test-id='5'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:28 PM</td>
+										<td class='linked' test-id='6'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:29 PM</td>
+										<td class='linked' test-id='7'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:38 PM</td>
+										<td class='linked' test-id='8'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:39 PM</td>
+										<td class='linked' test-id='9'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:39 PM</td>
+										<td class='linked' test-id='10'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:40 PM</td>
+										<td class='linked' test-id='11'>获取实名认证信息.查询实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>实名认证失效</span>
+						<span class='category-status right'>
+						<span class='label pass'>9</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 9</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 9, 2020 06:03:40 PM</td>
+										<td class='linked' test-id='12'>实名认证失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:40 PM</td>
+										<td class='linked' test-id='13'>实名认证失效.实名认证信息失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:03:52 PM</td>
+										<td class='linked' test-id='14'>实名认证失效.实名认证信息失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:04 PM</td>
+										<td class='linked' test-id='15'>实名认证失效.实名认证信息失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:04 PM</td>
+										<td class='linked' test-id='16'>实名认证失效.实名认证信息失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:14 PM</td>
+										<td class='linked' test-id='17'>实名认证失效.实名认证信息失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:14 PM</td>
+										<td class='linked' test-id='18'>实名认证失效.实名认证信息失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:15 PM</td>
+										<td class='linked' test-id='19'>实名认证失效.实名认证信息失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:15 PM</td>
+										<td class='linked' test-id='20'>实名认证失效.实名认证信息失效</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>确认实名认证</span>
+						<span class='category-status right'>
+						<span class='label pass'>11</span>
+						<span class='label fail'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 11</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 9, 2020 06:04:16 PM</td>
+										<td class='linked' test-id='21'>确认实名认证</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:16 PM</td>
+										<td class='linked' test-id='22'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:03 PM</td>
+										<td class='linked' test-id='23'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:16 PM</td>
+										<td class='linked' test-id='24'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:27 PM</td>
+										<td class='linked' test-id='25'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:04:43 PM</td>
+										<td class='linked' test-id='26'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:01 PM</td>
+										<td class='linked' test-id='27'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:02 PM</td>
+										<td class='linked' test-id='28'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:02 PM</td>
+										<td class='linked' test-id='29'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:03 PM</td>
+										<td class='linked' test-id='30'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:03 PM</td>
+										<td class='linked' test-id='31'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:16 PM</td>
+										<td class='linked' test-id='32'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:17 PM</td>
+										<td class='linked' test-id='33'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:17 PM</td>
+										<td class='linked' test-id='34'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2020 06:05:17 PM</td>
+										<td class='linked' test-id='35'>确认实名认证.提交实名认证信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
 
-  <body>
-    <div class="top-banner-root">
-      <span class="top-banner-title-font">Test results</span>
-      <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
-    </div> <!-- top-banner-root -->
-    <div class="navigator-root">
-      <div class="navigator-suite-header">
-        <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
-          </img> <!-- collapse-all-icon -->
-        </a> <!-- collapse-all-link -->
-      </div> <!-- navigator-suite-header -->
-      <div class="suite">
-        <div class="rounded-window">
-          <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
-            </a> <!-- navigator-link -->
-          </div> <!-- suite-header light-rounded-window-top -->
-          <div class="navigator-suite-content">
-            <div class="suite-section-title">
-              <span>Info</span>
-            </div> <!-- suite-section-title -->
-            <div class="suite-section-content">
-              <ul>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\YUJIN\AppData\Local\Temp\testng-eclipse-1468058883\testng-customsuite.xml</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
-                    <span class="test-stats">1 test</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>0 groups</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
-                    <span>Times</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
-                    <span>Reporter output</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
-                    <span>Ignored methods</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
-                    <span>Chronological view</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-              </ul>
-            </div> <!-- suite-section-content -->
-            <div class="result-section">
-              <div class="suite-section-title">
-                <span>Results</span>
-              </div> <!-- suite-section-title -->
-              <div class="suite-section-content">
-                <ul>
-                  <li>
-                    <span class="method-stats">25 methods, 2 failed,   23 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...)">SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,...)">SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: ...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": ...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: ...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": ...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMs...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
-    "resCode": "E0000",
-    "resMs...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg...)">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
-    "resCode": "E0000",
-    "resMsg...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resM...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
-    "resCode": "E0000",
-    "resM...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg"...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-  ...)">SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-  ...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg...)">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMs...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
-    "resCode": "E0000",
-    "resMs...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMs...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
-    "resCode": "E0000",
-    "resMs...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resM...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
-    "resCode": "E0000",
-    "resM...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;res...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
-    "resCode": "E0000",
-    "res...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;res...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
-    "resCode": "E0000",
-    "res...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMs...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
-    "resCode": "E0000",
-    "resMs...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
-    "resCode": "E0000",
-    "resMsg"...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.wecash.http.cases.JobPut" hash-for-method="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;...)">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
-                  </li>
-                </ul>
-              </div> <!-- suite-section-content -->
-            </div> <!-- result-section -->
-          </div> <!-- navigator-suite-content -->
-        </div> <!-- rounded-window -->
-      </div> <!-- suite -->
-    </div> <!-- navigator-root -->
-    <div class="wrapper">
-      <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.wecash.http.cases.JobPut</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...)">
-                  </a> <!-- SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=null, Comment=提交职业信息成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=select update_time from user_job where tenant_user_id =000113  and tenant_id = 1001, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-001})</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [2020-04-17 20:15:39] but found [2020-04-17 20]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.wecash.http.cases.JobPut.SaveJobInfo(JobPut.java:107)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin, selSQL1=select tenant_user_id,industry,occupation  from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "",
- "occupation": "",
- "company": "",
-  "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-027})</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [000113,,] but found [000113,IT,test,shanyin]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.wecash.http.cases.JobPut.SaveJobInfo(JobPut.java:63)
-	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.wecash.http.cases.JobPut</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: ...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": ...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
-
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-018})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: ...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": ...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,test,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,occupation,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-009})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
-
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.3
-}, 用例编号=JobPut-021})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,bj,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
-
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.4
-}, 用例编号=JobPut-022})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMs...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
-    "resCode": "E0000",
-    "resMs...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,12345@123.com,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
-
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.5
-}, 用例编号=JobPut-024})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantUserId': rejected value []; codes [NotEmpty.userJobReq.tenantUserId,NotEmpty.tenantUserId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [渠道用户id不允许为空]] "
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "li", 
- "tenantUserId": "",
- "industry": "IT",
- "occupation": "test",
- "company": "jingsuan",
- "job": "test",
- "companyCity": "shanghai", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-004})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
-    "resCode": "E0000",
-    "resMsg...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,bj,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.4
-}, 用例编号=JobPut-013})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resM...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
-    "resCode": "E0000",
-    "resM...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com"
-}, 用例编号=JobPut-026})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg"...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
-
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-019})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,
-  ...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-  ...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,fin,devp,wecash, selSQL1=select tenant_user_id,industry,occupation,company from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "fin",
- "occupation": "devp",
- "company": "wecash",
-  "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-002})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantUserId': rejected value [null]; codes [NotEmpty.userJobReq.tenantUserId,NotEmpty.tenantUserId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantUserId,tenantUserId]; arguments []; default message [tenantUserId]]; default message [渠道用户id不允许为空]] "
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "li", 
- "industry": "IT",
- "occupation": "test",
- "company": "jingsuan",
- "job": "test",
- "companyCity": "shanghai", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-006})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMs...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
-    "resCode": "E0000",
-    "resMs...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
-
- "monthlySalary": 3000.5
-}, 用例编号=JobPut-025})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMs...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
-    "resCode": "E0000",
-    "resMs...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,12345@123.com,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.5
-}, 用例编号=JobPut-015})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,beijing,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,job,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
-
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.3
-}, 用例编号=JobPut-020})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resM...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
-    "resCode": "E0000",
-    "resM...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,12345@123.com, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,company_email from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": ""
-}, 用例编号=JobPut-017})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;成功&quot;,...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.3
-}, 用例编号=JobPut-012})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;res...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
-    "resCode": "E0000",
-    "res...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.4
-}, 用例编号=JobPut-014})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;: &quot;...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,beijing,010-9999111,12345@123.com,3000.30, selSQL1=select tenant_user_id,industry,occupation,job,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.3
-}, 用例编号=JobPut-011})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;res...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
-    "resCode": "E0000",
-    "res...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,010-9999111,12345@123.com,3000.40, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
-
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.4
-}, 用例编号=JobPut-023})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMs...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
-    "resCode": "E0000",
-    "resMs...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,test,shanyin,beijing,bj,010-9999111,3000.50, selSQL1=select tenant_user_id,industry,occupation,job,company,company_city,company_address,company_phone,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "test",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "",
- "monthlySalary": 3000.5
-}, 用例编号=JobPut-016})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
-    &quot;resCode&quot;: &quot;E0000&quot;,
-    &quot;resMsg&quot;...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
-    "resCode": "E0000",
-    "resMsg"...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-    "successful": 1
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=000113,IT,test,shanyin,beijing,bj,010-9999111,12345@123.com,3000.20, selSQL1=select tenant_user_id,industry,job,company,company_city,company_address,company_phone,company_email,monthly_salary from user_job where tenant_user_id =000113  and tenant_id = 1001, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=insert into user_info_item values (1002897131,"699222007535509504","1001","000113","name","李*","G+1kJ3G3qsg=","a4292d5e92be734194926548ec6e3cf6","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897133,"699222007535509504","1001","000113","mobileNo","155****6733","v39jSjKgwX/LlzVDHCxGcQ==","74108036c205aedb06337232d5a01f03","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897135,"699222007535509504","1001","000113","certNo","5412**********0000","8b2KMXrX5qlF0bata4s7JOSCRGd6Y5PV","d508ebd3c36b9297a99a7354e0ae4f74","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_info_item values (1002897137,"699222007535509504","1001","000113","email","3234***@126.com","b1w/bCSdxM2sVm5O8y+eZg==","03065f0f961760adf3d79341ac1972e2","0","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_basic_info values ("699222007535509504","1001","000113",1,"ZWMwYzAyMjUtY2VhMi00NGRiLWI3NzQtYTIxZjhhMTFlZTViNFRNSmN1ejJBMFpmQkJGK2k4MHIxR2g5TGQzdVZNek9BQUFBQUFBQUFBRDhmeHdvcHRObnJIRU5OelJYaVptMGtmdEdNZDhnRzZhbENxbmR6YmdZcHhYVjgzVW9rSzVuNlR2T1NISmxMc0I2VXVuSVI5MUhaZnZQR2psRmZVbFhINmhHQW16SkFscDRsclk1akp5aGlJOWNQSzk0dmVDNVBCazMrNFkvcnJKZmVQZ1FrSFdRdzN1aUJrS1ZjbFhnWGxueTVjTmh6ZmhiY0E1UGo4U1l3OXFiRnZLWldsWDBFOFk2cjRYRSsxRmI4SDVURlFqS3NabGFlMEJkRE92UDc4ZUczUFErc0NvUFpkWnlKWTcwVzVody9zd0ZvdzBaMktmQ0RTL1FhaFY2ZGc1UGZTYitjMFU3ZVYvZXN3NHlBdWVmWGxqRldnbXU2dWxyeUp0MS9sbjhRTUlzY3gvMWFDckRCOGY5U3IrWGRlYUZDcW5QZ1pvOGdPNytsUmpJdDVmYVhYS2I5aGFVZGVVUktMeEdMTTQ4VlJ1WGc1anhlUnQ2UnV3ZmYyNForaGtpYjFUbmRyajBsNlVwRCtuQXA2bGZiMk82UVlsMVJQaFYxK0ZHUFJncjQ2ZTR3TVFDSmpNaTdYNmxWMkNIZy9aSVRFOFhjaFNxQko5bDN5M284dzZqeEJwRnRXRT0=","2020-03-28 21:49:59","2020-03-28 21:49:59");
-insert into user_index values ("699222007535509504","1001","000113","9337473d97849183519161fea2bfd554","67b10fbf4bd7cd6871830cf7fe5ee581","37f23ec7e589c3d77d162ddaccb495f8","458fdf82207c3a7d063d4924c2d310a2","233bcb92b24dbebd294b2eade430541d","6252a94479dbeb9c309a061962389948","c7ca10cbfddc6285810765c42cf91159","e5a3a77b29f86275295b31a1289e5400","2020-03-29 21:49:59","2020-03-29 21:49:59"), clearDataSQL=delete from user_request_serial where tenant_id = 1001;
-delete from user_basic_info where tenant_user_id =000113  and tenant_id = 1001;
-delete from user_info_item where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_index where tenant_user_id = 000113 and tenant_id = 1001;
-delete from user_request_serial where tenant_id = 1001;
-delete from user_job where tenant_user_id =000113  and tenant_id = 1001, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "1001", 
- "tenantUserId": "000113",
- "industry": "IT",
- "occupation": "",
- "company": "shanyin",
- "job": "test",
- "companyCity": "beijing", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-010})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantId': rejected value [null]; codes [NotEmpty.userJobReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [渠道id不允许为空]] "
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
- "tenantUserId": "1114",
- "industry": "IT",
- "occupation": "test",
- "company": "jingsuan",
- "job": "test",
- "companyCity": "shanghai", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-005})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    &quot;resCode&quot;: &quot;E0001&quot;,
-    &quot;resMsg&quot;: &quot;...)">
-                  </a> <!-- SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...) -->
-                  <span class="method-name">SaveJobInfo</span>
-                  <span class="parameters">({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "系统错误",
-    "successful": 0,
-    "data": "Validation failed for argument [0] in public java.lang.Object ***.web.controller.UserJobController.insertUserJob(***.web.request.UserJobReq): [Field error in object 'userJobReq' on field 'tenantId': rejected value []; codes [NotEmpty.userJobReq.tenantId,NotEmpty.tenantId,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userJobReq.tenantId,tenantId]; arguments []; default message [tenantId]]; default message [渠道id不允许为空]] "
-}, exceptSQL3=, selSQL3=, exceptSQL2=, flag=, exceptSQL1=, selSQL1=, requestType=, author=, serviceEnv=https://user-center-thu.tunaikita.id/user/job, preDataSQL=, clearDataSQL=, url=/put, expectParamJson=, baseParamJson={
- "tenantId": "", 
- "tenantUserId": "1114",
- "industry": "IT",
- "occupation": "test",
- "company": "jingsuan",
- "job": "test",
- "companyCity": "shanghai", 
- "companyAddress": "bj",
- "companyPhone": "010-9999111",
- "companyEmail": "12345@123.com",
- "monthlySalary": 3000.2
-}, 用例编号=JobPut-003})</span>
-                  <em>
-(提交职业信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\YUJIN\AppData\Local\Temp\testng-eclipse-1468058883\testng-customsuite.xml</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.wecash.http.cases.JobPut&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
-            </pre>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <ul>
-              <li>
-                <span class="test-name">Default test (1 class)</span>
-              </li>
-            </ul>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="times-div">
-              <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
-var data = new google.visualization.DataTable();
-data.addColumn('number', 'Number');
-data.addColumn('string', 'Method');
-data.addColumn('string', 'Class');
-data.addColumn('number', 'Time (ms)');
-data.addRows(25);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SaveJobInfo')
-data.setCell(0, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(0, 3, 20249);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'SaveJobInfo')
-data.setCell(1, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(1, 3, 16554);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'SaveJobInfo')
-data.setCell(2, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(2, 3, 16527);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'SaveJobInfo')
-data.setCell(3, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(3, 3, 16448);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'SaveJobInfo')
-data.setCell(4, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(4, 3, 16357);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'SaveJobInfo')
-data.setCell(5, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(5, 3, 16340);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'SaveJobInfo')
-data.setCell(6, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(6, 3, 16275);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'SaveJobInfo')
-data.setCell(7, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(7, 3, 16268);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'SaveJobInfo')
-data.setCell(8, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(8, 3, 16257);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'SaveJobInfo')
-data.setCell(9, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(9, 3, 16237);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'SaveJobInfo')
-data.setCell(10, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(10, 3, 16223);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'SaveJobInfo')
-data.setCell(11, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(11, 3, 16206);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'SaveJobInfo')
-data.setCell(12, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(12, 3, 16204);
-data.setCell(13, 0, 13)
-data.setCell(13, 1, 'SaveJobInfo')
-data.setCell(13, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(13, 3, 16181);
-data.setCell(14, 0, 14)
-data.setCell(14, 1, 'SaveJobInfo')
-data.setCell(14, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(14, 3, 16158);
-data.setCell(15, 0, 15)
-data.setCell(15, 1, 'SaveJobInfo')
-data.setCell(15, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(15, 3, 16109);
-data.setCell(16, 0, 16)
-data.setCell(16, 1, 'SaveJobInfo')
-data.setCell(16, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(16, 3, 16101);
-data.setCell(17, 0, 17)
-data.setCell(17, 1, 'SaveJobInfo')
-data.setCell(17, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(17, 3, 15960);
-data.setCell(18, 0, 18)
-data.setCell(18, 1, 'SaveJobInfo')
-data.setCell(18, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(18, 3, 15919);
-data.setCell(19, 0, 19)
-data.setCell(19, 1, 'SaveJobInfo')
-data.setCell(19, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(19, 3, 15897);
-data.setCell(20, 0, 20)
-data.setCell(20, 1, 'SaveJobInfo')
-data.setCell(20, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(20, 3, 15756);
-data.setCell(21, 0, 21)
-data.setCell(21, 1, 'SaveJobInfo')
-data.setCell(21, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(21, 3, 453);
-data.setCell(22, 0, 22)
-data.setCell(22, 1, 'SaveJobInfo')
-data.setCell(22, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(22, 3, 448);
-data.setCell(23, 0, 23)
-data.setCell(23, 1, 'SaveJobInfo')
-data.setCell(23, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(23, 3, 440);
-data.setCell(24, 0, 24)
-data.setCell(24, 1, 'SaveJobInfo')
-data.setCell(24, 2, 'com.wecash.http.cases.JobPut')
-data.setCell(24, 3, 437);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
-return data;
-}
-              </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
-            </div> <!-- times-div -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Methods in chronological order</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.wecash.http.cases.JobPut</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">SaveJobInfo({selSQL2=select create_time from user_job where tenant_user_id =000113  and tenant_id = 1001, null=n...)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息成功, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",
-  ...)</span>
-                <span class="method-start">20257 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...)</span>
-                <span class="method-start">36465 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId为空, exectResult={
-    "resCode": "E0001",
-    "resMsg...)</span>
-                <span class="method-start">36915 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg": "...)</span>
-                <span class="method-start">37370 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=必传参数-tenantUserId缺失, exectResult={
-    "resCode": "E0001",
-    "resMsg...)</span>
-                <span class="method-start">37809 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": ...)</span>
-                <span class="method-start">38250 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation为空, exectResult={
-    "resCode": "E0000",
-    "resMsg"...)</span>
-                <span class="method-start">54489 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "...)</span>
-                <span class="method-start">70592 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...)</span>
-                <span class="method-start">86818 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity为空, exectResult={
-    "resCode": "E0000",
-    "resMsg...)</span>
-                <span class="method-start">103076 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress为空, exectResult={
-    "resCode": "E0000",
-    "res...)</span>
-                <span class="method-start">119038 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone为空, exectResult={
-    "resCode": "E0000",
-    "resMs...)</span>
-                <span class="method-start">135149 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail为空, exectResult={
-    "resCode": "E0000",
-    "resMs...)</span>
-                <span class="method-start">151679 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary为空, exectResult={
-    "resCode": "E0000",
-    "resM...)</span>
-                <span class="method-start">168129 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-industry缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": ...)</span>
-                <span class="method-start">184685 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-occupation缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg"...)</span>
-                <span class="method-start">200844 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-company缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "...)</span>
-                <span class="method-start">217026 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-job缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...)</span>
-                <span class="method-start">232924 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyCity缺失, exectResult={
-    "resCode": "E0000",
-    "resMsg...)</span>
-                <span class="method-start">248682 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyAddress缺失, exectResult={
-    "resCode": "E0000",
-    "res...)</span>
-                <span class="method-start">264603 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyPhone缺失, exectResult={
-    "resCode": "E0000",
-    "resMs...)</span>
-                <span class="method-start">280962 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-companyEmail缺失, exectResult={
-    "resCode": "E0000",
-    "resMs...)</span>
-                <span class="method-start">297304 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=非必传参数-monthlySalary缺失, exectResult={
-    "resCode": "E0000",
-    "resM...)</span>
-                <span class="method-start">313510 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">SaveJobInfo({selSQL2=, null=null, Comment=修改职业信息-传参为空, exectResult={
-    "resCode": "E0000",
-    "resMsg": "成功",...)</span>
-                <span class="method-start">329787 ms</span>
-              </div> <!-- test-method -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-      </div> <!-- main-panel-root -->
-    </div> <!-- wrapper -->
-  </body>
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>32</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 9, 2020 06:02:42 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 9, 2020 06:05:18 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 2m 36s+226ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>获取实名认证信息</td>
+							<td>9</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									81.818%
+							</td>
+						</tr>
+						<tr>
+							<td>实名认证失效</td>
+							<td>9</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>确认实名认证</td>
+							<td>11</td>
+							<td>4</td>
+							<td>0</td>
+							<td>
+									73.333%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 3,
+				passParent: 1,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 2,
+				childCount: 32,
+				passChild: 28,
+				failChild: 4,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 4,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "获取实名认证信息":58.428,"实名认证失效":35.585,"确认实名认证":62.067
+			};
+		</script>
+		<script src='https://extentreports.com/resx/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
 </html>

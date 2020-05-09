@@ -24,17 +24,21 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
  * @ContentUse :
  */
 @Slf4j
-public class SaveGrant {
+public class GrantSave {
 
 
     
     @Test(dataProvider = "SaveGrantInfo", dataProviderClass = BaseProvider.class, description = "保存授权")
     public void SaveGrantInfo(Map<String, Object> params){
-        
-    	DBUtils.clearData(params.get("clearDataSQL").toString());
-    	//初始化数据
+
+        log.info("-------------> 数据清理开始");
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+        log.info("-------------> 数据清理结束");
+
+//    	初始化数据
+        log.info("-------------> 数据预至开始");
         Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
-        
+        log.info("-------------> 数据预至结束");
         String caseComment = params.get("Comment").toString();
         String url = params.get("serviceEnv").toString() + params.get("url").toString();
         String baseParamJson = params.get("baseParamJson").toString();
