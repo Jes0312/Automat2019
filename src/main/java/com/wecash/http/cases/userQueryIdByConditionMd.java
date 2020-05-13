@@ -31,6 +31,7 @@ public class userQueryIdByConditionMd {
     @Test(dataProvider = "QueryByConditionMd", dataProviderClass = BaseProvider.class, description = "查询用户信息")
     public void QueryByConditionMd(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -67,7 +68,11 @@ public class userQueryIdByConditionMd {
             Assert.assertEquals(exceptSQL,mysql);
             
         }
-       
+        }
+        finally
+        {
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+        }
         
     }
     

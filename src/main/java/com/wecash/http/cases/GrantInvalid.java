@@ -31,6 +31,7 @@ public class GrantInvalid {
     @Test(dataProvider = "InvalidGrantInfo", dataProviderClass = BaseProvider.class, description = "保存授权")
     public void InvalidGrantInfo(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -66,8 +67,12 @@ public class GrantInvalid {
             log.info("数据库查询结果："+mysql1);
             Assert.assertEquals(exceptSQL1,mysql1);
         }
-       
-        
+
+    }
+          finally
+    {
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+    }
     }
     
 }

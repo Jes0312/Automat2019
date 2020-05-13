@@ -6,10 +6,10 @@
 
     <test name="SaveGrant" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.SaveGrant">
-                <methods>
-                    <include name="SaveGrantInfo" />
-                </methods>
+            <class name="com.wecash.http.cases.GrantSave">
+<!--                <methods>-->
+<!--                    <include name="SaveGrantInfo" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

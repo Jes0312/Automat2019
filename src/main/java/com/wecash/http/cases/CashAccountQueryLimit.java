@@ -25,13 +25,19 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 @Slf4j
 public class CashAccountQueryLimit {
 
-    
+
     @Test(dataProvider = "QueryAccountInfo", dataProviderClass = BaseProvider.class, description = "查询账户信息")
     public void QueryAccountInfo(Map<String, Object> params){
 
-    	DBUtils.clearData(params.get("clearDataSQL").toString());
-        //初始化数据
+        try {
+        log.info("-------------> 数据清理开始");
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+        log.info("-------------> 数据清理结束");
+
+//    	初始化数据
+        log.info("-------------> 数据预至开始");
         Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
+        log.info("-------------> 数据预至结束");
     	
         
         String caseComment = params.get("Comment").toString();
@@ -63,7 +69,12 @@ public class CashAccountQueryLimit {
         }
        
       //清理数据
-        //DBUtils.clearData(params.get("clearDataSQL").toString());
+    }
+
+     finally
+    {
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+    }
         
     }
     

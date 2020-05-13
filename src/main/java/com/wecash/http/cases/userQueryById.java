@@ -31,6 +31,7 @@ public class userQueryById {
     @Test(dataProvider = "GetInfoById", dataProviderClass = BaseProvider.class, description = "修改用户信息")
     public void GetInfoById(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -67,8 +68,12 @@ public class userQueryById {
             Assert.assertEquals(exceptSQL,mysql);
             
         }
-       
-        
+
+        }
+        finally
+        {
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+        }
     }
     
 }

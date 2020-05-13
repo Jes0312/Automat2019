@@ -31,6 +31,7 @@ public class userModify {
     @Test(dataProvider = "userInfoModify", dataProviderClass = BaseProvider.class, description = "修改用户信息")
     public void userInfoModify(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -81,8 +82,12 @@ public class userModify {
             log.info("数据库查询结果："+mysql2);
             Assert.assertEquals(exceptSQL2,mysql2);
             
-        }        
-        
+        }
+        }
+        finally
+        {
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+        }
     }
     
 }

@@ -29,6 +29,7 @@ public class identityInvalid {
     @Test(dataProvider = "idInvalid", dataProviderClass = BaseProvider.class, description = "实名认证信息失效")
     public void idInvalid(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -67,8 +68,11 @@ public class identityInvalid {
         }
        
       //清理数据
-        //DBUtils.clearData(params.get("clearDataSQL").toString());
-        
+        }
+        finally
+        {
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+        }
     }
     
 }

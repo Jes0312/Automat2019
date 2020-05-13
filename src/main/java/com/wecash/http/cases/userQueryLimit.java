@@ -71,8 +71,8 @@ public class userQueryLimit {
         }
         }  finally
         {
-//            DBUtils.clearData(params.get("clearDataSQL").toString());
-//            log.info("-------------> case结束--数据清理结束" );
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+            log.info("-------------> case结束--数据清理结束" );
         }
         
     }

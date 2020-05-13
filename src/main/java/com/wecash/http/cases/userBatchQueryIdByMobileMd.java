@@ -27,6 +27,8 @@ public class userBatchQueryIdByMobileMd {
 
     @Test(dataProvider = "userBatchQueryMobileMd", dataProviderClass = BaseProvider.class, description = "根据用户手机号Md5批量查询用户信息")
     public void userBatchQueryMobileMd(Map<String, Object> params){
+
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -65,8 +67,11 @@ public class userBatchQueryIdByMobileMd {
         }
        
       //清理数据
-        //DBUtils.clearData(params.get("clearDataSQL").toString());
-        
+        }
+        finally
+        {
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+        }
     }
     
 }

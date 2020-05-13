@@ -7,9 +7,9 @@
     <test name="GrantGetById" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.GrantGetById">
-                <methods>
-                    <include name="GetGrantInfo" />
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="GetGrantInfo" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

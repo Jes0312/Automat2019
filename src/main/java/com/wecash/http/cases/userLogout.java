@@ -30,6 +30,7 @@ public class userLogout {
     @Test(dataProvider = "userInvalid", dataProviderClass = BaseProvider.class, description = "注销用户信息")
     public void userInvalid(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -66,7 +67,11 @@ public class userLogout {
             Assert.assertEquals(exceptSQL,mysql);
             
         }
-       
+    }
+          finally
+    {
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+    }
         
     }
     

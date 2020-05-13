@@ -29,6 +29,7 @@ public class identitySubmit {
     @Test(dataProvider = "idSubmitInfo", dataProviderClass = BaseProvider.class, description = "提交实名认证信息")
     public void idSubmitInfo(Map<String, Object> params) {
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -92,7 +93,10 @@ public class identitySubmit {
 
                 }
 
-                //清理数据
-                //DBUtils.clearData(params.get("clearDataSQL").toString());
 
-            }}}}
+            }}
+    }
+          finally
+    {
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+    }}}

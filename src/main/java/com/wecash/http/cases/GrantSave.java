@@ -31,6 +31,7 @@ public class GrantSave {
     @Test(dataProvider = "SaveGrantInfo", dataProviderClass = BaseProvider.class, description = "保存授权")
     public void SaveGrantInfo(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -77,9 +78,13 @@ public class GrantSave {
             String mysql2 = DBUtils.queryDataSQL(seSQL2);
             log.info("数据库查询结果："+mysql2);
             Assert.assertEquals(exceptSQL2,mysql2);     
-        }       
-        
-       
+        }
+
+    }
+          finally
+    {
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+    }
         
     }
     

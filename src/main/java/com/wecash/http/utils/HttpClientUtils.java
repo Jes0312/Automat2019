@@ -42,6 +42,17 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.util.*;
 
+
+
+
+//import org.json.JSONArray;
+//import org.json.JSONException;
+//import org.json.JSONObject;
+//
+//import org.json.JSONArray;
+//import org.json.JSONException;
+
+
 import static com.alibaba.fastjson.JSON.parse;
 import static com.wecash.http.utils.DataUtils.channelOrderNoCreate;
 
@@ -433,17 +444,19 @@ public class HttpClientUtils {
         Object object2 = parse(string2.trim());
         //遍历第二个Json Key，在第一个Json中取对应Key，替换对应的Value
         if(object1 instanceof JSONObject && object2 instanceof JSONObject) {
+//            1是真实的
             JSONObject jsonObject1 = (JSONObject) object1;
+//            2是excel
             JSONObject jsonObject2 = (JSONObject) object2;
             for (Map.Entry<String, Object> entry : jsonObject2.entrySet()) {
                 // 判断下一级Json格式
                 Object o2 = entry.getValue();
 
-
                 log.info(" 期望字段内容为：Key：" + entry.getKey() + "  ： " + entry.getValue());
                 log.info(" 实际字段内容为：Key：" + entry.getKey() + "  ： " + jsonObject1.get(entry.getKey()));
 
                 if(o2 instanceof String) {
+
                     flag = jsonObject1.get(entry.getKey()).toString().equals(entry.getValue().toString());
                     assertResult.add(flag);
                     log.info(" 实际字段内容为：" + jsonObject1.get(entry.getKey()) + "  期望字段内容为：" + entry.getValue() + "  对比结果为：" + flag);
@@ -466,35 +479,97 @@ public class HttpClientUtils {
                     }
                 } else if(o2 instanceof JSONArray){
                     log.warn(" 获取到的Json类型为：JsonArray ~ ~ ~");
-                    JSONArray jsonArray2 = (JSONArray) o2;
-                    JSONArray jsonArray1 = (JSONArray) jsonObject1.get(entry.getKey());
-                    for (int i = 0; i < jsonArray2.size(); i ++) {
-                        Object s2 = jsonArray2.get(i);
-                        Object s1 = jsonArray1.get(i);
-                        if (s2.getClass().isArray() & s1.getClass().isArray()) {
-                            int length = Array.getLength(s2);
-                            Object[] arr2 = new Object[length];
-                            for (int m = 0; m < arr2.length; m++) {
-                                arr2[i] = Array.get(s2, i);
-                            }
-
-                            int length1 = Array.getLength(s1);
-                            Object[] arr1 = new Object[length1];
-                            for (int m = 0; m < arr1.length; m++) {
-                                arr1[i] = Array.get(s1, i);
-                            }
+                      JSONArray jsonArray2 = (JSONArray) o2;
+                      JSONArray jsonArray1 = (JSONArray) jsonObject1.get(entry.getKey());
 
 
-                            for (int n = 0; n < arr2.length; n ++) {
-                                flag = arr2[n].toString().equals(arr1[n].toString());
+                    if(jsonArray2.size()>0){
+                        for(int i=0;i<jsonArray2.size();i++){
+                            JSONObject jsonObject4 = jsonArray2.getJSONObject(i);   // 遍历 jsonarray 数组，把每一个对象转成 json 对象
+                            log.error(" 获取到的Json类型为：Array中的JSONObject ~ ~ ");
+//                    4是预期的excel
+//
+                            //  3是实际的返回值
+                                JSONObject jsonObject3 = jsonArray1.getJSONObject(i);
+
+                            for (Map.Entry<String, Object> entry2 : jsonObject4.entrySet()) {
+
+                                flag = jsonObject3.get(entry2.getKey()).toString().equals(entry2.getValue().toString());
                                 assertResult.add(flag);
+                                log.info("  对比字段为  "+ entry2.getKey() );
+                                log.info("  实际Json字段内容为： " + jsonObject3.get(entry2.getKey()));
+                                log.info("  期望Json字段内容为： " + entry2.getValue() );
+                                log.info("  对比结果为： " + flag);
+
+                                if (!flag) {
+                                    return false;
+
+                                }
                             }
+
+
+
+//                    JSONArray jsonArray2 = (JSONArray) o2;
+//                    JSONArray jsonArray1 = (JSONArray) jsonObject1.get(entry.getKey());
+//                    for (int i = 0; i < jsonArray2.size(); i ++) {
+//                        Object s2 = jsonArray2.get(i);
+//                        Object s1 = jsonArray1.get(i);
+//                        if (s2.getClass().isArray() & s1.getClass().isArray()) {
+//                            int length = Array.getLength(s2);
+//                            Object[] arr2 = new Object[length];
+//                            for (int m = 0; m < arr2.length; m++) {
+//                                arr2[i] = Array.get(s2, i);
+//                                log.info(" 实际返回的遍历："+arr2[i]);
+//                            }
+//
+//                            int length1 = Array.getLength(s1);
+//                            Object[] arr1 = new Object[length1];
+//                            for (int m = 0; m < arr1.length; m++) {
+//                                arr1[i] = Array.get(s1, i);
+//                            }
+//
+//
+//                            for (int n = 0; n < arr2.length; n ++) {
+//                                flag = arr2[n].toString().equals(arr1[n].toString());
+//                                assertResult.add(flag);
+
+//                            }
                         }
                     }
 
 
                 }else if(o2 instanceof JSONObject){
-                    log.error(" 请完善Json对比类型 ~ ~ ~");
+                    log.error(" 获取到的Json类型为：JSONObject ~ ~ ");
+//                    4是预期的excel
+                    JSONObject jsonObject4 = (JSONObject) o2;
+//                    3是实际的
+                    JSONObject jsonObject3 = (JSONObject) jsonObject1.get(entry.getKey());
+
+                    for (Map.Entry<String, Object> entry2 : jsonObject4.entrySet()) {
+
+                        flag = jsonObject3.get(entry2.getKey()).toString().equals(entry2.getValue().toString());
+                        assertResult.add(flag);
+                        log.info("  对比字段为  "+ entry2.getKey() );
+                        log.info("  实际Json字段内容为： " + jsonObject3.get(entry2.getKey()));
+                        log.info("  期望Json字段内容为： " + entry2.getValue() );
+                        log.info("  对比结果为： " + flag);
+
+                        if(!flag){
+                            return false;
+
+                    }
+
+
+
+                        }
+
+
+
+
+
+
+
+
 
                 }else if(o2 instanceof JSONObject){
                     return compareJsonAssert(jsonObject1.get(entry.getKey()).toString(), o2.toString());

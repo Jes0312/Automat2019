@@ -7,9 +7,9 @@
     <test name="GrantInvalid" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.GrantInvalid">
-                <methods>
-                    <include name="InvalidGrantInfo" />
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="InvalidGrantInfo" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

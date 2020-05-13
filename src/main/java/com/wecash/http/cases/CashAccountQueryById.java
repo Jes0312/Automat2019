@@ -28,10 +28,16 @@ public class CashAccountQueryById {
     
     @Test(dataProvider = "QueryAccountById", dataProviderClass = BaseProvider.class, description = "通过中台id查询账户信息")
     public void QueryAccountById(Map<String, Object> params){
+        try{
 
-    	DBUtils.clearData(params.get("clearDataSQL").toString());
-        //初始化数据
+        log.info("-------------> 数据清理开始");
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+        log.info("-------------> 数据清理结束");
+
+//    	初始化数据
+        log.info("-------------> 数据预至开始");
         Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
+        log.info("-------------> 数据预至结束");
     	
         
         String caseComment = params.get("Comment").toString();
@@ -64,7 +70,12 @@ public class CashAccountQueryById {
        
       //清理数据
         //DBUtils.clearData(params.get("clearDataSQL").toString());
-        
+    }
+
+     finally
+    {
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+    }
     }
     
 }

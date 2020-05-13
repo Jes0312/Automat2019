@@ -23,10 +23,21 @@ public class CashAccountCreate {
     
     @Test(dataProvider = "CeateCashaccount", dataProviderClass = BaseProvider.class, description = "创建账户")
     public void CeateCashaccount(Map<String, Object> params){
-        
-    	DBUtils.clearData(params.get("clearDataSQL").toString());
-    	//初始化数据
+
+
+
+
+        try{
+
+
+        log.info("-------------> 数据清理开始");
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+        log.info("-------------> 数据清理结束");
+
+//    	初始化数据
+        log.info("-------------> 数据预至开始");
         Assert.assertEquals(true, DBUtils.initData(params.get("preDataSQL").toString()));
+        log.info("-------------> 数据预至结束");
         
         String caseComment = params.get("Comment").toString();
         String url = params.get("serviceEnv").toString() + params.get("url").toString();
@@ -66,10 +77,25 @@ public class CashAccountCreate {
             String mysql2 = DBUtils.queryDataSQL(seSQL2);
             log.info("数据库查询结果："+mysql2);
             Assert.assertEquals(exceptSQL2,mysql2);     
-        }       
-        
-       
-        
+        }
+
+        //数据库预期结果
+        String exceptSQL3= params.get("exceptSQL3").toString();
+        //数据库查询语句
+        String seSQL3= params.get("selSQL3").toString();
+        log.info("预期SQL:"+ exceptSQL3);
+        //数据库断言
+        if (null != exceptSQL3 && "" != exceptSQL3 && null != seSQL3) {
+
+            String mysql3 = DBUtils.queryDataSQL(seSQL3);
+            log.info("数据库查询结果："+mysql3);
+            Assert.assertEquals(exceptSQL3,mysql3);
+        }
+
+
     }
-    
-}
+     finally
+    {
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+    }
+    }}

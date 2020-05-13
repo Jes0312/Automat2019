@@ -31,6 +31,7 @@ public class GrantGetByType {
     @Test(dataProvider = "GetGrantByType", dataProviderClass = BaseProvider.class, description = "查询用户所有授权项授权状态")
     public void GetGrantByType(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -66,7 +67,11 @@ public class GrantGetByType {
             //log.info("数据库查询结果："+mysql1);
           //  Assert.assertEquals(exceptSQL1,mysql1);
         //}
-
+    }
+          finally
+    {
+        DBUtils.clearData(params.get("clearDataSQL").toString());
+    }
         
     }
     

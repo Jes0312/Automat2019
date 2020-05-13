@@ -30,6 +30,7 @@ public class userQueryLimitMdById {
     @Test(dataProvider = "GetInfoLimitById", dataProviderClass = BaseProvider.class, description = "查询用户信息")
     public void GetInfoLimitById(Map<String, Object> params){
 
+        try {
         log.info("-------------> 数据清理开始");
         DBUtils.clearData(params.get("clearDataSQL").toString());
         log.info("-------------> 数据清理结束");
@@ -66,7 +67,11 @@ public class userQueryLimitMdById {
             Assert.assertEquals(exceptSQL,mysql);
             
         }
-       
+        }
+        finally
+        {
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+        }
         
     }
     

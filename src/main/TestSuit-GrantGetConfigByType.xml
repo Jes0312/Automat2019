@@ -4,12 +4,12 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/grant"/>
 
-    <test name="GrantGetByType" preserve-order="true">
+    <test name="GrantGetConfigByType" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.GrantGetByType">
-                <methods>
-                    <include name="GetGrantByType" />
-                </methods>
+            <class name="com.wecash.http.cases.GrantGetConfigByType">
+<!--                <methods>-->
+<!--                    <include name="GetGrantByType" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>
