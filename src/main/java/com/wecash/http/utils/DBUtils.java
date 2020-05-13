@@ -239,15 +239,15 @@ public class DBUtils {
             connection = getConnection();
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
+
             
             while (resultSet.next()) {
                 int i =resultSet.getMetaData().getColumnCount();
-                for(int j = 1; j <= resultSet.getMetaData().getColumnCount(); j++) {
+                log.info("结果i的值 "+i );
+                for(int j = 1; j<=i; j++) {
                     result += resultSet.getString(j);
-                    System.out.println("结果"+j + result);
+                    System.out.println("结果 "+j + "  "+result);
                     result += ",";
-
-            	            
                     }
                 }
            
@@ -262,7 +262,12 @@ public class DBUtils {
                 ee.printStackTrace();
             }
         }
-        result = result.substring(0, result.length() - 1);
+
+        System.out.println("没加工的result： " + result);
+
+        result = result.substring( 0,result.length()-1 );
+        System.out.println("结果总的结果" + result);
+
         return result;
     }
     

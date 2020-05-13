@@ -74,6 +74,8 @@ public class CashAccountQueryLimit {
      finally
     {
         DBUtils.clearData(params.get("clearDataSQL").toString());
+        log.info("  结束后清理数据：");
+
     }
         
     }

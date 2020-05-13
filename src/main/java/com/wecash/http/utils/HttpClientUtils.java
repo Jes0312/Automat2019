@@ -8,6 +8,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import com.sun.org.apache.xpath.internal.objects.XString;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
@@ -34,15 +35,13 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-import java.lang.reflect.Array;
 
+import java.lang.reflect.Array;
 
 
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.*;
-
-
 
 
 //import org.json.JSONArray;
@@ -65,31 +64,34 @@ import static com.wecash.http.utils.DataUtils.channelOrderNoCreate;
 public class HttpClientUtils {
 
 
-    /**请求编码*/
+    /**
+     * 请求编码
+     */
     private static final String DEFAULT_CHARSET = "UTF-8";
 
     /**
      * 执行HTTP POST请求
-     * @param url url
+     *
+     * @param url   url
      * @param param 参数
      * @return
      */
     public static String httpPostWithParam(String url, Map<String, ?> param) {
         CloseableHttpClient client = null;
         try {
-            if(url == null || url.trim().length() == 0){
+            if (url == null || url.trim().length() == 0) {
                 throw new Exception("URL is null");
             }
             HttpPost httpPost = new HttpPost(url);
             client = HttpClients.createDefault();
-            if(param != null){
+            if (param != null) {
                 StringEntity entity = new StringEntity(JSON.toJSONString(param), DEFAULT_CHARSET);//解决中文乱码问题
                 entity.setContentEncoding(DEFAULT_CHARSET);
                 entity.setContentType("application/json");
                 httpPost.setEntity(entity);
             }
             HttpResponse resp = client.execute(httpPost);
-            if(resp.getStatusLine().getStatusCode() == 200) {
+            if (resp.getStatusLine().getStatusCode() == 200) {
                 return EntityUtils.toString(resp.getEntity(), DEFAULT_CHARSET);
             }
         } catch (Exception e) {
@@ -102,30 +104,30 @@ public class HttpClientUtils {
 
 
     /**
-     *
      * @param url
-     * @param baseParamJson 基础数据
-     * @param expectParamJson   需要替换的数据
+     * @param baseParamJson   基础数据
+     * @param expectParamJson 需要替换的数据
      * @return
      */
-    public static String httpPostParamWithString(String url, String baseParamJson, String expectParamJson, String replaceFlag, String replaceContent){
+    public static String httpPostParamWithString(String url, String baseParamJson, String expectParamJson, String replaceFlag, String replaceContent) {
 
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
         HttpPost httpost = new HttpPost(url);
         try {
 
-            if(url == null || url.trim().length() == 0){
+            if (url == null || url.trim().length() == 0) {
                 throw new Exception("URL 为空，请确认配置内容是否正确！！！");
             }
-            if(baseParamJson != null){
-                if(expectParamJson != null && expectParamJson.length() != 0){
+            if (baseParamJson != null) {
+                if (expectParamJson != null && expectParamJson.length() != 0) {
                     //替换 baseParamJson Json 中 存在 expectParamJson Json Key 对应的值
                     JSONObject replaceJson = compareJsonReplace(JSON.parse(baseParamJson), JSON.parse(expectParamJson));
 //                    log.info(" 替换后提交数据为：" + replaceJson.toString());
                     httpost.setEntity(new StringEntity(replaceJson.toString(), DEFAULT_CHARSET));
-                }else if(replaceFlag.equals("ON") && replaceContent != null && replaceContent.length() > 0){
+                } else if (replaceFlag.equals("ON") && replaceContent != null && replaceContent.length() > 0) {
                     // 用数据库查询结果 替换 baseParamJson 基础数据
-                    Map<String, String> map = JSONObject.parseObject(baseParamJson, new TypeReference<Map<String, String>>(){});
+                    Map<String, String> map = JSONObject.parseObject(baseParamJson, new TypeReference<Map<String, String>>() {
+                    });
                     map.put("channelOrderNo", replaceContent);
                     baseParamJson = JSONObject.toJSONString(map);
                     httpost.setEntity(new StringEntity(baseParamJson, DEFAULT_CHARSET));
@@ -151,28 +153,27 @@ public class HttpClientUtils {
     }
 
     /**
-     *
      * @param url
-     * @param baseParamJson 基础数据
-     * @param expectParamJson   需要替换的数据
+     * @param baseParamJson   基础数据
+     * @param expectParamJson 需要替换的数据
      * @return
      */
-    public static String httpPostParamWithJSON(String url, JSONObject baseParamJson, String expectParamJson, String replaceFlag, String replaceContent){
+    public static String httpPostParamWithJSON(String url, JSONObject baseParamJson, String expectParamJson, String replaceFlag, String replaceContent) {
 
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
         HttpPost httpost = new HttpPost(url);
         try {
 
-            if(url == null || url.trim().length() == 0){
+            if (url == null || url.trim().length() == 0) {
                 throw new Exception("URL 为空，请确认配置内容是否正确！！！");
             }
-            if(baseParamJson != null){
-                if(expectParamJson != null && expectParamJson.length() != 0){
+            if (baseParamJson != null) {
+                if (expectParamJson != null && expectParamJson.length() != 0) {
                     //替换 baseParamJson Json 中 存在 expectParamJson Json Key 对应的值
                     JSONObject replaceJson = compareJsonReplace(baseParamJson, JSON.parse(expectParamJson));
 //                    log.info(" 替换后提交数据为：" + replaceJson.toString());
                     httpost.setEntity(new StringEntity(replaceJson.toString(), DEFAULT_CHARSET));
-                }else if(replaceFlag.equals("ON") && replaceContent != null && replaceContent.length() > 0){
+                } else if (replaceFlag.equals("ON") && replaceContent != null && replaceContent.length() > 0) {
                     // 用数据库查询结果 替换 baseParamJson 基础数据
                     Map<String, String> map = JSONObject.toJavaObject(baseParamJson, Map.class);
                     map.put("channelOrderNo", replaceContent);
@@ -202,14 +203,14 @@ public class HttpClientUtils {
     /**
      * 发送 http post 请求，参数以form表单键值对的形式提交。
      */
-    public static String httpPostForm(String url, String baseParamJson, String expectParamJson, Map<String,String> headers, String encode) {
-        if(encode == null){
+    public static String httpPostForm(String url, String baseParamJson, String expectParamJson, Map<String, String> headers, String encode) {
+        if (encode == null) {
             encode = "utf-8";
         }
         //HttpClients.createDefault()等价于 HttpClientBuilder.create().build();
         CloseableHttpClient closeableHttpClient = null;
         String content = null;
-        CloseableHttpResponse  httpResponse = null;
+        CloseableHttpResponse httpResponse = null;
 
         try {
 
@@ -224,13 +225,13 @@ public class HttpClientUtils {
             }
 //            httpost.setHeader("Content-type", "multipart/form-data");
 //            httpost.setHeader("Content-type", "application/x-www-form-urlencoded");
-            if(baseParamJson != null){
-                if(expectParamJson != null && expectParamJson.length() > 0){
+            if (baseParamJson != null) {
+                if (expectParamJson != null && expectParamJson.length() > 0) {
                     //替换 baseParamJson Json 中 存在 expectParamJson Json Key 对应的值
                     JSONObject replaceJson = compareJsonReplace(JSON.parseObject(baseParamJson), JSON.parseObject(expectParamJson));
 //                    log.info(" 替换后提交数据为：" + replaceJson.toString());
                     httpost.setEntity(new StringEntity(replaceJson.toString()));
-                }else {
+                } else {
                     httpost.setEntity(new StringEntity(baseParamJson));
                 }
             }
@@ -245,7 +246,7 @@ public class HttpClientUtils {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             //关闭连接、释放资源
             try {
                 httpResponse.close();
@@ -261,30 +262,31 @@ public class HttpClientUtils {
 
     /**
      * 执行HTTP GET请求
-     * @param url url
+     *
+     * @param url   url
      * @param param 参数
      * @return
      */
     public static String httpGetWithParm(String url, Map<String, ?> param) {
         CloseableHttpClient client = null;
         try {
-            if(url == null || url.trim().length() == 0){
+            if (url == null || url.trim().length() == 0) {
                 throw new Exception("URL is null");
             }
             client = HttpClients.createDefault();
-            if(param != null){
+            if (param != null) {
                 StringBuffer sb = new StringBuffer("?");
-                for (String key : param.keySet()){
+                for (String key : param.keySet()) {
                     sb.append(key).append("=").append(param.get(key)).append("&");
                 }
                 url = url.concat(sb.toString());
-                url = url.substring(0, url.length()-1);
+                url = url.substring(0, url.length() - 1);
             }
 
             HttpGet httpGet = new HttpGet(url);
             HttpResponse resp = client.execute(httpGet);
 
-            if(resp.getStatusLine().getStatusCode() == 200) {
+            if (resp.getStatusLine().getStatusCode() == 200) {
                 return EntityUtils.toString(resp.getEntity(), DEFAULT_CHARSET);
             }
         } catch (Exception e) {
@@ -297,27 +299,28 @@ public class HttpClientUtils {
 
     /**
      * 执行HTTP GET请求
-     * @param url url
+     *
+     * @param url           url
      * @param baseParamJson 参数
      * @return
      */
     public static String httpGetWithJson(String url, String baseParamJson) {
         CloseableHttpClient client = null;
         try {
-            if(url == null || url.trim().length() == 0){
+            if (url == null || url.trim().length() == 0) {
                 throw new Exception("URL is null");
             }
             client = HttpClients.createDefault();
 
-            if(baseParamJson != null && baseParamJson.length() != 0){
+            if (baseParamJson != null && baseParamJson.length() != 0) {
                 StringBuffer sb = new StringBuffer("?");
                 JSONObject jsonObject = JSON.parseObject(baseParamJson);
-                for (Map.Entry<String, Object> entry: jsonObject.entrySet()) {
+                for (Map.Entry<String, Object> entry : jsonObject.entrySet()) {
                     sb.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
 
                 }
                 url = url.concat(sb.toString());
-                url = url.substring(0, url.length()-1);
+                url = url.substring(0, url.length() - 1);
                 log.info(" URL为：" + url);
 
             }
@@ -343,10 +346,11 @@ public class HttpClientUtils {
 
     /**
      * 关闭HTTP请求
+     *
      * @param client
      */
-    private static void close(CloseableHttpClient client){
-        if(client == null){
+    private static void close(CloseableHttpClient client) {
+        if (client == null) {
             return;
         }
         try {
@@ -357,34 +361,35 @@ public class HttpClientUtils {
 
     /**
      * 判断第一个Json中Key是否包含第二个Json中Key，包含则替换指定Key 的 Value
+     *
      * @param baseObject
      * @param exectObject
      */
     private static JSONObject compareJsonReplace(Object baseObject, Object exectObject) {
         //遍历第二个Json Key，在第一个Json中取对应Key，替换对应的Value
-        if(baseObject instanceof JSONObject && exectObject instanceof JSONObject) {
-            JSONObject baseJsonObject  = (JSONObject) baseObject;
+        if (baseObject instanceof JSONObject && exectObject instanceof JSONObject) {
+            JSONObject baseJsonObject = (JSONObject) baseObject;
             JSONObject exectJsonObject = (JSONObject) exectObject;
             for (Map.Entry<String, Object> entry : exectJsonObject.entrySet()) {
                 // 判断下一级Json格式
                 Object o2 = entry.getValue();
-                if(o2 instanceof String) {
+                if (o2 instanceof String) {
                     // 随机渠道订单号
-                    if(entry.getKey().equals("channelOrderNo")){
+                    if (entry.getKey().equals("channelOrderNo")) {
                         String channelOrderNo = channelOrderNoCreate();
                         log.info(" 渠道订单号为: " + channelOrderNo);
                         baseJsonObject.put(entry.getKey(), channelOrderNo);
                         log.info(" 已经替换内容为：Key：" + entry.getKey() + "  ： " + channelOrderNo);
-                    }else {
+                    } else {
                         log.info(" 期望替换内容为：Key：" + entry.getKey() + "  ： " + entry.getValue());
                         baseJsonObject.put(entry.getKey(), entry.getValue());
                         log.info("已经替换内容：Key：" + entry.getKey() + "  对应的Value为： " + baseJsonObject.get(entry.getKey()));
                     }
-                } else if (o2 instanceof JSONArray){
+                } else if (o2 instanceof JSONArray) {
                     JSONArray baseJsonArray = (JSONArray) baseJsonObject.get(entry.getKey());
                     JSONArray exectJsonArray = (JSONArray) o2;
                     //JsonArray 替换
-                    for (int i = 0; i < exectJsonArray.size(); i ++) {
+                    for (int i = 0; i < exectJsonArray.size(); i++) {
 //                        log.info("JsonArray中第" + i +"个内容为：" + exectJsonArray.get(i));
                         compareJsonReplace(baseJsonArray.get(i), exectJsonArray.get(i));
                     }
@@ -400,22 +405,22 @@ public class HttpClientUtils {
     }
 
     /**
-     *  遍历Json 兼容多层级的Json
-     *
-     *  需要考虑的就是 JSONObject 和 JSONArray 两种情况，
-     *
-     *  对这两种情况做处理，采用递归向下遍历，用instanceof判断递归到的类型，做不同处理
+     * 遍历Json 兼容多层级的Json
+     * <p>
+     * 需要考虑的就是 JSONObject 和 JSONArray 两种情况，
+     * <p>
+     * 对这两种情况做处理，采用递归向下遍历，用instanceof判断递归到的类型，做不同处理
      *
      * @param object
      */
 
     private static void jsonLoop(Object object) {
 
-        if(object instanceof JSONObject) {
+        if (object instanceof JSONObject) {
             JSONObject jsonObject = (JSONObject) object;
-            for (Map.Entry<String, Object> entry: jsonObject.entrySet()) {
+            for (Map.Entry<String, Object> entry : jsonObject.entrySet()) {
                 Object o = entry.getValue();
-                if(o instanceof String) {
+                if (o instanceof String) {
                     log.info("Key：" + entry.getKey() + "  对应的Value为： " + entry.getValue());
                 } else {
                     jsonLoop(o);
@@ -423,169 +428,186 @@ public class HttpClientUtils {
             }
         }
 
-        if(object instanceof JSONArray) {
+        if (object instanceof JSONArray) {
             JSONArray jsonArray = (JSONArray) object;
-            for (int i = 0; i < jsonArray.size(); i ++) {
+            for (int i = 0; i < jsonArray.size(); i++) {
                 jsonLoop(jsonArray.get(i));
             }
         }
     }
 
     /**
-     *  对比实际接口返回与期望接口返回
+     * 对比实际接口返回与期望接口返回
+     *
      * @param string1 实际接口返回
      * @param string2 期望接口返回
      * @return
      */
     public static Boolean compareJsonAssert(String string1, String string2) {
         boolean flag = false;
-        List<Boolean> assertResult = new ArrayList<Boolean>();
-        Object object1 = parse(string1.trim());
-        Object object2 = parse(string2.trim());
-        //遍历第二个Json Key，在第一个Json中取对应Key，替换对应的Value
-        if(object1 instanceof JSONObject && object2 instanceof JSONObject) {
+
+            List<Boolean> assertResult = new ArrayList<Boolean>();
+            Object object1 = parse(string1.trim());
+            Object object2 = parse(string2.trim());
+            //遍历第二个Json Key，在第一个Json中取对应Key，替换对应的Value
+            if (object1 instanceof JSONObject && object2 instanceof JSONObject) {
 //            1是真实的
-            JSONObject jsonObject1 = (JSONObject) object1;
+                JSONObject jsonObject1 = (JSONObject) object1;
 //            2是excel
-            JSONObject jsonObject2 = (JSONObject) object2;
-            for (Map.Entry<String, Object> entry : jsonObject2.entrySet()) {
-                // 判断下一级Json格式
-                Object o2 = entry.getValue();
+                JSONObject jsonObject2 = (JSONObject) object2;
+                for (Map.Entry<String, Object> entry : jsonObject2.entrySet()) {
+                    // 判断下一级Json格式 取出预期值中的value
+                    Object o2 = entry.getValue();
 
-                log.info(" 期望字段内容为：Key：" + entry.getKey() + "  ： " + entry.getValue());
-                log.info(" 实际字段内容为：Key：" + entry.getKey() + "  ： " + jsonObject1.get(entry.getKey()));
+                    log.info(" 期望字段内容为：Key：" + entry.getKey() + "  ： " + entry.getValue());
+                    log.info(" 实际字段内容为：Key：" + entry.getKey() + "  ： " + jsonObject1.get(entry.getKey()));
 
-                if(o2 instanceof String) {
+                    if (o2 instanceof String) {
 
-                    flag = jsonObject1.get(entry.getKey()).toString().equals(entry.getValue().toString());
-                    assertResult.add(flag);
-                    log.info(" 实际字段内容为：" + jsonObject1.get(entry.getKey()) + "  期望字段内容为：" + entry.getValue() + "  对比结果为：" + flag);
-                    if(!flag){
-                        return false;
-                    }
-                } else if(o2 instanceof Integer){
-                    flag = jsonObject1.get(entry.getKey()).equals(entry.getValue());
-                    assertResult.add(flag);
-                    log.info(" 实际字段数值为：" + jsonObject1.get(entry.getKey()) + "  期望字段数值为：" + entry.getValue() + "  对比结果为：" + flag);
-                    if(!flag){
-                        return false;
-                    }
-                } else if(o2 == null){
-                    flag = jsonObject1.get(entry.getKey()) == null && entry.getValue() == null;
-                    assertResult.add(flag);
-                    log.info(" 实际字段内容为：" + jsonObject1.get(entry.getKey()) + "  期望字段内容为：" + entry.getValue() + "  对比结果为：" + flag);
-                    if(!flag){
-                        return false;
-                    }
-                } else if(o2 instanceof JSONArray){
-                    log.warn(" 获取到的Json类型为：JsonArray ~ ~ ~");
-                      JSONArray jsonArray2 = (JSONArray) o2;
-                      JSONArray jsonArray1 = (JSONArray) jsonObject1.get(entry.getKey());
+                        flag = jsonObject1.get(entry.getKey()).toString().equals(entry.getValue().toString());
+                        assertResult.add(flag);
+                        log.info(" 实际字段内容为：" + jsonObject1.get(entry.getKey()) + "  期望字段内容为：" + entry.getValue() + "  对比结果为：" + flag);
+                        if (!flag) {
+                            return false;
+                        }
+                    } else if (o2 instanceof Integer) {
+                        flag = jsonObject1.get(entry.getKey()).equals(entry.getValue());
+                        assertResult.add(flag);
+                        log.info(" 实际字段数值为：" + jsonObject1.get(entry.getKey()) + "  期望字段数值为：" + entry.getValue() + "  对比结果为：" + flag);
+                        if (!flag) {
+                            return false;
+                        }
+                    } else if (o2 == null) {
+                        flag = jsonObject1.get(entry.getKey()) == null && entry.getValue() == null;
+                        assertResult.add(flag);
+                        log.info(" 实际字段内容为：" + jsonObject1.get(entry.getKey()) + "  期望字段内容为：" + entry.getValue() + "  对比结果为：" + flag);
+                        if (!flag) {
+                            return false;
+                        }
+                    } else if (o2 instanceof JSONArray) {
+                        log.warn(" 获取到的Json类型为：JsonArray ~ ~ ~");
+//                    转换成JSONArray
+                        JSONArray jsonArray2 = (JSONArray) o2;
+//                    转换成JSONArray  取出相同key的 JSONArray值
+                        JSONArray jsonArray1 = (JSONArray) jsonObject1.get(entry.getKey());
 
+                        if (jsonArray2.size() != (jsonArray1.size())) {
+                            log.error(" JsonArray的长度不相等 ~ ~ ");
+                            return false;
+                        }
 
-                    if(jsonArray2.size()>0){
-                        for(int i=0;i<jsonArray2.size();i++){
-                            JSONObject jsonObject4 = jsonArray2.getJSONObject(i);   // 遍历 jsonarray 数组，把每一个对象转成 json 对象
-                            log.error(" 获取到的Json类型为：Array中的JSONObject ~ ~ ");
+                        if (jsonArray2.size() > 0) {
+                            for (int i = 0; i < jsonArray2.size(); i++) {
+
+                                JSONObject jsonObject4 = jsonArray2.getJSONObject(i);   // 遍历 jsonarray 数组，把每一个对象转成 json 对象
+                                log.info(" 获取到的Json类型为：array中的JSONObject ~ ~ ");
 //                    4是预期的excel
 //
-                            //  3是实际的返回值
-                                JSONObject jsonObject3 = jsonArray1.getJSONObject(i);
+                                for (Map.Entry<String, Object> entry2 : jsonObject4.entrySet()) {
 
-                            for (Map.Entry<String, Object> entry2 : jsonObject4.entrySet()) {
+//                                用excel中的每一个 都和实际的返回值做比较
+                                    for (int j = 0; j < jsonArray1.size(); j++) {
+                                        //  3是实际的返回值
+                                        JSONObject jsonObject3 = jsonArray1.getJSONObject(j);
 
-                                flag = jsonObject3.get(entry2.getKey()).toString().equals(entry2.getValue().toString());
-                                assertResult.add(flag);
-                                log.info("  对比字段为  "+ entry2.getKey() );
-                                log.info("  实际Json字段内容为： " + jsonObject3.get(entry2.getKey()));
-                                log.info("  期望Json字段内容为： " + entry2.getValue() );
-                                log.info("  对比结果为： " + flag);
+                                        if (flag = false) {
+                                            log.info("   对比失败换一个吧  ");
+                                        }
+                                        if (flag = true) {
+                                            assertResult.add(flag);
+                                            log.info("  对比字段为  " + entry2.getKey());
+                                            log.info("  实际Json字段内容为： " + jsonObject3.get(entry2.getKey()));
+                                            log.info("  期望Json字段内容为： " + entry2.getValue());
+                                            log.info("  对比结果为： " + flag);
+                                            break;
+                                        }
+                                    }
+                                    if (!flag) {
+                                        return false;
 
-                                if (!flag) {
-                                    return false;
-
+                                    }
                                 }
+                            }
+                        }
+
+
+                    } else if (o2 instanceof JSONObject) {
+                        log.error(" 获取到的Json类型为：JSONObject ~ ~ ");
+//                    4是预期的excel
+                        JSONObject jsonObject4 = (JSONObject) o2;
+//                    3是实际的
+                        JSONObject jsonObject3 = (JSONObject) jsonObject1.get(entry.getKey());
+
+                        for (Map.Entry<String, Object> entry2 : jsonObject4.entrySet()) {
+                            if (entry2.getValue() instanceof List) {
+                                log.error(" 获取到的Json类型为：List ~ ~ ");
+
+                                List<String> list1 = new ArrayList<>();
+                                List<String> list2 = new ArrayList<>();
+
+                                list1 = (List<String>) jsonObject3.get(entry2.getKey());
+                                list2 = (List<String>) entry2.getValue();
+
+
+//                            对list做排序
+                                Collections.sort(list1);
+                                Collections.sort(list2);
+//                            判断两个list是否相等
+                                flag = list1.containsAll(list2);
+
+
+                            } else {
+                                log.info("  不是list呦  ");
+
+                                String str1 = new String();
+                                String str2 = new String();
+
+                                str1 = jsonObject3.get(entry2.getKey()).toString();
+//                            预期excel的
+                                str2 = entry2.getValue().toString();
+//                            对比结果是否相同
+                                flag = str1.equals(str2);
+
+                                assertResult.add(flag);
+                                log.info("  对比字段为  " + entry2.getKey());
+                                log.info("  实际Json字段内容为： " + jsonObject3.get(entry2.getKey()));
+                                log.info("  期望Json字段内容为： " + entry2.getValue());
+                                log.info("  对比结果为： " + flag);
+                            }
+                            if (!flag) {
+                                return false;
+
                             }
 
 
-
-//                    JSONArray jsonArray2 = (JSONArray) o2;
-//                    JSONArray jsonArray1 = (JSONArray) jsonObject1.get(entry.getKey());
-//                    for (int i = 0; i < jsonArray2.size(); i ++) {
-//                        Object s2 = jsonArray2.get(i);
-//                        Object s1 = jsonArray1.get(i);
-//                        if (s2.getClass().isArray() & s1.getClass().isArray()) {
-//                            int length = Array.getLength(s2);
-//                            Object[] arr2 = new Object[length];
-//                            for (int m = 0; m < arr2.length; m++) {
-//                                arr2[i] = Array.get(s2, i);
-//                                log.info(" 实际返回的遍历："+arr2[i]);
-//                            }
-//
-//                            int length1 = Array.getLength(s1);
-//                            Object[] arr1 = new Object[length1];
-//                            for (int m = 0; m < arr1.length; m++) {
-//                                arr1[i] = Array.get(s1, i);
-//                            }
-//
-//
-//                            for (int n = 0; n < arr2.length; n ++) {
-//                                flag = arr2[n].toString().equals(arr1[n].toString());
-//                                assertResult.add(flag);
-
-//                            }
-                        }
-                    }
-
-
-                }else if(o2 instanceof JSONObject){
-                    log.error(" 获取到的Json类型为：JSONObject ~ ~ ");
-//                    4是预期的excel
-                    JSONObject jsonObject4 = (JSONObject) o2;
-//                    3是实际的
-                    JSONObject jsonObject3 = (JSONObject) jsonObject1.get(entry.getKey());
-
-                    for (Map.Entry<String, Object> entry2 : jsonObject4.entrySet()) {
-
-                        flag = jsonObject3.get(entry2.getKey()).toString().equals(entry2.getValue().toString());
-                        assertResult.add(flag);
-                        log.info("  对比字段为  "+ entry2.getKey() );
-                        log.info("  实际Json字段内容为： " + jsonObject3.get(entry2.getKey()));
-                        log.info("  期望Json字段内容为： " + entry2.getValue() );
-                        log.info("  对比结果为： " + flag);
-
-                        if(!flag){
-                            return false;
-
-                    }
-
-
-
                         }
 
 
+//                } else if (o2 instanceof JSObject) {
+//
+//                    flag = jsonObject1.get(entry.getKey()).equals(entry.getValue());
+//                    assertResult.add(flag);
+//                    log.info("  对比字段为  " + entry.getKey());
+//                    log.info("  实际Json字段内容为： " + jsonObject1.get(entry.getKey()));
+//                    log.info("  期望Json字段内容为： " + entry.getValue());
+//                    log.info("  对比结果为： " + flag);
+////                    return compareJsonAssert(jsonObject1.get(entry.getKey()).toString(), o2.toString());
+                    } else {
+                        log.error(" 请完善Json对比类型 ~ ~ ~");
+                    }
 
-
-
-
-
-
-
-                }else if(o2 instanceof JSONObject){
-                    return compareJsonAssert(jsonObject1.get(entry.getKey()).toString(), o2.toString());
-                }else {
-                    log.error(" 请完善Json对比类型 ~ ~ ~");
                 }
 
-            }
+
         }
 
         //TODO: JsonArray替换逻辑待完善
         return flag;
+
     }
 
 
-    public static  List getJSONList(String jsonstring, Class cls) {
+    public static List getJSONList(String jsonstring, Class cls) {
         List list = new ArrayList();
         try {
             list = JSON.parseArray(jsonstring, cls);
@@ -596,13 +618,12 @@ public class HttpClientUtils {
     }
 
 
-
     /**
      * 发送http get请求
      */
-    public static String httpGet(String url, Map<String,String> headers, String encode){
+    public static String httpGet(String url, Map<String, String> headers, String encode) {
 //        HttpResponse response = new HttpResponse();
-        if(encode == null){
+        if (encode == null) {
             encode = "utf-8";
         }
         String content = null;
@@ -629,7 +650,7 @@ public class HttpClientUtils {
 //            response.setStatusCode(httpResponse.getStatusLine().getStatusCode());
         } catch (Exception e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             try {
                 httpResponse.close();
             } catch (IOException e) {
@@ -645,16 +666,15 @@ public class HttpClientUtils {
     }
 
 
-
-
     /**
      * 发送 http post 请求，参数以原生字符串进行提交
+     *
      * @param url
      * @param encode
      * @return
      */
-    public static String httpPostRaw(String url,String stringJson, Map<String,String> headers, String encode){
-        if(encode == null){
+    public static String httpPostRaw(String url, String stringJson, Map<String, String> headers, String encode) {
+        if (encode == null) {
             encode = "utf-8";
         }
         //HttpClients.createDefault()等价于 HttpClientBuilder.create().build();
@@ -665,14 +685,14 @@ public class HttpClientUtils {
         httpost.setHeader("Content-type", "application/json");
         if (headers != null && headers.size() > 0) {
             for (Map.Entry<String, String> entry : headers.entrySet()) {
-                httpost.setHeader(entry.getKey(),entry.getValue());
+                httpost.setHeader(entry.getKey(), entry.getValue());
             }
         }
         //组织请求参数
         StringEntity stringEntity = new StringEntity(stringJson, encode);
         httpost.setEntity(stringEntity);
         String content = null;
-        CloseableHttpResponse  httpResponse = null;
+        CloseableHttpResponse httpResponse = null;
         try {
             //响应信息
             httpResponse = closeableHttpClient.execute(httpost);
@@ -680,7 +700,7 @@ public class HttpClientUtils {
             content = EntityUtils.toString(entity, encode);
         } catch (Exception e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             try {
                 httpResponse.close();
             } catch (IOException e) {
@@ -698,8 +718,8 @@ public class HttpClientUtils {
     /**
      * 发送 http post 请求，支持文件上传
      */
-    public static String httpPostFormMultipart(String url,Map<String,String> params, List<File> files,Map<String,String> headers,String encode){
-        if(encode == null){
+    public static String httpPostFormMultipart(String url, Map<String, String> params, List<File> files, Map<String, String> headers, String encode) {
+        if (encode == null) {
             encode = "utf-8";
         }
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
@@ -708,7 +728,7 @@ public class HttpClientUtils {
         //设置header
         if (headers != null && headers.size() > 0) {
             for (Map.Entry<String, String> entry : headers.entrySet()) {
-                httpost.setHeader(entry.getKey(),entry.getValue());
+                httpost.setHeader(entry.getKey(), entry.getValue());
             }
         }
         MultipartEntityBuilder mEntityBuilder = MultipartEntityBuilder.create();
@@ -716,11 +736,11 @@ public class HttpClientUtils {
         mEntityBuilder.setCharset(Charset.forName(encode));
 
         // 普通参数
-        ContentType contentType = ContentType.create("text/plain",Charset.forName(encode));//解决中文乱码
+        ContentType contentType = ContentType.create("text/plain", Charset.forName(encode));//解决中文乱码
         if (params != null && params.size() > 0) {
             Set<String> keySet = params.keySet();
             for (String key : keySet) {
-                mEntityBuilder.addTextBody(key, params.get(key),contentType);
+                mEntityBuilder.addTextBody(key, params.get(key), contentType);
             }
         }
         //二进制参数
@@ -731,14 +751,14 @@ public class HttpClientUtils {
         }
         httpost.setEntity(mEntityBuilder.build());
         String content = null;
-        CloseableHttpResponse  httpResponse = null;
+        CloseableHttpResponse httpResponse = null;
         try {
             httpResponse = closeableHttpClient.execute(httpost);
             HttpEntity entity = httpResponse.getEntity();
             content = EntityUtils.toString(entity, encode);
         } catch (Exception e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             try {
                 httpResponse.close();
             } catch (IOException e) {
@@ -754,7 +774,7 @@ public class HttpClientUtils {
     }
 
 
-    public void testGetCookies1(String url, String name, String password ) {
+    public void testGetCookies1(String url, String name, String password) {
 
         // 全局请求设置
         RequestConfig globalConfig = RequestConfig.custom().setCookieSpec(CookieSpecs.STANDARD).build();
@@ -822,16 +842,16 @@ public class HttpClientUtils {
     }
 
 
-    public static String postWithParamsForString(String url, List<NameValuePair> params){
+    public static String postWithParamsForString(String url, List<NameValuePair> params) {
         HttpClient client = HttpClients.createDefault();
-        HttpPost httpPost =   new HttpPost(url);
+        HttpPost httpPost = new HttpPost(url);
         String result = "";
         try {
-            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
+            httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
             httpPost.setHeader("Content-type", "application/x-www-form-urlencoded");
             HttpResponse response = client.execute(httpPost);
             int statusCode = response.getStatusLine().getStatusCode();
-            if(statusCode==200){
+            if (statusCode == 200) {
                 HttpEntity entity = response.getEntity();
                 result = EntityUtils.toString(entity);
                 log.info("--> 接口实际返回为：" + result);
@@ -858,18 +878,18 @@ public class HttpClientUtils {
         return null;
     }
 
-    public static String postWithParams(String url, Map<String, ?> param){
+    public static String postWithParams(String url, Map<String, ?> param) {
         url = trasferToData(url, param);
         log.info("--> 传入参数为：" + url);
         HttpClient client = HttpClients.createDefault();
-        HttpPost httpPost =   new HttpPost(url);
+        HttpPost httpPost = new HttpPost(url);
         String result = "";
         try {
 //            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
             httpPost.setHeader("Content-type", "application/x-www-form-urlencoded");
             HttpResponse response = client.execute(httpPost);
             int statusCode = response.getStatusLine().getStatusCode();
-            if(statusCode==200){
+            if (statusCode == 200) {
                 HttpEntity entity = response.getEntity();
                 result = EntityUtils.toString(entity);
                 log.info("--> 接口实际返回为：" + result);
@@ -881,33 +901,33 @@ public class HttpClientUtils {
     }
 
 
-
     /**
      * 执行HTTP POST请求
-     * @param url url
+     *
+     * @param url       url
      * @param jsonParam json格式参数
      * @return
      */
     public static String httpJSONPost(String url, String jsonParam) {
         CloseableHttpClient client = null;
         try {
-            if(url == null || url.trim().length() == 0){
+            if (url == null || url.trim().length() == 0) {
                 throw new Exception("URL is null");
             }
             HttpPost httpPost = new HttpPost(url);
             client = HttpClients.createDefault();
-            if(jsonParam != null){
+            if (jsonParam != null) {
                 StringEntity entity = new StringEntity(jsonParam, DEFAULT_CHARSET);//解决中文乱码问题
                 entity.setContentEncoding(DEFAULT_CHARSET);
                 entity.setContentType("application/json");
-                httpPost.setHeader("token","qsL0FxqzPwuApNb9");
-                httpPost.setHeader("fromTenantId","1001");
+                httpPost.setHeader("token", "qsL0FxqzPwuApNb9");
+                httpPost.setHeader("fromTenantId", "1001");
 
 
                 httpPost.setEntity(entity);
             }
             HttpResponse resp = client.execute(httpPost);
-            if(resp.getStatusLine().getStatusCode() == 200) {
+            if (resp.getStatusLine().getStatusCode() == 200) {
                 return EntityUtils.toString(resp.getEntity(), DEFAULT_CHARSET);
             }
         } catch (Exception e) {
@@ -917,7 +937,6 @@ public class HttpClientUtils {
         }
         return null;
     }
-
 
 
 }
