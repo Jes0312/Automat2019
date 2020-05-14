@@ -24,9 +24,6 @@ public class CashAccountCreate {
     @Test(dataProvider = "CeateCashaccount", dataProviderClass = BaseProvider.class, description = "创建账户")
     public void CeateCashaccount(Map<String, Object> params){
 
-
-
-
         try{
 
 

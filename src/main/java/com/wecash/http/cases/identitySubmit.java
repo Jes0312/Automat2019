@@ -98,5 +98,5 @@ public class identitySubmit {
     }
           finally
     {
-        DBUtils.clearData(params.get("clearDataSQL").toString());
+//        DBUtils.clearData(params.get("clearDataSQL").toString());
     }}}

@@ -491,6 +491,11 @@ public class HttpClientUtils {
 //                    转换成JSONArray  取出相同key的 JSONArray值
                         JSONArray jsonArray1 = (JSONArray) jsonObject1.get(entry.getKey());
 
+
+
+                        if (jsonArray2.size() ==  0 &&jsonArray2.size()==0)
+                        {log.error(" JsonArray为空 ~ ~ ");}
+
                         if (jsonArray2.size() != (jsonArray1.size())) {
                             log.error(" JsonArray的长度不相等 ~ ~ ");
                             return false;

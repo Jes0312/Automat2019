@@ -1,7 +1,7 @@
 package com.wecash.http.utils;
 
+import apple.laf.JRSUIConstants;
 import lombok.extern.slf4j.Slf4j;
-
 
 
 import java.sql.*;
@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 /**
  * @Author: kaka.lo    luoping@***.net
  * @Date: 2019/7/22 11:36 AM
@@ -18,7 +19,7 @@ import java.util.Map;
  */
 @Slf4j
 public class DBUtils {
-    private static String   driver = "com.mysql.cj.jdbc.Driver";
+    private static String driver = "com.mysql.cj.jdbc.Driver";
     private static String url = "jdbc:mysql://10.61.19.142:30012/seraph?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull";
     private static String user = "app_seraph_rw";
     private static String pwd = "xlWl7Z3YRQgfxmgTckqZCGVPKRZUN0";
@@ -31,44 +32,46 @@ public class DBUtils {
         }
     }
 
-    public static Connection getConnection()  {
+    public static Connection getConnection() {
         try {
-            return DriverManager.getConnection(url,user,pwd);
+            return DriverManager.getConnection(url, user, pwd);
         } catch (SQLException e) {
             log.info("db连接异常,请检查!");
             e.printStackTrace();
         }
         return null;
     }
+
     //  新增、修改、删除
-    public  static int addOrUpdateOrDel(String sql)  {
+    public static int addOrUpdateOrDel(String sql) {
         Statement st = null;
         try {
             st = getConnection().createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        int i=0;
+        int i = 0;
         try {
-            if (sql != null && sql.length() > 0){
+            if (sql != null && sql.length() > 0) {
                 i = st.executeUpdate(sql);
             }
-        }catch (RuntimeException e){
+        } catch (RuntimeException e) {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return i;
     }
+
     //新增ID
-    public static int insertAndGetId(String sql){
-        int id=-1;
+    public static int insertAndGetId(String sql) {
+        int id = -1;
         try {
-            PreparedStatement pst=getConnection().prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement pst = getConnection().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             pst.executeUpdate();
-            ResultSet rs=pst.getGeneratedKeys();
-            if(rs.next()){
-                id=rs.getInt(1);
+            ResultSet rs = pst.getGeneratedKeys();
+            if (rs.next()) {
+                id = rs.getInt(1);
                 return id;
             }
         } catch (SQLException e) {
@@ -76,6 +79,7 @@ public class DBUtils {
         }
         return id;
     }
+
     //  查询
     public static ResultSet queryData(Connection conn, String sql) throws SQLException {
         ResultSet rs = null;
@@ -86,8 +90,9 @@ public class DBUtils {
         }
         return rs;
     }
+
     // 获取结果集
-    public static List getQueryResultList(Connection conn, String sql) throws SQLException{
+    public static List getQueryResultList(Connection conn, String sql) throws SQLException {
         ResultSet rs = null;
         List list = new ArrayList();
         try {
@@ -108,52 +113,55 @@ public class DBUtils {
         }
         return list;
     }
+
     //清理数据
-    public static boolean clearData(String vars){
-        boolean flag=false;
-        if(!"".equals(vars)||vars.length()!=0){
+    public static boolean clearData(String vars) {
+        boolean flag = false;
+        if (!"".equals(vars) || vars.length() != 0) {
             String[] clearSqls = vars.split(";");
             for (String clearSql : clearSqls) {
-                if(1==addOrUpdateOrDel(clearSql)){
-                    flag=true;
+                if (1 == addOrUpdateOrDel(clearSql)) {
+                    flag = true;
                 }
             }
-        }else {
-            flag=true;
+        } else {
+            flag = true;
         }
         return flag;
     }
+
     //初始化数据
-    public static int initData(String vars,boolean isGenKey){
-        int result=-1;
-        if(!"".equals(vars) || vars.length()!=0){
+    public static int initData(String vars, boolean isGenKey) {
+        int result = -1;
+        if (!"".equals(vars) || vars.length() != 0) {
             String[] pareSqls = vars.split(";");
             for (String pareSql : pareSqls) {
-                if(isGenKey){
-                    result=insertAndGetId(pareSql);
-                }else {
-                    result=addOrUpdateOrDel(pareSql);
+                if (isGenKey) {
+                    result = insertAndGetId(pareSql);
+                } else {
+                    result = addOrUpdateOrDel(pareSql);
                 }
             }
-        }else {
-            result =1;
+        } else {
+            result = 1;
         }
         return result;
     }
+
     //初始化数据
-    public static boolean initData(String vars){
-        boolean flag=false;
-        if(!"".equals(vars)||vars.length()!=0){
+    public static boolean initData(String vars) {
+        boolean flag = false;
+        if (!"".equals(vars) || vars.length() != 0) {
             String[] pareSqls = vars.split(";");
             for (String pareSql : pareSqls) {
-                if(1==addOrUpdateOrDel(pareSql)){
-                    flag=true;
-                }else {
-                    log.info("当前初始化数据sql执行失败:"+pareSql);
+                if (1 == addOrUpdateOrDel(pareSql)) {
+                    flag = true;
+                } else {
+                    log.info("当前初始化数据sql执行失败:" + pareSql);
                 }
             }
-        }else {
-            flag=true;
+        } else {
+            flag = true;
         }
         return flag;
     }
@@ -169,7 +177,7 @@ public class DBUtils {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        }else {
+        } else {
             return null;
         }
 
@@ -186,11 +194,11 @@ public class DBUtils {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            if(!sql.equals("") && sql.length() > 0){
+            if (!sql.equals("") && sql.length() > 0) {
                 resultSet = statement.executeQuery(sql);
-                if(pram != null && !"".equals(pram)){
+                if (pram != null && !"".equals(pram)) {
                     return result.toString();
-                    
+
                 }
 
                 if (null != resultSet && !"".equals(resultSet)) {
@@ -205,7 +213,7 @@ public class DBUtils {
                 } else {
                     log.info("数据库无记录");
                 }
-            }else {
+            } else {
                 System.out.println(" ");
             }
         } catch (Exception e) {
@@ -224,37 +232,46 @@ public class DBUtils {
         }
         return result;
     }
-    
- 
-    
-    
+
+
     public static String queryDataSQL(String sql) {
         String result = "";
         // 查询数据库记录
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
-        
+
         try {
             connection = getConnection();
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
+            int i = resultSet.getMetaData().getColumnCount();
+//            System.out.println("结果长度底是个啥  " + i);
 
-            
-            while (resultSet.next()) {
-                int i =resultSet.getMetaData().getColumnCount();
-                log.info("结果i的值 "+i );
-                for(int j = 1; j<=i; j++) {
-                    result += resultSet.getString(j);
-                    System.out.println("结果 "+j + "  "+result);
-                    result += ",";
+//结果只有一个
+
+            if (i == 1) {
+                resultSet.first();
+                result = resultSet.getString(i);
+                result += ",";
+//                System.out.println("结果只有一个  " + result);
+
+            } else {
+                while (resultSet.next()) {
+                    for (int j = 1; j <= i; j++) {
+                        result += resultSet.getString(j);
+                        System.out.println("结果 " + j + "  " + result);
+                        result += ",";
                     }
                 }
-           
+            }
+            ;
+
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-        	//connection.close();
+            //connection.close();
             try {
                 statement.close();
                 connection.close();
@@ -263,13 +280,11 @@ public class DBUtils {
             }
         }
 
-        System.out.println("没加工的result： " + result);
-
-        result = result.substring( 0,result.length()-1 );
-        System.out.println("结果总的结果" + result);
-
+//        System.out.println("没加工的result： " + result);
+        result = result.substring(0, result.length() - 1);
+//        System.out.println("结果总的结果" + result);
         return result;
     }
-    
-    
+
+
 }
