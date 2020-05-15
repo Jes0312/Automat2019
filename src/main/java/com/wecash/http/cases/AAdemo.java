@@ -1,20 +1,18 @@
 package com.wecash.http.cases;
 
+import com.google.gson.internal.$Gson$Preconditions;
 import com.wecash.http.common.BaseProvider;
-
-
-
-import com.wecash.http.utils.DBUtils;
-
 import lombok.extern.slf4j.Slf4j;
-
 import org.testng.Assert;
-import org.testng.ITestContext;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.Map;
 
+import static com.wecash.http.utils.RedisUtils.getJedis;
+
+
+import redis.clients.jedis.Jedis;
+import com.wecash.http.utils.DBUtils;
 import static com.wecash.http.utils.HttpClientUtils.compareJsonAssert;
 import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 
@@ -24,12 +22,11 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
  * @ContentUse :
  */
 @Slf4j
-public class AAdemo
-{
+public class AAdemo {
 //    dataProvider  与接口名称一致   在/src/main/java/com/wecash/http/common/BaseProvider.java
 //    description    可以尽量写详细
 
-//    步骤1 cases中创建于接口名称一致java文件
+    //    步骤1 cases中创建于接口名称一致java文件
 //    步骤2 BaseProvider创建用例执行规则
 //    步骤3 ExcelConstant中添加excel路径
 //    步骤4 创建TestSuit-接口名的xml文件
@@ -38,9 +35,28 @@ public class AAdemo
 //
 //
     @Test(dataProvider = "userCeateInfo", dataProviderClass = BaseProvider.class, description = "创建用户信息")
-    public void userCeateInfo(Map<String, Object> params){
+//    @Test
+    public void userCeateInfo(Map<String, Object> params) {
+
+
+//        清理缓存数据
+
 
         try {
+
+
+            //        清理缓存数据
+
+            String rediscommon = params.get("redis").toString();
+
+            if (null != rediscommon && "" != rediscommon) {
+                log.info("-------------> 缓存清理开始");
+                Jedis redis = getJedis();
+//            切换库目前都在10
+                redis.select(10);
+                redis.del(params.get("redis").toString());
+                log.info("-------------> 缓存清理结束");
+            }
 
             log.info("-------------> 数据清理开始");
             DBUtils.clearData(params.get("clearDataSQL").toString());
@@ -80,15 +96,10 @@ public class AAdemo
             }
 
 
-        }  finally
-        {  DBUtils.clearData(params.get("clearDataSQL").toString());
-            log.info("-------------> case结束--数据清理结束" );
+        } finally {
+            DBUtils.clearData(params.get("clearDataSQL").toString());
+            log.info("-------------> case结束--数据清理结束");
         }
-
-
-
-
-
 
 
     }
