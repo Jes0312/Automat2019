@@ -21,7 +21,9 @@ public class BaseProvider {
 //    src/main/java/com/wecash/http/common/ExcelConstant.java中添加excel的路径；命名规则同name
 //    sheetName 为excel中sheet页的名字；命名规则同name
 
-	
+
+
+
     @DataProvider(name = "CeateCashaccount")
     public Iterator<Object[]> CeateCashaccount() throws IOException {
         List<String> lables = new ArrayList<String>();
@@ -30,8 +32,19 @@ public class BaseProvider {
         ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.CashAccountCreate, "CashAccountCreate", lables);
         return testdata.iterator();
     }
-    
-    
+
+
+
+    @DataProvider(name = "CashAccountQueryByItem")
+    public Iterator<Object[]> CashAccountQueryByItem() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        //lables.add("0级");
+        lables.add("1级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.CashAccountQueryByItem, "CashAccountQueryByItem", lables);
+        return testdata.iterator();
+    }
+
+
     @DataProvider(name = "ModifyCashaccount")
     public Iterator<Object[]> ModifyCashaccount() throws IOException {
         List<String> lables = new ArrayList<String>();

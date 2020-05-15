@@ -8,6 +8,7 @@
         <suite-file path="src/main/TestSuit-CashAccountModify.xml"></suite-file>
         <suite-file path="src/main/TestSuit-CashAccountQueryById.xml"></suite-file>
         <suite-file path="src/main/TestSuit-CashAccountQueryLimit.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-CashAccountQueryByItem.xml"></suite-file>
 
 
         <suite-file path="src/main/TestSuit-GrantGetById.xml"></suite-file>

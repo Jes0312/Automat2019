@@ -15,7 +15,7 @@ public class CashAccountQueryByItem {
     //    dataProvider  与接口名称一致   在/src/main/java/com/wecash/http/common/BaseProvider.java
 //    description    可以尽量写详细
 
-    //    步骤1 cases中创建于接口名称一致java文件
+//    步骤1 cases中创建于接口名称一致java文件
 //    步骤2 BaseProvider创建用例执行规则
 //    步骤3 ExcelConstant中添加excel路径
 //    步骤4 创建TestSuit-接口名的xml文件

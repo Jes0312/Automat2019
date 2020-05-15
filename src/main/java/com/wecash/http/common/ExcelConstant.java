@@ -67,7 +67,10 @@ public interface ExcelConstant {
     
     //通过中台id查询账户
     public  String CashAccountQueryById = "src/main/resources/caseconf/CashAccountQueryById/Case_CashAccountQueryById.xlsx";
-  
+
+    //通过VK查询账户
+    public  String CashAccountQueryByItem = "src/main/resources/caseconf/CashAccountQueryByItem/Case_CashAccountQueryByItem.xlsx";
+
   //保存授权
     public  String GrantSave = "src/main/resources/caseconf/GrantSave/Case_SaveGrant.xlsx";
       

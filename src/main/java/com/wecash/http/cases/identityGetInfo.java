@@ -1,6 +1,7 @@
 package com.wecash.http.cases;
 
 import com.wecash.http.common.BaseProvider;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.wecash.http.utils.DBUtils;
@@ -29,6 +30,8 @@ public class identityGetInfo {
 
 
     @Test(dataProvider = "idGetInfo", dataProviderClass = BaseProvider.class, description = "查询实名认证信息")
+    @AfterTest
+//    待补充 释放线程池
     public void idGetInfo(Map<String, Object> params) {
 
         try {
