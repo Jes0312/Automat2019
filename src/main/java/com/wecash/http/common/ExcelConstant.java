@@ -87,7 +87,19 @@ public interface ExcelConstant {
     public  String GrantInvalid = "src/main/resources/caseconf/GrantInvalid/Case_GrantInvalid.xlsx"; 
     
     //提交职业信息
-    public  String JobPut = "src/main/resources/caseconf/JobPut/Case_JobPut.xlsx"; 
-    
+    public  String JobPut = "src/main/resources/caseconf/JobPut/Case_JobPut.xlsx";
+    //提交个人信息
+    public  String InfoPut = "src/main/resources/caseconf/userinfoput/Case_userinfoput.xlsx";
+
+    //查询个人信息
+    public  String InfoQuery = "src/main/resources/caseconf/userinfoquery/Case_userinfoquery.xlsx";
+    //Pii查询个人信息
+    public  String InfoQueryByPii = "src/main/resources/caseconf/userinfoqueryInfoByPii/Case_userinfoqueryInfoByPii.xlsx";
+    //提交联系人信息
+    public  String ContactPut = "src/main/resources/caseconf/userContactPut/Case_userContactPut.xlsx";
+    //查询联系人信息
+    public  String ContactQuery = "src/main/resources/caseconf/userContactQuery/Case_userContactQuery.xlsx";
+    //查询工作信息
+    public  String JobQuery = "src/main/resources/caseconf/userJobQuery/Case_userJobQuery.xlsx";
     
 }
