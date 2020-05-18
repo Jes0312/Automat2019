@@ -290,9 +290,67 @@ public class BaseProvider {
     @DataProvider(name = "SaveJobInfo")
     public Iterator<Object[]> SaveJobInfo() throws IOException {
         List<String> lables = new ArrayList<String>();
-        //lables.add("0级");
+        lables.add("0级");
         lables.add("1级");
+        lables.add("2级");
         ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.JobPut, "JobPut", lables);
+        return testdata.iterator();
+    }
+
+    @DataProvider(name = "infoput")
+    public Iterator<Object[]> infoput() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        lables.add("0级");
+        lables.add("1级");
+        lables.add("2级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.InfoPut, "userinfoput", lables);
+        return testdata.iterator();
+    }
+
+    @DataProvider(name = "infoquery")
+    public Iterator<Object[]> infoquery() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        lables.add("0级");
+        lables.add("1级");
+        lables.add("2级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.InfoQuery, "userinfoquery", lables);
+        return testdata.iterator();
+    }
+
+    @DataProvider(name = "contactput")
+    public Iterator<Object[]> contactput() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        lables.add("0级");
+        lables.add("1级");
+        lables.add("2级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.ContactPut, "usercontactput", lables);
+        return testdata.iterator();
+    }
+    @DataProvider(name = "contactquery")
+    public Iterator<Object[]> contactquery() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        lables.add("0级");
+        lables.add("1级");
+        lables.add("2级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.ContactQuery, "usercontactquery", lables);
+        return testdata.iterator();
+    }
+    @DataProvider(name = "jobquery")
+    public Iterator<Object[]> jobquery() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        lables.add("0级");
+        lables.add("1级");
+        lables.add("2级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.JobQuery, "userjobquery", lables);
+        return testdata.iterator();
+    }
+    @DataProvider(name = "infoqueryInfoByPii")
+    public Iterator<Object[]> infoqueryInfoByPii() throws IOException {
+        List<String> lables = new ArrayList<String>();
+        lables.add("0级");
+        lables.add("1级");
+        lables.add("2级");
+        ArrayList<Object[]> testdata = ExcelUitls.getTestData(ExcelConstant.InfoQueryByPii, "queryInfoByPii", lables);
         return testdata.iterator();
     }   
     

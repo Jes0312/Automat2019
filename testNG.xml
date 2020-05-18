@@ -21,7 +21,6 @@
         <suite-file path="src/main/TestSuit-identityGetInfo.xml"></suite-file>
         <suite-file path="src/main/TestSuit-identityInvalid.xml"></suite-file>
         <suite-file path="src/main/TestSuit-identitySubmit.xml"></suite-file>
-<!--        <suite-file path="src/main/TestSui t-JobPut.xml"></suite-file>-->
 
         <suite-file path="src/main/TestSuit-userBatchqueryById.xml"></suite-file>
         <suite-file path="src/main/TestSuit-userBatchQueryIdByMobileMd.xml"></suite-file>
@@ -35,6 +34,14 @@
         <suite-file path="src/main/TestSuit-userQueryUserInfoByUserId.xml"></suite-file>
         
         
-        <!--<suite-file path="TestSuit-CapitalProduct.xml"></suite-file>-->
+        <suite-file path="src/main/TestSuit-JobPut.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-JobQuery.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-UserContactPut.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-UserContactQuery.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-UserInfoPut.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-UserInfoQuery.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-UserInfoQueryByPii.xml"></suite-file>
+
+
     </suite-files>
 </suite>

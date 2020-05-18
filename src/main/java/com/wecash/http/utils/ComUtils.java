@@ -233,14 +233,22 @@ public class ComUtils {
             while (resultSet.next()) {
                 mysqlData = ja.getJSONObject(i);
                 for (String key : mysqlData.keySet()) {
-                    String expectedValue = mysqlData.get(key).toString();
-                    String mysqlValue = resultSet.getString(keyList.indexOf(key) + 1);
-                    if (!expectedValue.equals(mysqlValue)) {
-                        log.info("key:" + key);
-                        log.info("expectedValue:" + expectedValue);
-                        log.info("mysqlValue:" + mysqlValue);
-                        return false;
+                    if (null != mysqlData.get(key)){
+                        String expectedValue = mysqlData.get(key).toString();
+                        String mysqlValue = resultSet.getString(keyList.indexOf(key) + 1);
+                        if (!expectedValue.equals(mysqlValue)) {
+                            log.info("key:" + key);
+                            log.info("expectedValue:" + expectedValue);
+                            log.info("mysqlValue:" + mysqlValue);
+                            return false;
+                        }
+                    }else {
+                        Object mysqlValue = resultSet.getObject(keyList.indexOf(key) + 1);
+                        if (null !=mysqlValue){
+                            return false;
+                        }
                     }
+
                 }
                 i++;
             }

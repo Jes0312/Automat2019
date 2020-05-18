@@ -4,39 +4,31 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.wecash.http.common.BaseProvider;
+import com.wecash.http.utils.ComUtils;
+import com.wecash.http.utils.DBUtils;
+import lombok.extern.slf4j.Slf4j;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import com.wecash.http.utils.ComUtils;
-import com.wecash.http.utils.DBUtils;
-
-import lombok.extern.slf4j.Slf4j;
-
-import org.testng.Assert;
-import org.testng.ITestContext;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
 import java.util.Map;
 
 import static com.wecash.http.utils.HttpClientUtils.compareJsonAssert;
 import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 
 /**
- * @Author : wjm
- * @CreateTime : 2020/05/16  4:26 PM
- * @ContentUse :
+ * @Author : wangjianmei
+ * @CreateTime : 2020/05/11
+ * @ContentUse :新增个人信息
  */
+
+
 @Slf4j
-public class JobPut {
+public class usrtinfoput {
 
-
-
-    @Test(dataProvider = "SaveJobInfo", dataProviderClass = BaseProvider.class, description = "提交职业信息")
-    public void SaveJobInfo(Map<String, Object> params){
+    @Test(dataProvider = "infoput", dataProviderClass = BaseProvider.class, description = "保存个人信息")
+    public void userInfoput(Map<String, Object> params){
 
         try {
             log.info("------------> case编号:"+params.get("用例编号").toString());
@@ -64,11 +56,11 @@ public class JobPut {
             //对比接口返回数据
             Assert.assertTrue(compareJsonAssert(result, exectResult));
 
-            //userjob 数据库预期结果
-            String expect_data= params.get("except_data_userjob").toString();
+            //userinfo 数据库预期结果
+            String expect_data= params.get("except_data_userinfo").toString();
             log.info("数据库预期结果为:"+ expect_data);
             //数据库查询语句
-            String sql_userinfo= params.get("sql_userjob").toString();
+            String sql_userinfo= params.get("sql_userinfo").toString();
             log.info("数据库查询语句为:"+ sql_userinfo);
             //数据库断言
             if (null != expect_data && "" != expect_data && null != sql_userinfo) {
@@ -76,15 +68,16 @@ public class JobPut {
                 ResultSet data_mysql = DBUtils.queryDataNoConn(sql_userinfo);
                 JSONArray act_result = ComUtils.resultSetToJson(data_mysql);
                 log.info("数据库实际查询结果为："+act_result.toString());
-                for (String key :data_info.keySet()){
-                    if (null != data_info.get(key) && "" !=data_info.get(key)){
-                        Assert.assertTrue(JSONObject.parseObject(act_result.get(0).toString()).get(key).toString().equals(data_info.get(key).toString()),"userJob数据库字段校验不一致");
-                        Assert.assertNotNull(JSONObject.parseObject(act_result.get(0).toString()).get("create_time").toString());
-                    } else {
-                        Assert.assertNull(JSONObject.parseObject(act_result.get(0).toString()).get(key), "数据库比对校验不一致");
+                    for (String key :data_info.keySet()){
+                        if (null != data_info.get(key) && "" !=data_info.get(key)){
+                            Assert.assertTrue(JSONObject.parseObject(act_result.get(0).toString()).get(key).toString().equals(data_info.get(key).toString()),"userInfo数据库字段校验不一致");
+                            Assert.assertNotNull(JSONObject.parseObject(act_result.get(0).toString()).get("create_time").toString());
+                            Assert.assertNotNull(JSONObject.parseObject(act_result.get(0).toString()).get("update_time").toString());
+                        } else {
+                            Assert.assertNull(JSONObject.parseObject(act_result.get(0).toString()).get(key), "数据库比对校验不一致");
+                        }
                     }
                 }
-            }
         }catch (SQLException e){
             e.printStackTrace();
         }

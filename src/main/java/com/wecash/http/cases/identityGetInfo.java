@@ -30,7 +30,7 @@ public class identityGetInfo {
 
 
     @Test(dataProvider = "idGetInfo", dataProviderClass = BaseProvider.class, description = "查询实名认证信息")
-    @AfterTest
+//    @AfterTest
 //    待补充 释放线程池
     public void idGetInfo(Map<String, Object> params) {
 

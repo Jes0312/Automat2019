@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="提交职业信息" parallel="classes" thread-count="4">
+<suite name="查询联系人信息" parallel="classes" thread-count="4">
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
 
-    <test name="JobPut" preserve-order="true">
+    <test name="userContactQuery" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.JobPut">
+            <class name="com.wecash.http.cases.userContactQuery">
                 <methods>
-                    <include name="SaveJobInfo" />
+                    <include name="contactquery" />
                 </methods>
             </class>
         </classes>
