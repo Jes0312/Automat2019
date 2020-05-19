@@ -19,6 +19,7 @@ import java.util.Map;
 import static com.wecash.http.utils.HttpClientUtils.compareJsonAssert;
 import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 import static com.wecash.http.utils.RedisUtils.getJedis;
+import static com.wecash.http.utils.RedisUtils.returnResource;
 
 /**
  * @Author : LeePuvier
@@ -28,10 +29,28 @@ import static com.wecash.http.utils.RedisUtils.getJedis;
 @Slf4j
 public class identityGetInfo {
 
+//    @BeforeTest
+
+//    public void setup()
+
+//    {
+//        Jedis redis = getJedis();
+//
+//
+//    }
+//
+//    @AfterTest
+//    public void tearDown()
+//
+//    {
+//         returnResource();
+//
+//
+//    }
+//    待补充 释放线程池
 
     @Test(dataProvider = "idGetInfo", dataProviderClass = BaseProvider.class, description = "查询实名认证信息")
-//    @AfterTest
-//    待补充 释放线程池
+//
     public void idGetInfo(Map<String, Object> params) {
 
         try {
@@ -40,17 +59,14 @@ public class identityGetInfo {
 
             String rediscommon = params.get("redis").toString();
 
-            if (null != rediscommon&& "" != rediscommon) {
-                log.info("-------------> 缓存清理开始");
+            if (null != rediscommon && "" != rediscommon) {
                 Jedis redis = getJedis();
-                redis.select(10);
-//                redis.exists("user_centeruserInfo:tenantId:tenantUserId:1001:005");
-//                log.info("-------------> "+redis.exists("user_centeruserInfo:tenantId:tenantUserId:1001:005"));
-//                redis.del(rediscommon);
-                log.info("-------------取出的是啥> " + params.get("redis").toString());
-//                log.info("-------------> 删除成功了吗"+redis.exists("user_centeruserInfo:tenantId:tenantUserId:1001:005"));
 
-                redis.del(params.get("redis").toString());
+                log.info("-------------> 缓存清理开始");
+                redis.select(10);
+                log.info("-------------取出的是啥> " + params.get("redis").toString());
+
+                redis.del(rediscommon);
                 log.info("-------------> 缓存清理结束");
             }
 

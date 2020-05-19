@@ -17,10 +17,10 @@
         <suite-file path="src/main/TestSuit-GrantInvalid.xml"></suite-file>
          <suite-file path="src/main/TestSuit-SaveGrant.xml"></suite-file>
 
-
+        <suite-file path="src/main/TestSuit-identitySubmit.xml"></suite-file>
         <suite-file path="src/main/TestSuit-identityGetInfo.xml"></suite-file>
         <suite-file path="src/main/TestSuit-identityInvalid.xml"></suite-file>
-        <suite-file path="src/main/TestSuit-identitySubmit.xml"></suite-file>
+
 
         <suite-file path="src/main/TestSuit-userBatchqueryById.xml"></suite-file>
         <suite-file path="src/main/TestSuit-userBatchQueryIdByMobileMd.xml"></suite-file>
@@ -32,8 +32,8 @@
         <suite-file path="src/main/TestSuit-userQueryLimit.xml"></suite-file>
         <suite-file path="src/main/TestSuit-userQueryLimitMdById.xml"></suite-file>
         <suite-file path="src/main/TestSuit-userQueryUserInfoByUserId.xml"></suite-file>
-        
-        
+<!--        -->
+<!--        -->
         <suite-file path="src/main/TestSuit-JobPut.xml"></suite-file>
         <suite-file path="src/main/TestSuit-JobQuery.xml"></suite-file>
         <suite-file path="src/main/TestSuit-UserContactPut.xml"></suite-file>
