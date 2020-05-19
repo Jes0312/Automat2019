@@ -36,11 +36,11 @@
 <!--        -->
         <suite-file path="src/main/TestSuit-JobPut.xml"></suite-file>
         <suite-file path="src/main/TestSuit-JobQuery.xml"></suite-file>
-        <suite-file path="src/main/TestSuit-UserContactPut.xml"></suite-file>
-        <suite-file path="src/main/TestSuit-UserContactQuery.xml"></suite-file>
-        <suite-file path="src/main/TestSuit-UserInfoPut.xml"></suite-file>
-        <suite-file path="src/main/TestSuit-UserInfoQuery.xml"></suite-file>
-        <suite-file path="src/main/TestSuit-UserInfoQueryByPii.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-ContactPut.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-ContactQuery.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-InfoPut.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-InfoQuery.xml"></suite-file>
+        <suite-file path="src/main/TestSuit-InfoQueryByPii.xml"></suite-file>
 
 
     </suite-files>
