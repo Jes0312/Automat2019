@@ -247,12 +247,12 @@ public class DBUtils {
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
             int i = resultSet.getMetaData().getColumnCount();
-            System.out.println("结果长度底是个啥  " + i);
+//            System.out.println("结果长度底是个啥  " + i);
 
 //            System.out.println("resultSet.next()  " + resultSet.next());
 
             while (resultSet.next()) {
-                System.out.println("走到这里了吗  " + result);
+//                System.out.println("走到这里了吗  " + result);
                 for (int j = 1; j <= i; j++) {
                     result += resultSet.getString(j);
                     System.out.println("结果 " + j + "  " + result);
@@ -275,9 +275,9 @@ public class DBUtils {
             }
         }
 
-        System.out.println("没加工的result： " + result);
+//        System.out.println("没加工的result： " + result);
         result = result.substring(0, result.length() - 1);
-        System.out.println("结果总的结果" + result);
+//        System.out.println("结果总的结果" + result);
         return result;
     }
 
