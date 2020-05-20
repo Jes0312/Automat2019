@@ -19,10 +19,10 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 
 
 @Slf4j
-public class userJobQuery {
+public class ContactQuery {
 
-    @Test(dataProvider = "jobquery", dataProviderClass = BaseProvider.class, description = "查询紧急联系人信息")
-    public void jobquery(Map<String, Object> params){
+    @Test(dataProvider = "contactquery", dataProviderClass = BaseProvider.class, description = "查询紧急联系人信息")
+    public void contactquery(Map<String, Object> params){
 
         try {
             log.info("------------> case编号:"+params.get("用例编号").toString());

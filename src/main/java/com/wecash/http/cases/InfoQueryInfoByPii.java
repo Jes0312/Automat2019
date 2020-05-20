@@ -18,10 +18,10 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
  */
 
 @Slf4j
-public class Userinfoquery {
+public class InfoQueryInfoByPii {
 
-    @Test(dataProvider = "infoquery", dataProviderClass = BaseProvider.class, description = "查询个人信息")
-    public void userInfoquery(Map<String, Object> params){
+    @Test(dataProvider = "infoqueryInfoByPii", dataProviderClass = BaseProvider.class, description = "查询个人信息")
+    public void infoqueryInfoByPii(Map<String, Object> params){
 
         try {
             log.info("------------> case编号:"+params.get("用例编号").toString());

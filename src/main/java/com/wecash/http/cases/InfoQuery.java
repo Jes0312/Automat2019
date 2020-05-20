@@ -13,16 +13,15 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 
 /**
  * @Author : wangjianmei
- * @CreateTime : 2020/05/14
- * @ContentUse :保存紧急联系人信息
+ * @CreateTime : 2020/05/12
+ * @ContentUse :查询个人信息
  */
 
-
 @Slf4j
-public class userContactQuery {
+public class InfoQuery {
 
-    @Test(dataProvider = "contactquery", dataProviderClass = BaseProvider.class, description = "查询紧急联系人信息")
-    public void contactquery(Map<String, Object> params){
+    @Test(dataProvider = "infoquery", dataProviderClass = BaseProvider.class, description = "查询个人信息")
+    public void userInfoquery(Map<String, Object> params){
 
         try {
             log.info("------------> case编号:"+params.get("用例编号").toString());
@@ -49,7 +48,6 @@ public class userContactQuery {
             log.info("-------------> 接口实际返回为：" + result);
             //对比接口返回数据
             Assert.assertTrue(compareJsonAssert(result, exectResult));
-
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -63,13 +61,4 @@ public class userContactQuery {
             }
         }
     }
-
-//    @Test
-//    public void test0111(){
-//        JSONObject j= new JSONObject();
-//        j.put("aa","bb");
-//        j.put("cc",null);
-//
-//        log.info(j.keySet().toString());
-//    }
 }

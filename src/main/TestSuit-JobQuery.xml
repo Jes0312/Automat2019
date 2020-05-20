@@ -4,9 +4,9 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
 
-    <test name="userJobQuery" preserve-order="true">
+    <test name="JobQuery" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.userJobQuery">
+            <class name="com.wecash.http.cases.JobQuery">
                 <methods>
                     <include name="jobquery" />
                 </methods>

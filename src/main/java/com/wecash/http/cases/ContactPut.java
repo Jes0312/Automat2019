@@ -24,7 +24,7 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 
 
 @Slf4j
-public class userContactPut {
+public class ContactPut {
 
     @Test(dataProvider = "contactput", dataProviderClass = BaseProvider.class, description = "保存紧急联系人信息")
     public void contactput(Map<String, Object> params){

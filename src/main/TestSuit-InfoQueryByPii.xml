@@ -4,9 +4,9 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
 
-    <test name="UserinfoqueryInfoByPii" preserve-order="true">
+    <test name="InfoQueryInfoByPii" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.UserinfoqueryInfoByPii">
+            <class name="com.wecash.http.cases.InfoQueryInfoByPii">
                 <methods>
                     <include name="infoqueryInfoByPii" />
                 </methods>
