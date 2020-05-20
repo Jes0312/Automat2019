@@ -531,7 +531,6 @@ public class HttpClientUtils {
                                     else   {
                                         log.info("   失败的字段是    "+j+ entry2.getKey());
                                         log.info("   对比失败换一个吧  ");
-                                        j++;
 
 
 
