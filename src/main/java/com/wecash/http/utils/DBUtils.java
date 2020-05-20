@@ -25,6 +25,8 @@ public class DBUtils {
     private static String user = "app_seraph_rw";
     private static String pwd = "xlWl7Z3YRQgfxmgTckqZCGVPKRZUN0";
 
+
+    private static Connection connection;
     static {
         try {
             Class.forName(driver);
@@ -33,15 +35,30 @@ public class DBUtils {
         }
     }
 
+//    public static Connection getConnection() {
+//        try {
+//            return DriverManager.getConnection(url, user, pwd);
+//        } catch (SQLException e) {
+//            log.info("db连接异常,请检查!");
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
+
     public static Connection getConnection() {
-        try {
-            return DriverManager.getConnection(url, user, pwd);
-        } catch (SQLException e) {
-            log.info("db连接异常,请检查!");
-            e.printStackTrace();
+        if (connection == null ) {
+            try {
+                connection =  DriverManager.getConnection(url, user, pwd);
+            } catch (SQLException e) {
+                log.info("db连接异常,请检查!");
+                e.printStackTrace();
+            }
         }
-        return null;
+        return connection;
     }
+
+
+
 
     //  新增、修改、删除
     public static int addOrUpdateOrDel(String sql) {
