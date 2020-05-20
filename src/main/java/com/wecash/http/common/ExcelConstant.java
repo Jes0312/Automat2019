@@ -89,17 +89,17 @@ public interface ExcelConstant {
     //提交职业信息
     public  String JobPut = "src/main/resources/caseconf/JobPut/Case_JobPut.xlsx";
     //提交个人信息
-    public  String InfoPut = "src/main/resources/caseconf/userinfoput/Case_userinfoput.xlsx";
+    public  String InfoPut = "src/main/resources/caseconf/Infoput/Case_userinfoput.xlsx";
 
     //查询个人信息
-    public  String InfoQuery = "src/main/resources/caseconf/userinfoquery/Case_userinfoquery.xlsx";
+    public  String InfoQuery = "src/main/resources/caseconf/Infoquery/Case_userinfoquery.xlsx";
     //Pii查询个人信息
-    public  String InfoQueryByPii = "src/main/resources/caseconf/userinfoqueryInfoByPii/Case_userinfoqueryInfoByPii.xlsx";
+    public  String InfoQueryByPii = "src/main/resources/caseconf/InfoqueryInfoByPii/Case_userinfoqueryInfoByPii.xlsx";
     //提交联系人信息
-    public  String ContactPut = "src/main/resources/caseconf/userContactPut/Case_userContactPut.xlsx";
+    public  String ContactPut = "src/main/resources/caseconf/ContactPut/Case_userContactPut.xlsx";
     //查询联系人信息
-    public  String ContactQuery = "src/main/resources/caseconf/userContactQuery/Case_userContactQuery.xlsx";
+    public  String ContactQuery = "src/main/resources/caseconf/ContactQuery/Case_userContactQuery.xlsx";
     //查询工作信息
-    public  String JobQuery = "src/main/resources/caseconf/userJobQuery/Case_userJobQuery.xlsx";
+    public  String JobQuery = "src/main/resources/caseconf/JobQuery/Case_userJobQuery.xlsx";
     
 }

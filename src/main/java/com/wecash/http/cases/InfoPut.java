@@ -25,7 +25,7 @@ import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 
 
 @Slf4j
-public class usrtinfoput {
+public class InfoPut {
 
     @Test(dataProvider = "infoput", dataProviderClass = BaseProvider.class, description = "保存个人信息")
     public void userInfoput(Map<String, Object> params){

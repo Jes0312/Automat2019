@@ -4,9 +4,9 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
 
-    <test name="Userinfoquery" preserve-order="true">
+    <test name="InfoQuery" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.Userinfoquery">
+            <class name="com.wecash.http.cases.InfoQuery">
                 <methods>
                     <include name="userInfoquery" />
                 </methods>

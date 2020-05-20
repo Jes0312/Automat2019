@@ -4,9 +4,9 @@
 
     <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
 
-    <test name="userContactPut" preserve-order="true">
+    <test name="ContactPut" preserve-order="true">
         <classes>
-            <class name="com.wecash.http.cases.userContactPut">
+            <class name="com.wecash.http.cases.ContactPut">
                 <methods>
                     <include name="contactput" />
                 </methods>
