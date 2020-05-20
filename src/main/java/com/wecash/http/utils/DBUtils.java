@@ -24,7 +24,7 @@ public class DBUtils {
     private static String url = "jdbc:mysql://10.61.19.142:30012/seraph?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull";
     private static String user = "app_seraph_rw";
     private static String pwd = "xlWl7Z3YRQgfxmgTckqZCGVPKRZUN0";
-
+    private static Connection connection;
 
 //    private static Connection connection;
     static {
@@ -36,13 +36,17 @@ public class DBUtils {
     }
 
     public static Connection getConnection() {
+
         try {
-            return DriverManager.getConnection(url, user, pwd);
+            if (connection == null || connection.isClosed()) {
+                connection =  DriverManager.getConnection(url, user, pwd);
+            }
         } catch (SQLException e) {
             log.info("db连接异常,请检查!");
             e.printStackTrace();
         }
-        return null;
+
+        return connection;
     }
 
 //    public static Connection getConnection() {
@@ -242,7 +246,7 @@ public class DBUtils {
             try {
 //                resultSet.close();
                 statement.close();
-                connection.close();
+//                connection.close();
             } catch (Exception ee) {
                 ee.printStackTrace();
                 System.out.println("关闭数据库连接失败");
@@ -286,7 +290,7 @@ public class DBUtils {
             //connection.close();
             try {
                 statement.close();
-                connection.close();
+//                connection.close();
             } catch (Exception ee) {
                 ee.printStackTrace();
             }
