@@ -89,7 +89,7 @@ public interface ExcelConstant {
     //提交职业信息
     public  String JobPut = "src/main/resources/caseconf/JobPut/Case_JobPut.xlsx";
     //提交个人信息
-    public  String InfoPut = "src/main/resources/caseconf/Infoput/Case_userinfoput.xlsx";
+    public  String InfoPut = "src/main/resources/caseconf/InfoPut/Case_userinfoput.xlsx";
 
     //查询个人信息
     public  String InfoQuery = "src/main/resources/caseconf/Infoquery/Case_userinfoquery.xlsx";
