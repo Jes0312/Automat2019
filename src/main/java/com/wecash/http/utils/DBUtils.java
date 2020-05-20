@@ -26,7 +26,7 @@ public class DBUtils {
     private static String pwd = "xlWl7Z3YRQgfxmgTckqZCGVPKRZUN0";
 
 
-    private static Connection connection;
+//    private static Connection connection;
     static {
         try {
             Class.forName(driver);
@@ -35,27 +35,27 @@ public class DBUtils {
         }
     }
 
-//    public static Connection getConnection() {
-//        try {
-//            return DriverManager.getConnection(url, user, pwd);
-//        } catch (SQLException e) {
-//            log.info("db连接异常,请检查!");
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
-
     public static Connection getConnection() {
-        if (connection == null ) {
-            try {
-                connection =  DriverManager.getConnection(url, user, pwd);
-            } catch (SQLException e) {
-                log.info("db连接异常,请检查!");
-                e.printStackTrace();
-            }
+        try {
+            return DriverManager.getConnection(url, user, pwd);
+        } catch (SQLException e) {
+            log.info("db连接异常,请检查!");
+            e.printStackTrace();
         }
-        return connection;
+        return null;
     }
+
+//    public static Connection getConnection() {
+//        if (connection == null ) {
+//            try {
+//                connection =  DriverManager.getConnection(url, user, pwd);
+//            } catch (SQLException e) {
+//                log.info("db连接异常,请检查!");
+//                e.printStackTrace();
+//            }
+//        }
+//        return connection;
+//    }
 
 
 
