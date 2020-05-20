@@ -522,17 +522,15 @@ public class HttpClientUtils {
 
                                     if (flag ) {
                                         assertResult.add(flag);
-                                        log.info("  对比字段为  " +j+ entry2.getKey());
-                                        log.info("  实际Json字段内容为： " +j+ jsonObject3.get(entry2.getKey()));
-                                        log.info("  期望Json字段内容为： " +j+ entry2.getValue());
-                                        log.info("  对比结果为： "+j + flag);
+                                        log.info("  对比字段为  " + entry2.getKey());
+                                        log.info("  实际Json字段内容为： " + jsonObject3.get(entry2.getKey()));
+                                        log.info("  期望Json字段内容为： " + entry2.getValue());
+                                        log.info("  对比结果为： "+ flag);
                                         break;
                                     }
                                     else   {
                                         log.info("   失败的字段是    "+j+ entry2.getKey());
                                         log.info("   对比失败换一个吧  ");
-
-
 
 
                                     }
