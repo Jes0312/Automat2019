@@ -83,15 +83,15 @@ public class ContactPut {
         }catch (SQLException e){
             e.printStackTrace();
         }
-//        finally {
-//            if (DBUtils.clearData(params.get("clearDataSQL").toString())){
-//                log.info("执行测试用例结束");
-//                Assert.assertTrue(true);
-//            }else {
-//                log.info("执行测试用例失败");
-//                Assert.assertTrue(false);
-//            }
-//        }
+        finally {
+            if (DBUtils.clearData(params.get("clearDataSQL").toString())){
+                log.info("执行测试用例结束");
+                Assert.assertTrue(true);
+            }else {
+                log.info("执行测试用例失败");
+                Assert.assertTrue(false);
+            }
+        }
     }
 
 //    @Test

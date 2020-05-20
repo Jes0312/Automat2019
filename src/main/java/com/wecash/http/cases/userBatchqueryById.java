@@ -75,7 +75,7 @@ public class userBatchqueryById {
             log.info("-------------> case结束--数据清理结束" );
         }
       //清理数据
-        //DBUtils.clearData(params.get("clearDataSQL").toString());
+        DBUtils.clearData(params.get("clearDataSQL").toString());
         
     }
     

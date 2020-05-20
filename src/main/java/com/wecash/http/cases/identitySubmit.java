@@ -118,7 +118,7 @@ public class identitySubmit {
         } finally {
             log.info("测试结束清理数据");
 
-//            DBUtils.clearData(params.get("clearDataSQL").toString());
+            DBUtils.clearData(params.get("clearDataSQL").toString());
         }
     }
 }
