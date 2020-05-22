@@ -14,8 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map;
 
-import static com.wecash.http.utils.HttpClientUtils.compareJsonAssert;
-import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
+import static com.wecash.http.utils.HttpClientUtils.*;
 
 /**
  * @Author : wangjianmei
@@ -54,8 +53,8 @@ public class InfoPut {
             log.info("-------------> 期望接口返回为：" + exectResult);
             log.info("-------------> 接口实际返回为：" + result);
             //对比接口返回数据
-            Assert.assertTrue(compareJsonAssert(result, exectResult));
-
+//            Assert.assertTrue(compareJsonAssert(result, exectResult));
+            compareJsonAssert1(result, exectResult);
             //userinfo 数据库预期结果
             String expect_data= params.get("except_data_userinfo").toString();
             log.info("数据库预期结果为:"+ expect_data);

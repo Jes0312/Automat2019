@@ -16,8 +16,7 @@ import redis.clients.jedis.Jedis;
 
 import java.util.Map;
 
-import static com.wecash.http.utils.HttpClientUtils.compareJsonAssert;
-import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
+import static com.wecash.http.utils.HttpClientUtils.*;
 import static com.wecash.http.utils.RedisUtils.getJedis;
 import static com.wecash.http.utils.RedisUtils.returnResource;
 
@@ -90,8 +89,8 @@ public class identityGetInfo {
             log.info("-------------> 期望接口返回为：" + exectResult);
             log.info("-------------> 接口实际返回为：" + result);
             //对比接口返回数据
-            Assert.assertTrue(compareJsonAssert(result, exectResult));
-
+//            Assert.assertTrue(compareJsonAssert(result, exectResult));
+            compareJsonAssert1(result, exectResult);
 
             //数据库预期结果
             String exceptSQL = params.get("exceptSQL").toString();

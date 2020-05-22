@@ -39,6 +39,19 @@ public class AAdemo {
     public void userCeateInfo(Map<String, Object> params) {
 
 
+//            // 依据Jenkins传入参数处理逻辑
+//            if(ifReplaceConfig.equals("true")){
+//                //替换Jenkins 传入指定参数
+//                expectParamJson = replaceConfig;
+//                channelOrderNo = DataUtils.getJsonInfo(expectParamJson, "channelOrderNo");
+//            }else {
+//                //替换Excel 传入指定参数
+//                // 随机订单号
+//                channelOrderNo = DataUtils.channelOrderNoCreate(capitalName);
+//                expectParamJson = DataUtils.replaceJson(expectParamJson, "channelOrderNo", channelOrderNo);
+//
+//            }
+
 //        清理缓存数据
 
 
