@@ -28,7 +28,7 @@ public class userCreate {
 
     
     @Test(dataProvider = "userCeateInfo", dataProviderClass = BaseProvider.class, description = "创建用户信息")
-    public void userCeateInfo(Map<String, Object> params){
+    public void userCeateInfo(ITestContext context, Map<String, Object> params){
 
         try {
 
@@ -44,9 +44,14 @@ public class userCreate {
 
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
+
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+
+            String url=serviceEnv+params.get("url").toString();
+
 
             String result = httpJSONPost(url, baseParamJson);
             log.info("【" + caseComment + "】");

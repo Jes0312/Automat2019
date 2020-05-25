@@ -7,9 +7,9 @@
     <test name="CashAccountModify" preserve-order="true">
         <classes>
             <class name="com.wecash.http.cases.CashAccountModify">
-<!--                <methods>-->
-<!--                    <include name="	ModifyCashaccount" />-->
-<!--                </methods>-->
+                <methods>
+                    <include name="ModifyCashaccount" />
+                </methods>
             </class>
         </classes>
     </test>

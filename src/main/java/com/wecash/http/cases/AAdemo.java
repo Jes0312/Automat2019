@@ -4,6 +4,7 @@ import com.google.gson.internal.$Gson$Preconditions;
 import com.wecash.http.common.BaseProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -13,6 +14,7 @@ import static com.wecash.http.utils.RedisUtils.getJedis;
 
 import redis.clients.jedis.Jedis;
 import com.wecash.http.utils.DBUtils;
+
 import static com.wecash.http.utils.HttpClientUtils.compareJsonAssert;
 import static com.wecash.http.utils.HttpClientUtils.httpJSONPost;
 
@@ -36,30 +38,9 @@ public class AAdemo {
 //
     @Test(dataProvider = "userCeateInfo", dataProviderClass = BaseProvider.class, description = "创建用户信息")
 //    @Test
-    public void userCeateInfo(Map<String, Object> params) {
-
-
-//            // 依据Jenkins传入参数处理逻辑
-//            if(ifReplaceConfig.equals("true")){
-//                //替换Jenkins 传入指定参数
-//                expectParamJson = replaceConfig;
-//                channelOrderNo = DataUtils.getJsonInfo(expectParamJson, "channelOrderNo");
-//            }else {
-//                //替换Excel 传入指定参数
-//                // 随机订单号
-//                channelOrderNo = DataUtils.channelOrderNoCreate(capitalName);
-//                expectParamJson = DataUtils.replaceJson(expectParamJson, "channelOrderNo", channelOrderNo);
-//
-//            }
-
-//        清理缓存数据
-
-
+    public void userCeateInfo(ITestContext context, Map<String, Object> params) {
         try {
-
-
             //        清理缓存数据
-
             String rediscommon = params.get("redis").toString();
 
             if (null != rediscommon && "" != rediscommon) {
@@ -82,9 +63,10 @@ public class AAdemo {
 
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url = serviceEnv + params.get("url").toString();
 //          实际访问的开始
             String result = httpJSONPost(url, baseParamJson);
             log.info("【" + caseComment + "】");

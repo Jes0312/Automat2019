@@ -2,16 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="创建用户信息" parallel="classes" thread-count="4">
 
-<!--    <parameter name="serviceEnv" value="https://user-center-qa01.tunaikita.id/user"/>-->
+    <parameter name="serviceEnv" value="https://user-center-thu.tunaikita.id/user"/>
+
 
     <test name="userCreate" preserve-order="true">
         <classes>
             <!--      name为整个case的路径      -->
             <class name="com.wecash.http.cases.userCreate">
-                <methods>
+<!--                <methods>-->
                     <!-- name是case中的 method名字                  -->
-                    <include name="userCeateInfo" />
-                </methods>
+<!--                    <include name="userCeateInfo" />-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>
