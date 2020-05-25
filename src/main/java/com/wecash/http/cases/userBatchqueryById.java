@@ -39,12 +39,24 @@ public class userBatchqueryById {
             if (null != rediscommon && "" != rediscommon) {
 
 
-                log.info("-------------> 缓存清理开始");
-                Jedis redis = getJedis();
-                redis.select(10);
-//                log.info("-------------取出的是啥> " + params.get("redis").toString());
+                if (null != rediscommon && "" != rediscommon) {
+                    log.info("-------------> 缓存清理开始");
+                    Jedis redis = getJedis();
+                    redis.select(10);
 
-                redis.del(rediscommon);
+                    if (!"".equals(rediscommon) || rediscommon.length() != 0) {
+                        if (rediscommon.length() == 1)
+                            redis.del(rediscommon);
+                        else {
+                            String[] pareRedis = rediscommon.split(";");
+                            for (String pareRed : pareRedis) {
+                                redis.del(pareRed);
+                            }
+                        }
+                    }
+                    log.info("-------------> 缓存清理结束");
+                }
+
                 log.info("-------------> 缓存清理结束");
 
                 log.info("-------------> 数据清理开始");
