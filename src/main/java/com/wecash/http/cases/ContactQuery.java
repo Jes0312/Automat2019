@@ -4,6 +4,7 @@ import com.wecash.http.common.BaseProvider;
 import com.wecash.http.utils.DBUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -21,7 +22,7 @@ import static com.wecash.http.utils.HttpClientUtils.*;
 public class ContactQuery {
 
     @Test(dataProvider = "contactquery", dataProviderClass = BaseProvider.class, description = "查询紧急联系人信息")
-    public void contactquery(Map<String, Object> params){
+    public void contactquery(ITestContext context, Map<String, Object> params){
 
         try {
             log.info("------------> case编号:"+params.get("用例编号").toString());
@@ -37,9 +38,11 @@ public class ContactQuery {
 
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 
             String result = httpJSONPost(url, baseParamJson);
             log.info("【"+caseComment+"】");

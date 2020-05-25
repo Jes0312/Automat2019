@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -25,9 +26,13 @@ import static com.wecash.http.utils.HttpClientUtils.*;
 public class CashAccountModify {
 
 
-    @Test(dataProvider = "ModifyCashaccount", dataProviderClass = BaseProvider.class, description = "修改账户")
-    public void ModifyCashaccount(Map<String, Object> params) {
-        try {
+
+        @Test(dataProvider = "ModifyCashaccount", dataProviderClass = BaseProvider.class, description = "修改账户")
+    public void ModifyCashaccount(ITestContext context,Map<String, Object> params) {
+
+
+
+            try {
 
             log.info("-------------> 数据清理开始");
             DBUtils.clearData(params.get("clearDataSQL").toString());
@@ -39,10 +44,11 @@ public class CashAccountModify {
             log.info("-------------> 数据预至结束");
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
-
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
             String result = httpJSONPost(url, baseParamJson);
             log.info("【" + caseComment + "】");
             log.info("-------------> 用例功能描述为：" + caseComment);

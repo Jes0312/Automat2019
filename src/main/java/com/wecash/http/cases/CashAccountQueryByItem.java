@@ -4,6 +4,7 @@ import com.wecash.http.common.BaseProvider;
 import com.wecash.http.utils.DBUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -24,7 +25,7 @@ public class CashAccountQueryByItem {
 //
 //
     @Test(dataProvider = "CashAccountQueryByItem", dataProviderClass = BaseProvider.class, description = "通过VK查询用户")
-    public void CashAccountQueryByItem(Map<String, Object> params){
+    public void CashAccountQueryByItem(ITestContext context, Map<String, Object> params){
 
         try {
 
@@ -39,9 +40,11 @@ public class CashAccountQueryByItem {
 
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 //          实际访问的开始
             String result = httpJSONPost(url, baseParamJson);
             log.info("【" + caseComment + "】");

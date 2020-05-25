@@ -28,29 +28,10 @@ import static com.wecash.http.utils.RedisUtils.returnResource;
 @Slf4j
 public class identityGetInfo {
 
-//    @BeforeTest
-
-//    public void setup()
-
-//    {
-//        Jedis redis = getJedis();
-//
-//
-//    }
-//
-//    @AfterTest
-//    public void tearDown()
-//
-//    {
-//         returnResource();
-//
-//
-//    }
-//    待补充 释放线程池
 
     @Test(dataProvider = "idGetInfo", dataProviderClass = BaseProvider.class, description = "查询实名认证信息")
 //
-    public void idGetInfo(Map<String, Object> params) {
+    public void idGetInfo(ITestContext context, Map<String, Object> params) {
 
         try {
 
@@ -79,9 +60,11 @@ public class identityGetInfo {
             log.info("-------------> SQL数据预至结束");
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 
             String result = httpJSONPost(url, baseParamJson);
             log.info("【" + caseComment + "】");

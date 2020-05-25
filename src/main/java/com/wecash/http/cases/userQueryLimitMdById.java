@@ -27,7 +27,7 @@ public class userQueryLimitMdById {
 
     
     @Test(dataProvider = "GetInfoLimitById", dataProviderClass = BaseProvider.class, description = "查询用户信息")
-    public void GetInfoLimitById(Map<String, Object> params){
+    public void GetInfoLimitById(ITestContext context, Map<String, Object> params){
 
         try {
         log.info("-------------> 数据清理开始");
@@ -40,9 +40,11 @@ public class userQueryLimitMdById {
         log.info("-------------> 数据预至结束");
 
         String caseComment = params.get("Comment").toString();
-        String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//        String url = params.get("serviceEnv").toString() + params.get("url").toString();
         String baseParamJson = params.get("baseParamJson").toString();
         String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 
         String result = httpJSONPost(url, baseParamJson);
         log.info("【"+caseComment+"】");

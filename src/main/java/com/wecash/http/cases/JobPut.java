@@ -35,7 +35,7 @@ public class JobPut {
 
 
     @Test(dataProvider = "SaveJobInfo", dataProviderClass = BaseProvider.class, description = "提交职业信息")
-    public void SaveJobInfo(Map<String, Object> params){
+    public void SaveJobInfo(ITestContext context, Map<String, Object> params){
 
         try {
             log.info("------------> case编号:"+params.get("用例编号").toString());
@@ -51,9 +51,11 @@ public class JobPut {
 
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 
             String result = httpJSONPost(url, baseParamJson);
             log.info("【"+caseComment+"】");

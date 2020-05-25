@@ -28,7 +28,7 @@ public class userBatchqueryById {
 
 
     @Test(dataProvider = "userBatchQuery", dataProviderClass = BaseProvider.class, description = "根据用户id批量查询用户信息")
-    public void userBatchQuery(Map<String, Object> params) throws InterruptedException {
+    public void userBatchQuery(ITestContext context, Map<String, Object> params) throws InterruptedException {
 
         try {
 
@@ -70,9 +70,11 @@ public class userBatchqueryById {
 
 
                 String caseComment = params.get("Comment").toString();
-                String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//                String url = params.get("serviceEnv").toString() + params.get("url").toString();
                 String baseParamJson = params.get("baseParamJson").toString();
                 String exectResult = params.get("exectResult").toString();
+                String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+                String url=serviceEnv+params.get("url").toString();
 
                 String result = httpJSONPost(url, baseParamJson);
                 log.info("【" + caseComment + "】");
@@ -100,10 +102,7 @@ public class userBatchqueryById {
             }
 
 
-
-        }
-        finally
-        {
+        } finally {
             log.info("-------------> case结束--数据清理开始");
 
             DBUtils.clearData(params.get("clearDataSQL").toString());

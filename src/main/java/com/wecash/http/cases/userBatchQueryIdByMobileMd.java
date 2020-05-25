@@ -25,7 +25,7 @@ public class userBatchQueryIdByMobileMd {
 
 
     @Test(dataProvider = "userBatchQueryMobileMd", dataProviderClass = BaseProvider.class, description = "根据用户手机号Md5批量查询用户信息")
-    public void userBatchQueryMobileMd(Map<String, Object> params){
+    public void userBatchQueryMobileMd(ITestContext context, Map<String, Object> params){
 
         try {
         log.info("-------------> 数据清理开始");
@@ -38,9 +38,11 @@ public class userBatchQueryIdByMobileMd {
         log.info("-------------> 数据预至结束");
 
         String caseComment = params.get("Comment").toString();
-        String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//        String url = params.get("serviceEnv").toString() + params.get("url").toString();
         String baseParamJson = params.get("baseParamJson").toString();
         String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 
         String result = httpJSONPost(url, baseParamJson);
         log.info("【"+caseComment+"】");

@@ -26,7 +26,7 @@ public class CashAccountQueryLimit {
 
 
     @Test(dataProvider = "QueryAccountInfo", dataProviderClass = BaseProvider.class, description = "查询账户信息")
-    public void QueryAccountInfo(Map<String, Object> params){
+    public void QueryAccountInfo(ITestContext context,  Map<String, Object> params){
 
         try {
         log.info("-------------> 数据清理开始");
@@ -40,11 +40,14 @@ public class CashAccountQueryLimit {
     	
         
         String caseComment = params.get("Comment").toString();
-        String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//        String url = params.get("serviceEnv").toString() + params.get("url").toString();
         String baseParamJson = params.get("baseParamJson").toString();
         String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 
-        String result = httpJSONPost(url, baseParamJson);
+
+            String result = httpJSONPost(url, baseParamJson);
         log.info("【"+caseComment+"】");
         log.info("-------------> 用例功能描述为：" + caseComment);
         log.info("-------------> 期望接口返回为：" + exectResult);

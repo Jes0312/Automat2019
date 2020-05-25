@@ -7,6 +7,7 @@ import com.wecash.http.utils.ComUtils;
 import com.wecash.http.utils.DBUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import java.sql.ResultSet;
@@ -26,7 +27,7 @@ import static com.wecash.http.utils.HttpClientUtils.*;
 public class ContactPut {
 
     @Test(dataProvider = "contactput", dataProviderClass = BaseProvider.class, description = "保存紧急联系人信息")
-    public void contactput(Map<String, Object> params){
+    public void contactput(ITestContext context, Map<String, Object> params){
 
         try {
             log.info("------------> case编号:"+params.get("用例编号").toString());
@@ -42,9 +43,12 @@ public class ContactPut {
 
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
+
 
             String result = httpJSONPost(url, baseParamJson);
             log.info("【"+caseComment+"】");

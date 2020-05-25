@@ -28,7 +28,7 @@ public class userQueryLimit {
 
 
     @Test(dataProvider = "GetInfoLimit", dataProviderClass = BaseProvider.class, description = "查询用户信息")
-    public void GetInfoLimit(Map<String, Object> params) {
+    public void GetInfoLimit(ITestContext context, Map<String, Object> params) {
 
         try {
 
@@ -64,9 +64,11 @@ public class userQueryLimit {
 
 
                 String caseComment = params.get("Comment").toString();
-                String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//                String url = params.get("serviceEnv").toString() + params.get("url").toString();
                 String baseParamJson = params.get("baseParamJson").toString();
                 String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 
                 String result = httpJSONPost(url, baseParamJson);
                 log.info("【" + caseComment + "】");

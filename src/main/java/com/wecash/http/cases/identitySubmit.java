@@ -28,7 +28,7 @@ public class identitySubmit {
 
 
     @Test(dataProvider = "idSubmitInfo", dataProviderClass = BaseProvider.class, description = "提交实名认证信息")
-    public void idSubmitInfo(Map<String, Object> params) {
+    public void idSubmitInfo(ITestContext context,   Map<String, Object> params) {
 
         try {
 
@@ -58,9 +58,11 @@ public class identitySubmit {
             log.info("-------------> 数据预至结束");
 
             String caseComment = params.get("Comment").toString();
-            String url = params.get("serviceEnv").toString() + params.get("url").toString();
+//            String url = params.get("serviceEnv").toString() + params.get("url").toString();
             String baseParamJson = params.get("baseParamJson").toString();
             String exectResult = params.get("exectResult").toString();
+            String serviceEnv = context.getCurrentXmlTest().getParameter("serviceEnv");
+            String url=serviceEnv+params.get("url").toString();
 
             String result = httpJSONPost(url, baseParamJson);
             log.info("【" + caseComment + "】");
